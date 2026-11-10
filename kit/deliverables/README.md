@@ -2,12 +2,14 @@
 
 ## ویدیوهای ثبت‌شده در Git
 
+- [دانلود ریل ۰۴ — ناخن شمارهٔ ۹، از پا تا اوج](https://github.com/eternity-lord/instareel/raw/refs/heads/main/kit/deliverables/nail-reel-04.mp4) — ۳۹٫۶ ثانیه
+
 - [دانلود ریل ۰۳ — ناخن شمارهٔ ۸، انتقام استون](https://github.com/eternity-lord/instareel/raw/refs/heads/main/kit/deliverables/nail-reel-03.mp4) — ۳۹ ثانیه
 
 - [دانلود ریل ۰۲ — ناخن شمارهٔ ۷، مأموریت زنده‌موندن](https://github.com/eternity-lord/instareel/raw/refs/heads/main/kit/deliverables/nail-reel-02.mp4) — ۳۴ ثانیه
 - [دانلود ریل ۰۱ — پنج جمله، یک عالمه صبر](https://github.com/eternity-lord/instareel/raw/refs/heads/main/kit/deliverables/nail-reel-01.mp4) — ۳۵ ثانیه
 
-هر سه Full HD عمودی، 30fps، H.264 High / yuv420p و AAC stereo 48kHz هستند. هر سه نسخه موسیقی و افکت دارند، بدون گوینده. فقط MP4های نهایی برای دانلود مستقیم در Git ثبت می‌شوند؛ فایل‌های تولیدشدهٔ دیگر عمداً ignored هستند و با دستورهای README بازسازی می‌شوند.
+هر چهار Full HD عمودی، 30fps، H.264 High / yuv420p و AAC stereo 48kHz هستند. هر چهار نسخه موسیقی و افکت دارند، بدون گوینده. فقط MP4های نهایی برای دانلود مستقیم در Git ثبت می‌شوند؛ فایل‌های تولیدشدهٔ دیگر عمداً ignored هستند و با دستورهای README بازسازی می‌شوند.
 
 ## فایل‌های همراه ریل ۰۲
 
@@ -26,3 +28,7 @@
 ## فایل‌های همراه ریل ۰۳
 
 در `kit/deliverables/reel-03/` پس از export، همان مجموعهٔ MP4/کاور/شیت/صوت/گزارش و شواهد با نام `nail-reel-03.mp4` ایجاد می‌شود. گزارش پایدار: `kit/docs/REPORT-03.md` و `kit/docs/evidence-03/`. ویدیوهای ۰۱ و نسخهٔ اصلاح‌شدهٔ ۰۲ تغییر نکرده‌اند.
+
+## فایل‌های همراه ریل ۰۴
+
+در `kit/deliverables/reel-04/` پس از export، مجموعهٔ MP4/کاور/شیت/صوت/گزارش/زمان‌بندی/شواهد ساخته می‌شود. ویدیوی اصلی `nail-reel-04.mp4`، گزارش پایدار `kit/docs/REPORT-04.md` و شواهد `kit/docs/evidence-04/` هستند. سه MP4 قبلی بدون تغییر باقی می‌مانند.

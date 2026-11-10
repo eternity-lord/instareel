@@ -9,8 +9,7 @@ for(const name of files){
  if(!fs.existsSync(source))throw new Error('Missing final artifact: '+name);
  fs.copyFileSync(source,path.join(target,name));
 }
-const previewQA=path.join(OUTDIR,'preview-qa.json');
-if(fs.existsSync(previewQA))fs.copyFileSync(previewQA,path.join(target,'preview-qa.json'));
+for(const optional of ['preview-qa.json','journey-qa.json']){const file=path.join(OUTDIR,optional);if(fs.existsSync(file))fs.copyFileSync(file,path.join(target,optional));}
 fs.copyFileSync(path.join(ROOT,'input/post_copy.md'),path.join(target,'post_copy.md'));
 fs.copyFileSync(AUDIO,path.join(target,'mix.wav'));
 fs.copyFileSync(path.join(OUTDIR,STEM+'.mp4'),path.join(ROOT,'deliverables',STEM+'.mp4'));

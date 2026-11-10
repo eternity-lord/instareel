@@ -1,171 +1,84 @@
 {
-  "title": "ناخن شماره ۸: انتقام استون",
-  "format": "Sequel to scenario 02 (same movie-trailer parody: letterbox bars, film grain, dramatic title cards). HIGHER motion than 02: tracking shots, whip-pans, dolly zoom, orbit, barrel roll, speed lines, parallax, screen shake on hits, cuts on the beat. Cute, never scary.",
+  "title": "ناخن شماره ۹: از پا تا اوج",
+  "format": "Third episode but a new genre: heartwarming underdog story + glow-up makeover (Pixar-like warmth with comedy). Keep the cinematic bars/grain look from 02/03 but warmer. Built as ONE continuous 'camera journey' with match-cut portals through objects (sock hole, door, mirror-like shine). Beat-synced montage at 100 bpm for the glow-up. High motion: orbits, whip-pans, rack focus, parallax, speed ramps, squash-and-stretch. Cute, never scary.",
   "hold": 0.7,
   "endCardSeconds": 3,
-  "goal": "Share-worthy sequel reel. 32-40 s. Hook in 1 s, one wow-motion beat every 2-3 s, a twist ending that teases the next episode, loop-friendly.",
+  "goal": "Emotional + shareable. 34-42 s. 1-second hook, glow-up transformation as the wow moment, a 'tag someone' CTA, and a tease for episode 5 (Number 10).",
   "cast": [
     {
-      "name": "Number 7",
-      "role": "returning hero",
-      "desc": "tiny pink almond-nail blob with a small bandage, braver now"
+      "name": "Number 9",
+      "role": "hero",
+      "desc": "giant sleepy toenail blob, tiny sock hat, huge gentle eyes; after glow-up: glossy lilac with a gem"
     },
     {
-      "name": "Gel",
-      "role": "mentor knight",
-      "desc": "glossy translucent-blue knight blob with a gel-drop helmet and a brush sword"
+      "name": "Number 7",
+      "role": "cameo",
+      "desc": "tiny pink almond-nail blob with a bandage"
     },
     {
       "name": "Number 8",
-      "role": "rookie",
-      "desc": "glossy ruby-red almond-nail blob, tiny sunglasses, big attitude, skates on a nail file"
+      "role": "cameo",
+      "desc": "ruby-red rookie blob with sunglasses"
     },
     {
-      "name": "Acetone",
-      "role": "villain",
-      "desc": "cute-menacing glass bottle with a glowing green eye, cap like a crown, green vapor tentacles"
+      "name": "Gel",
+      "role": "cameo",
+      "desc": "glossy translucent-blue knight blob"
     },
     {
-      "name": "Cotton army",
-      "role": "minions",
-      "desc": "fluffy white cotton-ball blobs with tiny angry eyes, march in formation"
+      "name": "Ducky",
+      "role": "sidekick",
+      "desc": "rubber duck in the spa with a sly wink and a tiny towel"
     },
     {
-      "name": "Number 9",
-      "role": "twist",
-      "desc": "giant sleepy toenail blob in a tiny sock hat, rises like a kaiju"
+      "name": "Number 10",
+      "role": "tease",
+      "desc": "giant thumbnail blob silhouette, thumbs-up"
+    },
+    {
+      "name": "Fans",
+      "role": "crowd",
+      "desc": "colorful fingernail blobs with tiny glow-sticks and cameras"
     }
   ],
   "scenes": [
     {
       "id": "hook",
-      "text": "ناخن شماره هفت زنده موند... ولی دشمن برگشته",
-      "mood": "shock",
-      "idea": "MOTION HIGH. Open on a quick slow-mo recap flash of Number 7's victory pose, then a toxic-green shadow sweeps across the frame and shatters it like glass; giant title card slams in 'قسمت ۲' with screen shake and green fume particles. Whip-pan to black.",
-      "sfx": [
-        {
-          "k": "whoosh",
-          "t": 0.0
-        },
-        {
-          "k": "error",
-          "t": 1.5
-        }
-      ]
-    },
-    {
-      "id": "acetone",
-      "text": "از اعماق یه شیشه‌ی کوچیک... استون بیدار شد",
-      "mood": "angry",
-      "idea": "Dolly-in on a dark vanity shelf: a glass acetone bottle slowly opens one glowing green eye; the cap lifts like a crown, vapor tentacles uncoil and fill the frame, smell-waves ripple the whole image with a heat-haze distortion. Cute-menacing, never gory.",
+      "text": "هیچ‌کس ناخن پا رو نمی‌بینه...",
+      "mood": "tired",
+      "idea": "Dark cozy sock cave, one dust-lit ray from a hole high above. Camera creeps in on Number 9, the giant sleepy toenail blob in a tiny sock hat, hugging his knees, a single sad blink. Through the hole, glimpses of bright fingernails getting compliments. Slow dolly-in, soft piano feel.",
       "sfx": [
         {
           "k": "tick",
-          "t": 0.4
-        },
-        {
-          "k": "whoosh",
-          "t": 2.0
-        }
-      ]
-    },
-    {
-      "id": "army",
-      "text": "پنبه‌های سفید، ارتش بی‌رحمش",
-      "mood": "angry",
-      "idea": "Top-down then low-angle: an army of fluffy cotton-ball minions with tiny angry eyes marches in perfect rows, then multiplies and swarms across a pastel table like a wave; camera crane sweeps over them, parallax of marching legs, dust puffs on every beat.",
-      "sfx": [
-        {
-          "k": "tick",
-          "t": 0.3
-        },
-        {
-          "k": "tick",
-          "t": 0.7
-        },
-        {
-          "k": "tick",
-          "t": 1.1
-        },
-        {
-          "k": "whoosh",
-          "t": 2.0
-        }
-      ]
-    },
-    {
-      "id": "rookie",
-      "text": "و ناخن شماره هشت وارد شد!",
-      "mood": "happy",
-      "idea": "Smash cut to bright color: Number 8, a glossy ruby-red rookie blob with tiny sunglasses and attitude, drops from above onto a nail file used as a skateboard; sparks fly from the grit, a power slide stops dead at camera with a 'wanted' freeze-frame and cool title card.",
-      "sfx": [
-        {
-          "k": "pop",
-          "t": 0.2
-        },
-        {
-          "k": "whoosh",
-          "t": 0.8
-        }
-      ]
-    },
-    {
-      "id": "chase",
-      "text": "سریع‌تر از سوهان... بدون ترمز!",
-      "mood": "happy",
-      "idea": "MOTION MAX. High-speed parkour chase across a giant hand landscape: knuckle bridges, rings as hoops, bracelet as a zip-line, cuticle-cliff jumps; tracking shot with speed lines and motion blur, camera barrel-rolls on jumps, cotton minions bounce off walls in pursuit.",
-      "sfx": [
-        {
-          "k": "whoosh",
-          "t": 0.0
-        },
-        {
-          "k": "pop",
-          "t": 0.7
-        },
-        {
-          "k": "whoosh",
-          "t": 1.3
-        }
-      ]
-    },
-    {
-      "id": "melt",
-      "text": "ولی استون دست‌بردار نبود",
-      "mood": "shock",
-      "idea": "Acetone's vapor wave catches Number 8; its red color starts melting and dripping, face goes pale; dramatic dolly-zoom as the green cloud closes in, Number 8 clings to the edge of a nail with trembling hands; heartbeat pulse in the picture.",
-      "sfx": [
-        {
-          "k": "error",
           "t": 0.5
         },
         {
-          "k": "tick",
-          "t": 1.4
-        }
-      ]
-    },
-    {
-      "id": "team",
-      "text": "تا اینکه شماره هفت و ژل رسیدن",
-      "mood": "love",
-      "idea": "Backlit slow-motion silhouette in the green fog: Number 7 and Gel stride in side by side, cape of sparkles fluttering, fog parts like curtains; 360-degree orbit around the trio, then a snap-zoom to Number 8's relieved face.",
-      "sfx": [
-        {
-          "k": "chime",
-          "t": 0.2
-        },
-        {
-          "k": "pop",
+          "k": "error",
           "t": 1.8
         }
       ]
     },
     {
-      "id": "final",
-      "text": "یه تاپ‌کت... و همه‌چی تموم شد!",
-      "mood": "happy",
-      "idea": "Fast action beat on the audio hits: Gel slashes a top-coat shield across the screen, vapor bounces off in a rainbow-gloss reflection, the beam reflects back and pushes Acetone into his bottle, cap closes with a big clink, ground-shake; Acetone starts snoring bubbles. Freeze-frame high-five.",
+      "id": "tired",
+      "text": "شماره نُه خسته بود... خسته از تو جوراب بودن",
+      "mood": "sad",
+      "idea": "Split-screen/parallax montage: upstairs, glossy fingernails get hearts, camera flashes and a coffee-mug photo shoot; downstairs Number 9 gets only lint and a dangling thread. Hearts float up past him and don't stop. He tries to wave, nobody sees. Camera tilts up and down between the two worlds.",
+      "sfx": [
+        {
+          "k": "pop",
+          "t": 0.8
+        },
+        {
+          "k": "pop",
+          "t": 1.6
+        }
+      ]
+    },
+    {
+      "id": "break",
+      "text": "پس یه تصمیم گرفت: بیرون زدن!",
+      "mood": "angry",
+      "idea": "He stands up with determination, cracks his knuckles (cute), runs and headbutts the sock toe; fabric rips in slow-mo with threads flying; MATCH CUT: the camera flies through the hole like a portal into the next scene. Speed lines, screen shake.",
       "sfx": [
         {
           "k": "whoosh",
@@ -173,39 +86,119 @@
         },
         {
           "k": "pop",
-          "t": 0.7
+          "t": 1.4
+        }
+      ]
+    },
+    {
+      "id": "shoe",
+      "text": "از لابه‌لای کفش... تا رسید به یه جای عجیب",
+      "mood": "shock",
+      "idea": "One-take illusion: camera tracks beside Number 9 as he rolls and bounces like a ball through shoe-world: lace bridges, insole trampoline, sandal-strap swing, dropping down a staircase; clumsy comedy, camera whip-pans on each bounce, dust trails, ends with a door he crashes through.",
+      "sfx": [
+        {
+          "k": "whoosh",
+          "t": 0.0
+        },
+        {
+          "k": "pop",
+          "t": 0.8
+        },
+        {
+          "k": "pop",
+          "t": 1.6
+        }
+      ]
+    },
+    {
+      "id": "spa",
+      "text": "آب گرم، سوهان، و یه کم ناز",
+      "mood": "calm",
+      "idea": "Door bursts open to a bright pastel spa: warm foot-bath with bubbles, steam, soft ring light. A rubber-duck sidekick winks and points at the bath. Number 9 dips in, ahh face, foam hat, tiny sponge scrubs, file sparks like glitter. Warm color grade shift from cool blue to peach. Slow orbit.",
+      "sfx": [
+        {
+          "k": "chime",
+          "t": 0.2
         },
         {
           "k": "tick",
           "t": 1.6
+        }
+      ]
+    },
+    {
+      "id": "glow",
+      "text": "ژل، رنگ، براقی!",
+      "mood": "love",
+      "idea": "MOTION MAX beat-synced glow-up montage, a hard cut on each word: base coat sweep, lilac color wipe, sparkle gem pop. Final spin transformation: 360-degree orbit with a light-sweep reveals Number 9 glossy, lilac with a gem and a huge specular shine, star glints, camera flare.",
+      "sfx": [
+        {
+          "k": "pop",
+          "t": 0.2
+        },
+        {
+          "k": "pop",
+          "t": 0.7
         },
         {
           "k": "chime",
+          "t": 1.1
+        }
+      ]
+    },
+    {
+      "id": "walk",
+      "text": "و برای اولین بار... همه برگشتن نگاش کنن",
+      "mood": "happy",
+      "idea": "Catwalk on a sunny beach boardwalk: Number 9 strides in slow-motion wearing tiny sandals, crowd of fingernails (Number 7, Number 8, Gel, many colors) turn their heads, flash photography, confetti, parallax palm trees; camera tracks low and then cranes up. Wind in the sock hat.",
+      "sfx": [
+        {
+          "k": "chime",
+          "t": 0.2
+        },
+        {
+          "k": "pop",
+          "t": 1.5
+        },
+        {
+          "k": "pop",
           "t": 2.2
         }
       ]
     },
     {
-      "id": "twist",
-      "text": "ولی صبر کن... یکی داره از پا میاد",
+      "id": "heart",
+      "text": "شماره نُه دیگه نامرئی نبود",
+      "mood": "love",
+      "idea": "Emotional beat: close-up on Number 9, a happy tear and a smile, hearts bubbling up around him; slow pull-back reveals the whole foot with a ring-light halo and sparkles; the sock hole is patched with a little heart patch. Quiet, warm, rack focus.",
+      "sfx": [
+        {
+          "k": "chime",
+          "t": 0.3
+        }
+      ]
+    },
+    {
+      "id": "tease",
+      "text": "ولی یه سایه‌ی بزرگ‌تر داره میاد... شماره ده!",
       "mood": "shock",
-      "idea": "Quiet beat then twist: everything calm, then the whole frame rumbles; from the bottom edge a gigantic sleepy toenail blob, Number 9, in a tiny sock-hat slowly rises like a kaiju, sleepy eyes opening, lens flare behind it. Camera tilts up in awe, title sting 'ناخن شماره نُه'.",
+      "idea": "Sudden rumble: the sunny sky darkens, a giant shadow slides across the beach; the camera tilts up to a huge thumbnail blob silhouette blotting out the sun, thumbs-up pose, lens flare behind. Title sting. Everyone gasps, sand shakes, waves recede.",
       "sfx": [
         {
           "k": "error",
-          "t": 0.4
+          "t": 0.2
         },
         {
           "k": "whoosh",
-          "t": 1.5
+          "t": 1.4
         }
       ]
     },
     {
       "id": "cta",
-      "text": "تگ کن اونی رو که از استون می‌ترسه",
+      "text": "تگ کن اونی رو که ناخن پاش رو نادیده می‌گیره",
       "mood": "smug",
-      "idea": "Everyone (7, 8, Gel, sleepy 9) lines up and points at the viewer together; sparkling nail-lamp spotlight; quick match-cut loop back to the opening title; end-card @ayda.nailroom.",
+      "idea": "All the nails and the duck line up and point at the viewer; Number 9 winks and shows a sparkling shine; quick match-cut loop back to the dark sock cave of scene 1, now with a heart patch; end-card @ayda.nailroom.",
       "sfx": [
         {
           "k": "pop",
@@ -213,12 +206,12 @@
         },
         {
           "k": "chime",
-          "t": 1.4
+          "t": 1.5
         }
       ]
     }
   ],
-  "reelId": "03",
-  "renderer": "sequel",
-  "audioStyle": "cinematic"
+  "reelId": "04",
+  "renderer": "journey",
+  "audioStyle": "journey"
 }

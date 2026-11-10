@@ -1,0 +1,214 @@
+{
+ "title": "ناخن شماره ۹: از پا تا اوج",
+ "format": "Third episode but a new genre: heartwarming underdog story + glow-up makeover (Pixar-like warmth with comedy). Keep the cinematic bars/grain look from 02/03 but warmer. Built as ONE continuous 'camera journey' with match-cut portals through objects (sock hole, door, mirror-like shine). Beat-synced montage at 100 bpm for the glow-up. High motion: orbits, whip-pans, rack focus, parallax, speed ramps, squash-and-stretch. Cute, never scary.",
+ "hold": 0.7,
+ "endCardSeconds": 3,
+ "goal": "Emotional + shareable. 34-42 s. 1-second hook, glow-up transformation as the wow moment, a 'tag someone' CTA, and a tease for episode 5 (Number 10).",
+ "cast": [
+  {
+   "name": "Number 9",
+   "role": "hero",
+   "desc": "giant sleepy toenail blob, tiny sock hat, huge gentle eyes; after glow-up: glossy lilac with a gem"
+  },
+  {
+   "name": "Number 7",
+   "role": "cameo",
+   "desc": "tiny pink almond-nail blob with a bandage"
+  },
+  {
+   "name": "Number 8",
+   "role": "cameo",
+   "desc": "ruby-red rookie blob with sunglasses"
+  },
+  {
+   "name": "Gel",
+   "role": "cameo",
+   "desc": "glossy translucent-blue knight blob"
+  },
+  {
+   "name": "Ducky",
+   "role": "sidekick",
+   "desc": "rubber duck in the spa with a sly wink and a tiny towel"
+  },
+  {
+   "name": "Number 10",
+   "role": "tease",
+   "desc": "giant thumbnail blob silhouette, thumbs-up"
+  },
+  {
+   "name": "Fans",
+   "role": "crowd",
+   "desc": "colorful fingernail blobs with tiny glow-sticks and cameras"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "هیچ‌کس ناخن پا رو نمی‌بینه...",
+   "mood": "tired",
+   "idea": "Dark cozy sock cave, one dust-lit ray from a hole high above. Camera creeps in on Number 9, the giant sleepy toenail blob in a tiny sock hat, hugging his knees, a single sad blink. Through the hole, glimpses of bright fingernails getting compliments. Slow dolly-in, soft piano feel.",
+   "sfx": [
+    {
+     "k": "tick",
+     "t": 0.5
+    },
+    {
+     "k": "error",
+     "t": 1.8
+    }
+   ]
+  },
+  {
+   "id": "tired",
+   "text": "شماره نُه خسته بود... خسته از تو جوراب بودن",
+   "mood": "sad",
+   "idea": "Split-screen/parallax montage: upstairs, glossy fingernails get hearts, camera flashes and a coffee-mug photo shoot; downstairs Number 9 gets only lint and a dangling thread. Hearts float up past him and don't stop. He tries to wave, nobody sees. Camera tilts up and down between the two worlds.",
+   "sfx": [
+    {
+     "k": "pop",
+     "t": 0.8
+    },
+    {
+     "k": "pop",
+     "t": 1.6
+    }
+   ]
+  },
+  {
+   "id": "break",
+   "text": "پس یه تصمیم گرفت: بیرون زدن!",
+   "mood": "angry",
+   "idea": "He stands up with determination, cracks his knuckles (cute), runs and headbutts the sock toe; fabric rips in slow-mo with threads flying; MATCH CUT: the camera flies through the hole like a portal into the next scene. Speed lines, screen shake.",
+   "sfx": [
+    {
+     "k": "whoosh",
+     "t": 0.0
+    },
+    {
+     "k": "pop",
+     "t": 1.4
+    }
+   ]
+  },
+  {
+   "id": "shoe",
+   "text": "از لابه‌لای کفش... تا رسید به یه جای عجیب",
+   "mood": "shock",
+   "idea": "One-take illusion: camera tracks beside Number 9 as he rolls and bounces like a ball through shoe-world: lace bridges, insole trampoline, sandal-strap swing, dropping down a staircase; clumsy comedy, camera whip-pans on each bounce, dust trails, ends with a door he crashes through.",
+   "sfx": [
+    {
+     "k": "whoosh",
+     "t": 0.0
+    },
+    {
+     "k": "pop",
+     "t": 0.8
+    },
+    {
+     "k": "pop",
+     "t": 1.6
+    }
+   ]
+  },
+  {
+   "id": "spa",
+   "text": "آب گرم، سوهان، و یه کم ناز",
+   "mood": "calm",
+   "idea": "Door bursts open to a bright pastel spa: warm foot-bath with bubbles, steam, soft ring light. A rubber-duck sidekick winks and points at the bath. Number 9 dips in, ahh face, foam hat, tiny sponge scrubs, file sparks like glitter. Warm color grade shift from cool blue to peach. Slow orbit.",
+   "sfx": [
+    {
+     "k": "chime",
+     "t": 0.2
+    },
+    {
+     "k": "tick",
+     "t": 1.6
+    }
+   ]
+  },
+  {
+   "id": "glow",
+   "text": "ژل، رنگ، براقی!",
+   "mood": "love",
+   "idea": "MOTION MAX beat-synced glow-up montage, a hard cut on each word: base coat sweep, lilac color wipe, sparkle gem pop. Final spin transformation: 360-degree orbit with a light-sweep reveals Number 9 glossy, lilac with a gem and a huge specular shine, star glints, camera flare.",
+   "sfx": [
+    {
+     "k": "pop",
+     "t": 0.2
+    },
+    {
+     "k": "pop",
+     "t": 0.7
+    },
+    {
+     "k": "chime",
+     "t": 1.1
+    }
+   ]
+  },
+  {
+   "id": "walk",
+   "text": "و برای اولین بار... همه برگشتن نگاش کنن",
+   "mood": "happy",
+   "idea": "Catwalk on a sunny beach boardwalk: Number 9 strides in slow-motion wearing tiny sandals, crowd of fingernails (Number 7, Number 8, Gel, many colors) turn their heads, flash photography, confetti, parallax palm trees; camera tracks low and then cranes up. Wind in the sock hat.",
+   "sfx": [
+    {
+     "k": "chime",
+     "t": 0.2
+    },
+    {
+     "k": "pop",
+     "t": 1.5
+    },
+    {
+     "k": "pop",
+     "t": 2.2
+    }
+   ]
+  },
+  {
+   "id": "heart",
+   "text": "شماره نُه دیگه نامرئی نبود",
+   "mood": "love",
+   "idea": "Emotional beat: close-up on Number 9, a happy tear and a smile, hearts bubbling up around him; slow pull-back reveals the whole foot with a ring-light halo and sparkles; the sock hole is patched with a little heart patch. Quiet, warm, rack focus.",
+   "sfx": [
+    {
+     "k": "chime",
+     "t": 0.3
+    }
+   ]
+  },
+  {
+   "id": "tease",
+   "text": "ولی یه سایه‌ی بزرگ‌تر داره میاد... شماره ده!",
+   "mood": "shock",
+   "idea": "Sudden rumble: the sunny sky darkens, a giant shadow slides across the beach; the camera tilts up to a huge thumbnail blob silhouette blotting out the sun, thumbs-up pose, lens flare behind. Title sting. Everyone gasps, sand shakes, waves recede.",
+   "sfx": [
+    {
+     "k": "error",
+     "t": 0.2
+    },
+    {
+     "k": "whoosh",
+     "t": 1.4
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "text": "تگ کن اونی رو که ناخن پاش رو نادیده می‌گیره",
+   "mood": "smug",
+   "idea": "All the nails and the duck line up and point at the viewer; Number 9 winks and shows a sparkling shine; quick match-cut loop back to the dark sock cave of scene 1, now with a heart patch; end-card @ayda.nailroom.",
+   "sfx": [
+    {
+     "k": "pop",
+     "t": 0.3
+    },
+    {
+     "k": "chime",
+     "t": 1.5
+    }
+   ]
+  }
+ ]
+}
