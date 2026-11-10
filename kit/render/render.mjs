@@ -1,36 +1,57 @@
-// Deterministic frame-by-frame renderer: Playwright -> ffmpeg. Usage: node render.mjs [--test] [--fps=30] [--out=../out/nail-reel-01.mp4]
-import {chromium} from 'playwright';import {spawn,execFileSync} from 'node:child_process';
-import http from 'node:http';import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';
-const A=Object.fromEntries(process.argv.slice(2).map(a=>{const [k,v]=a.replace(/^--/,'').split('=');return [k,v??true]}));
-const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),FPS=+A.fps||30,OUT=path.resolve(ROOT,A.out||'out/nail-reel-01.mp4');
-const MIME={'.html':'text/html','.js':'text/javascript','.json':'application/json','.woff2':'font/woff2','.png':'image/png','.svg':'image/svg+xml','.jpg':'image/jpeg','.css':'text/css'};
-const srv=http.createServer((q,r)=>{let p=decodeURIComponent(q.url.split('?')[0]);if(p==='/')p='/src/index.html';
-  if(p.startsWith('/node_modules/'))p='/render'+p;const f=path.join(ROOT,p);
-  if(!f.startsWith(ROOT)||!fs.existsSync(f)||fs.statSync(f).isDirectory()){r.writeHead(404);return r.end()}
-  r.writeHead(200,{'content-type':MIME[path.extname(f)]||'application/octet-stream'});fs.createReadStream(f).pipe(r)}).listen(0);
-await new Promise(r=>srv.on('listening',r));
-const browser=await chromium.launch({args:['--force-color-profile=srgb','--use-angle=swiftshader','--enable-unsafe-swiftshader','--ignore-gpu-blocklist']});
-const page=await browser.newPage({viewport:{width:540,height:960},deviceScaleFactor:2});
-page.on('console',m=>console.log('[page]',m.text()));page.on('pageerror',e=>{console.error('[pageerror]',e);process.exitCode=1});
-await page.goto(`http://localhost:${srv.address().port}/`);await page.evaluate(()=>window.__ready);
-const dur=await page.evaluate(()=>window.__duration),secs=A.test?Math.min(3,dur):dur,N=Math.ceil(secs*FPS);
-const audio=['audio/mix.wav','audio/music.mp3','audio/music.wav'].map(f=>path.join(ROOT,f)).find(fs.existsSync);
-fs.mkdirSync(path.dirname(OUT),{recursive:true});
-const args=['-y','-f','image2pipe','-framerate',String(FPS),'-i','-',...(audio?['-i',audio]:[]),
- '-c:v','libx264','-preset','slow','-crf','16','-profile:v','high','-pix_fmt','yuv420p','-r',String(FPS),'-movflags','+faststart',
- ...(audio?['-c:a','aac','-b:a','192k','-ar','48000','-af',`afade=t=out:st=${Math.max(0,secs-1.2)}:d=1.2`,'-t',String(secs)]:['-an']),OUT];
-const ff=spawn('ffmpeg',args,{stdio:['pipe','inherit','inherit']});
-const done=new Promise(r=>ff.on('close',r));
-const frames=path.join(ROOT,'out/frames');fs.mkdirSync(frames,{recursive:true});
-const keep=new Set([0,Math.floor(N*.5)]);const every=Math.max(1,Math.floor(N/24));
-for(let f=0;f<N;f++){
+// Deterministic seek -> screenshot -> checked ffmpeg stream. No wall-clock capture.
+import {spawn,execFileSync} from 'node:child_process';
+import fs from 'node:fs';
+import path from 'node:path';
+import {once} from 'node:events';
+import {ROOT,serve,openScene,ffmpegPath} from './lib.mjs';
+const args=Object.fromEntries(process.argv.slice(2).map(a=>{const [k,v]=a.replace(/^--/,'').split('=');return[k,v??true];}));
+const FPS=Number(args.fps||30);
+if(!Number.isFinite(FPS)||FPS<1||FPS>60)throw new Error('FPS must be 1–60');
+const OUT=path.resolve(ROOT,args.out||`out/${args.test?'smoke-test':'nail-reel-01'}.mp4`);
+const FFMPEG=ffmpegPath(),server=await serve();let browser,ff;
+fs.mkdirSync(path.join(ROOT,'out'),{recursive:true});
+for(const name of ['storyboard.md','REPORT.md']){const source=path.join(ROOT,'docs',name);if(fs.existsSync(source))fs.copyFileSync(source,path.join(ROOT,'out',name));}
+try{
+ const session=await openScene(server);browser=session.browser;const {page,errors}=session;
+ const cdp=await page.context().newCDPSession(page);
+ const duration=await page.evaluate(()=>window.__duration),secs=args.test?Math.min(3,duration):duration;
+ const frames=Math.ceil(secs*FPS);
+ const audio=path.join(ROOT,'audio/mix.wav');
+ if(!fs.existsSync(audio))throw new Error('Missing audio/mix.wav. Run audio/make_audio.py first.');
+ fs.mkdirSync(path.dirname(OUT),{recursive:true});
+ const command=['-hide_banner','-loglevel','warning','-y','-f','image2pipe','-framerate',String(FPS),'-i','-',
+  '-i',audio,'-map','0:v:0','-map','1:a:0','-c:v','libx264','-preset','medium','-threads','2','-crf','18',
+  '-profile:v','high','-level:v','4.2','-pix_fmt','yuv420p','-r',String(FPS),
+  '-vf','scale=iw:ih:in_range=full:out_range=limited:out_color_matrix=bt709,format=yuv420p,sidedata=mode=delete:type=ICC_PROFILE','-color_range','tv',
+  '-x264-params','colorprim=bt709:transfer=bt709:colormatrix=bt709:fullrange=off','-color_primaries','bt709','-color_trc','bt709','-colorspace','bt709',
+  '-c:a','aac','-b:a','192k','-ar','48000','-t',String(secs),'-movflags','+faststart',OUT];
+ ff=spawn(FFMPEG,command,{stdio:['pipe','ignore','pipe']});
+ let stderr='';ff.stderr.on('data',b=>{stderr+=b;});
+ let spawnError;ff.on('error',e=>{spawnError=e;});
+ const done=new Promise(resolve=>ff.once('close',(code)=>resolve(code)));
+ const pipeErrors=[];ff.stdin.on('error',e=>pipeErrors.push(e));
+ const sampled=[];const sampleDir=path.join(ROOT,'out',args.test?'smoke-frames':'frames');
+ fs.mkdirSync(sampleDir,{recursive:true});
+ for(const f of fs.readdirSync(sampleDir))if(/^f\d+\.jpg$/.test(f))fs.unlinkSync(path.join(sampleDir,f));
+ const sampleAt=new Set(Array.from({length:24},(_,i)=>Math.min(frames-1,Math.round(i*(frames-1)/23))));
+ for(let f=0;f<frames;f++){
+  if(spawnError)throw spawnError;
+  if(ff.exitCode!==null||pipeErrors.length)throw new Error('Encoder exited early: '+stderr);
   await page.evaluate(t=>window.__seek(t),f/FPS);
-  const buf=await page.screenshot({type:'png'});
-  if(!ff.stdin.write(buf))await new Promise(r=>ff.stdin.once('drain',r));
-  if(f%every===0)fs.writeFileSync(path.join(frames,`f${String(f).padStart(5,'0')}.png`),buf);
-  if(f%60===0)console.log(`frame ${f}/${N}`);
-}
-ff.stdin.end();await done;await browser.close();srv.close();
-try{execFileSync('ffmpeg',['-y','-pattern_type','glob','-i',path.join(frames,'f*.png'),'-vf','scale=216:-1,tile=6x4','-frames:v','1',path.join(ROOT,'out/contact-sheet.png')])}catch(e){console.error('contact sheet failed')}
-try{execFileSync('ffmpeg',['-y','-ss','0.8','-i',OUT,'-frames:v','1',path.join(ROOT,'out/cover.png')])}catch(e){}
-console.log('DONE ->',OUT);
+  const capture=await cdp.send('Page.captureScreenshot',{format:'jpeg',quality:96,fromSurface:true,clip:{x:0,y:0,width:540,height:960,scale:2},optimizeForSpeed:true});
+  const buf=Buffer.from(capture.data,'base64');
+  if(sampleAt.has(f)){const file=path.join(sampleDir,`f${String(f).padStart(5,'0')}.jpg`);fs.writeFileSync(file,buf);sampled.push(file);}
+  if(!ff.stdin.write(buf))await Promise.race([once(ff.stdin,'drain'),done.then(c=>{throw new Error(`Encoder stopped ${c}: ${stderr}`);})]);
+  if(f%90===0)console.log(`frame ${f}/${frames} (${(100*f/frames).toFixed(0)}%)`);
+ }
+ ff.stdin.end();const code=await done;
+ if(code!==0)throw new Error(`ffmpeg exit ${code}: ${stderr}`);
+ if(errors.length)throw new Error(errors.join('\n'));
+ if(!args.test){
+  execFileSync(FFMPEG,['-hide_banner','-loglevel','error','-y','-framerate','1','-pattern_type','glob','-i',path.join(sampleDir,'f*.jpg'),
+   '-vf','scale=216:384,tile=6x4:padding=8:margin=8:color=0x211c33','-frames:v','1',path.join(ROOT,'out/contact-sheet.png')]);
+ }
+ const manifest={file:path.relative(ROOT,OUT),duration:secs,fps:FPS,frames,width:1080,height:1920,bytes:fs.statSync(OUT).size,codec:'H.264 High / yuv420p',audio:'AAC stereo 48 kHz',samples:sampled.map(f=>path.relative(ROOT,f))};
+ fs.writeFileSync(path.join(ROOT,'out',args.test?'smoke-render.json':'render-manifest.json'),JSON.stringify(manifest,null,2));
+ console.log('DONE',JSON.stringify(manifest,null,2));
+}finally{if(ff&&ff.exitCode===null)ff.kill('SIGTERM');await browser?.close();await new Promise(r=>server.close(r));}

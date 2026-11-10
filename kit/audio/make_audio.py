@@ -1,68 +1,204 @@
 #!/usr/bin/env python3
-"""Builds voice (optional), music bed, SFX and the final mix. Writes out/timing.json (word timings + scene durations) and audio/mix.wav.
-Run from repo root:  python3 audio/make_audio.py   (pip install edge-tts numpy ; needs ffmpeg/ffprobe)
-Voice = synthetic only. If TTS is unavailable it silently falls back to music+SFX and wordDuration timing."""
-import json,subprocess,asyncio,os,wave,math,random
+"""Original instrumental score + timed SFX; bounded optional synthetic Persian TTS.
+No external tracks. Run from any directory. Audio metadata explicitly reports fallback.
+"""
+import asyncio
+import json
+import math
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import wave
 import numpy as np
-R=os.path.dirname(os.path.dirname(os.path.abspath(__file__)));J=lambda *a:os.path.join(R,*a)
-SC=json.load(open(J('input','scenario.json'),encoding='utf-8'));BR=json.load(open(J('brand.json'),encoding='utf-8'))
-HOLD=SC.get('hold',1.0);END=SC.get('endCardSeconds',3);SR=48000;WD=BR['wordDuration']
-os.makedirs(J('out','audio'),exist_ok=True)
-def dur(f):return float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0',f]).decode())
-async def tts(text,path):
+
+ROOT = Path(__file__).resolve().parents[1]
+SR = 48000
+SC = json.loads((ROOT / 'input/scenario.json').read_text())
+BR = json.loads((ROOT / 'brand.json').read_text())
+OUT = ROOT / 'out'
+OUT.mkdir(exist_ok=True)
+(OUT / 'audio').mkdir(exist_ok=True)
+DEFAULTS = {'hook': 3.4, 'short': 4, 'simple': 5, 'hurry': 4.2,
+            'photo': 4, 'trust': 4.5, 'payoff': 4, 'cta': 2.9}
+
+def ffmpeg():
+    if os.getenv('FFMPEG_PATH'):
+        return os.environ['FFMPEG_PATH']
+    if shutil.which('ffmpeg'):
+        return shutil.which('ffmpeg')
+    import imageio_ffmpeg
+    return imageio_ffmpeg.get_ffmpeg_exe()
+
+async def tts(text, path):
     import edge_tts
-    c=edge_tts.Communicate(text,BR['voice']['voice'],rate=BR['voice'].get('rate','+0%'),boundary='WordBoundary');w=[]
-    with open(path,'wb') as f:
-        async for ch in c.stream():
-            if ch['type']=='audio':f.write(ch['data'])
-            elif ch['type']=='WordBoundary':w.append({'w':ch['text'],'t0':ch['offset']/1e7,'t1':(ch['offset']+ch['duration'])/1e7})
-    return w
-timing={};voices=[];t=0.0
-for s in SC['scenes']:
-    words=None;vf=None
-    if BR['voice']['enabled']:
+    communicate = edge_tts.Communicate(text, BR['voice']['voice'],
+                                     rate=BR['voice'].get('rate', '+0%'), boundary='WordBoundary')
+    words = []
+    with open(path, 'wb') as f:
+        async for chunk in communicate.stream():
+            if chunk['type'] == 'audio':
+                f.write(chunk['data'])
+            elif chunk['type'] == 'WordBoundary':
+                words.append({'w': chunk['text'], 't0': chunk['offset'] / 1e7 + .15,
+                              't1': (chunk['offset'] + chunk['duration']) / 1e7 + .15})
+    return words
+
+voice_ok = BR['voice']['enabled'] and not os.getenv('NO_TTS')
+voice_failure = 'disabled by configuration' if not voice_ok else None
+voices = []
+timing = {}
+clock = 0
+for scene in SC['scenes']:
+    dur = scene.get('dur', DEFAULTS.get(scene['id'], max(3, len(scene['text'].split()) * .34 + .6)))
+    voice = None
+    words = None
+    if voice_ok:
+        target = OUT / 'audio' / (scene['id'] + '.mp3')
         try:
-            vf=J('out','audio',s['id']+'.mp3');words=asyncio.run(tts(s['text'],vf));d=dur(vf)
+            words = asyncio.run(asyncio.wait_for(tts(scene['text'], target), timeout=8))
+            raw = subprocess.check_output([ffmpeg(), '-v', 'error', '-i', str(target), '-f', 'f32le',
+                                           '-ac', '1', '-ar', str(SR), '-'])
+            voice = np.frombuffer(raw, dtype=np.float32)
             if not words:
-                toks=s['text'].split();step=d/len(toks);words=[{'w':x,'t0':i*step,'t1':(i+1)*step} for i,x in enumerate(toks)]
-            words=[{'w':x['w'],'t0':x['t0']+.15,'t1':x['t1']+.15} for x in words];sd=d+.15+HOLD
-        except Exception as e:
-            print('TTS unavailable ->',e);vf=None;words=None;BR['voice']['enabled']=False
+                raise ValueError('No word boundaries returned')
+            dur = max(dur, len(voice) / SR + .4)
+        except Exception as exc:
+            voice_ok = False
+            voice_failure = type(exc).__name__ + ': ' + str(exc)
+            print('Synthetic TTS unavailable; using disclosed instrumental fallback:', voice_failure)
+            target.unlink(missing_ok=True)
+            words = None
+            voice = None
     if not words:
-        toks=s['text'].split();words=[{'w':x,'t0':.15+i*WD,'t1':.15+(i+1)*WD} for i,x in enumerate(toks)];sd=s.get('dur') or words[-1]['t1']+HOLD
-    timing[s['id']]={'words':words,'dur':sd};voices.append((t,vf));t+=sd
-total=t+END;json.dump(timing,open(J('out','timing.json'),'w'),ensure_ascii=False,indent=1)
-N=int(total*SR);mix=np.zeros((N,2),dtype=np.float32)
-def add(x,at,g=1.0):
-    i=int(at*SR);x=x[:max(0,N-i)];mix[i:i+len(x)]+=(x[:,None]*g if x.ndim==1 else x*g)
-def env(n,a=.005,r=.3):e=np.ones(n);k=int(a*SR);e[:k]=np.linspace(0,1,k);m=int(r*n);e[-m:]=np.linspace(1,0,m);return e
-def tone(f,d,w='sin'):x=np.arange(int(d*SR))/SR;y=np.sin(2*math.pi*f*x);return y*env(len(y))
-SFX={'pop':lambda:tone(520,.12)*np.exp(-np.arange(int(.12*SR))/SR*25),'chime':lambda:(tone(1046,.9)+.6*tone(1568,.9))*.5,
- 'tick':lambda:np.random.RandomState(1).randn(int(.04*SR))*np.exp(-np.arange(int(.04*SR))/SR*120)*.6,
- 'error':lambda:tone(180,.35)*np.sign(np.sin(np.arange(int(.35*SR))/SR*60)),
- 'whoosh':lambda:np.convolve(np.random.RandomState(2).randn(int(.5*SR)),np.ones(60)/60,'same')*np.sin(np.linspace(0,math.pi,int(.5*SR)))*.8}
-st=0.0
-for s in SC['scenes']:
-    for e in s.get('sfx',[]):
-        if e['k'] in SFX:add(SFX[e['k']]().astype(np.float32),st+e['t'],.35)
-    st+=timing[s['id']]['dur']
+        tokens = scene['text'].split()
+        weights = [1 + min(.6, len(w) * .025) + (.5 if '...' in w else 0) for w in tokens]
+        step = (dur - .55) / sum(weights)
+        cursor = .15
+        words = []
+        for word, weight in zip(tokens, weights):
+            words.append({'w': word, 't0': round(cursor, 4), 't1': round(cursor + step * weight, 4)})
+            cursor += step * weight
+    timing[scene['id']] = {'words': words, 'dur': dur}
+    voices.append((clock, voice))
+    clock += dur
+TOTAL = clock + SC.get('endCardSeconds', 3)
+(OUT / 'timing.json').write_text(json.dumps(timing, ensure_ascii=False, indent=2))
+N = round(TOTAL * SR)
+music = np.zeros((N, 2), np.float32)
+fx = np.zeros_like(music)
+voice_track = np.zeros_like(music)
+rng = np.random.default_rng(1621)
+
+def add(track, signal, at, gain=1, pan=0):
+    start = round(at * SR)
+    if start < 0 or start >= N:
+        return
+    signal = signal[:N-start]
+    track[start:start+len(signal), 0] += signal * gain * math.sqrt((1-pan)/2)
+    track[start:start+len(signal), 1] += signal * gain * math.sqrt((1+pan)/2)
+
+def pluck(freq, seconds=.55, bright=1):
+    x = np.arange(round(seconds * SR)) / SR
+    attack = np.minimum(1, x / .004)
+    y = np.sin(2*math.pi*freq*x)*np.exp(-x*7)
+    y += .24*bright*np.sin(2*math.pi*freq*2.003*x)*np.exp(-x*12)
+    y += .09*bright*np.sin(2*math.pi*freq*3.98*x)*np.exp(-x*18)
+    return y * attack
+
+def softpad(freq, seconds):
+    x = np.arange(round(seconds * SR)) / SR
+    env = np.minimum(1, x/.12) * np.minimum(1, (seconds-x)/.3)
+    return (np.sin(2*math.pi*freq*x) + .12*np.sin(2*math.pi*freq*2*x)) * env * .2
+
+def sfx(kind):
+    if kind in ('pop', 'tap'):
+        x=np.arange(round(.14*SR))/SR
+        return np.sin(2*np.pi*(520*x-900*x*x))*np.exp(-x*32)*np.minimum(1,x/.002)
+    if kind=='tick':
+        x=np.arange(round(.055*SR))/SR
+        return rng.standard_normal(len(x))*np.exp(-x*130)*.35
+    if kind=='whoosh':
+        x=np.arange(round(.38*SR))/SR
+        noise=np.convolve(rng.standard_normal(len(x)),np.ones(35)/35,mode='same')
+        return noise*np.sin(np.linspace(0,np.pi,len(x)))
+    if kind=='error':
+        x=np.arange(round(.32*SR))/SR
+        f=np.where(x<.14,246.94,196)
+        return np.sin(2*np.pi*np.cumsum(f)/SR)*np.exp(-x*6)*np.minimum(1,x/.006)*.5
+    if kind=='chime':
+        return pluck(1046.5,.8,.8)+.55*pluck(1567.98,.8,.8)
+    raise ValueError('Unknown SFX '+kind)
+
+# Original light bossa / music-box bed, Amaj7–F#m7–Dmaj7–E6, 100 bpm.
+beat = 60 / BR['music']['bpm']
+chords = [[220,277.18,329.63,415.3], [185,220,277.18,329.63],
+          [146.83,185,220,277.18], [164.81,207.65,246.94,329.63]]
 if BR['music']['enabled']:
-    bpm=BR['music']['bpm'];beat=60/bpm;ch=[[220,277,330],[196,247,294],[175,220,262],[196,247,294]];m=np.zeros((N,2),dtype=np.float32);n=0
-    while n*beat*2<total:
-        for f in ch[n%4]:
-            x=tone(f,beat*2.2)*.5+tone(f*2,beat*2.2)*.15;i=int(n*beat*2*SR);x=x[:max(0,N-i)];m[i:i+len(x),0]+=x;m[i:i+len(x),1]+=x
-        n+=1
-    k=np.zeros(int(.2*SR));k=np.sin(2*math.pi*(60+80*np.exp(-np.arange(len(k))/SR*30))*np.arange(len(k))/SR)*np.exp(-np.arange(len(k))/SR*14)
+    bar=0
+    while bar*4*beat<TOTAL:
+        at=bar*4*beat
+        chord=chords[bar%4]
+        for note in chord:
+            add(music,softpad(note,4*beat+.3),at,.12,pan=.15)
+        for b in range(8):
+            note=chord[[0,2,1,3,2,1,3,2][b]]*2
+            add(music,pluck(note,.7),at+b*beat/2,.12,pan=(-.4 if b%2 else .4))
+        for b in (0,2):
+            add(music,pluck(chord[0]/2,.9,.1),at+b*beat,.23)
+        bar+=1
     b=0
-    while b*beat<total:
-        i=int(b*beat*SR);x=k[:max(0,N-i)]*.5
-        if b%2==0:m[i:i+len(x),0]+=x;m[i:i+len(x),1]+=x
+    while b*beat<TOTAL:
+        x=np.arange(round(.2*SR))/SR
+        kick=np.sin(2*np.pi*(52*x + .4*(1-np.exp(-x*50))))*np.exp(-x*25)
+        if b%2==0:
+            add(music,kick,b*beat,.15)
+        else:
+            brush=rng.standard_normal(len(x))*np.exp(-x*40)*np.minimum(1,x/.004)
+            add(music,brush,b*beat,.018,pan=.2)
         b+=1
-    m*=BR['music']['volume']/max(1e-6,np.abs(m).max());mix+=m
-for at,vf in voices:
-    if vf:
-        raw=subprocess.check_output(['ffmpeg','-v','error','-i',vf,'-f','f32le','-ac','1','-ar',str(SR),'-'])
-        add(np.frombuffer(raw,dtype=np.float32),at+.15,.9)
-mix*=min(1,.95/max(1e-6,np.abs(mix).max()))
-out=J('audio','mix.wav');w=wave.open(out,'wb');w.setnchannels(2);w.setsampwidth(2);w.setframerate(SR);w.writeframes((mix*32767).astype('<i2').tobytes());w.close()
-print('mix ->',out,'total',round(total,2),'s')
+    music *= BR['music']['volume'] / max(1e-6, float(np.max(np.abs(music))))
+clock=0
+for scene in SC['scenes']:
+    for effect in scene.get('sfx', []):
+        add(fx,sfx(effect['k']),clock+effect['t'],.25,pan=.12*math.sin(clock))
+    # A quiet page-turn click makes reading rhythm tangible without mimicking speech.
+    add(fx,sfx('tick'),clock,.04)
+    clock+=timing[scene['id']]['dur']
+for at,voice in voices:
+    if voice is not None:
+        add(voice_track,voice,at+.15,1.15)
+        start=round((at+.1)*SR);stop=min(N,start+len(voice)+round(.3*SR))
+        music[start:stop]*=.34
+# Uplift for the warm payoff, not a downloaded recording.
+payoff=sum(timing[s['id']]['dur'] for s in SC['scenes'][:6])
+for i,note in enumerate([659.25,830.61,987.77,1318.51]):
+    add(fx,pluck(note,1.1),payoff+i*.1,.12,pan=(i-1.5)*.2)
+combined=music+fx+voice_track
+combined*=min(1, .89/max(1e-6,float(np.max(np.abs(combined)))))
+# Tiny boundary ramps avoid digital clicks, without a long dead fade.
+fade=round(.025*SR)
+combined[:fade]*=np.linspace(0,1,fade)[:,None]
+combined[-fade:]*=np.linspace(1,0,fade)[:,None]
+with wave.open(str(ROOT/'audio/mix.wav'),'wb') as f:
+    f.setnchannels(2);f.setsampwidth(2);f.setframerate(SR)
+    f.writeframes((combined*32767).astype('<i2').tobytes())
+# Broadcast-style loudness master. This is original synthesized music, not an external asset.
+master = ROOT/'audio/mix-master.wav'
+mastering = subprocess.run([ffmpeg(), '-hide_banner', '-loglevel', 'info', '-y',
+                           '-i', str(ROOT/'audio/mix.wav'), '-af',
+                           'loudnorm=I=-18:TP=-1.5:LRA=7:print_format=json',
+                           '-ar', str(SR), '-c:a', 'pcm_s16le', '-t', str(TOTAL), str(master)],
+                          capture_output=True, text=True, check=True)
+os.replace(master, ROOT/'audio/mix.wav')
+with wave.open(str(ROOT/'audio/mix.wav'), 'rb') as f:
+    mastered = np.frombuffer(f.readframes(f.getnframes()), dtype='<i2').astype(np.float32)/32768
+loudness, _ = json.JSONDecoder().raw_decode(mastering.stderr[mastering.stderr.rfind('{'):])
+metadata={'duration':TOTAL,'sampleRate':SR,'peakDbFS':round(20*math.log10(max(1e-9,float(np.max(np.abs(mastered))))),2),
+          'mastering':'FFmpeg loudnorm: -18 LUFS / -1.5 dBTP / LRA 7','loudness':loudness,
+          'voiceUsed':any(v is not None for _,v in voices),'voiceFailure':voice_failure,
+          'timingMode':'tts-boundaries' if all(v is not None for _,v in voices) else 'reading-timing',
+          'music':'Original deterministic synthesized bossa/music-box; no external recordings',
+          'seed':1621}
+(OUT/'audio-status.json').write_text(json.dumps(metadata,ensure_ascii=False,indent=2))
+print(json.dumps(metadata,ensure_ascii=False,indent=2))

@@ -1,1 +1,21 @@
-{"name":"nail-reel-render","private":true,"type":"module","dependencies":{"playwright":"^1.48.0","gsap":"^3.12.5","vazirmatn":"^33.0.3"}}
+{
+  "name": "nail-reel-render",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@sparticuz/chromium": "^143.0.4",
+    "playwright": "^1.58.2",
+    "pngjs": "^7.0.0",
+    "vazirmatn": "^33.0.3"
+  },
+  "scripts": {
+    "start": "node serve.mjs",
+    "audio": "../../.venv/bin/python ../audio/make_audio.py",
+    "stills": "node stills.mjs",
+    "test": "node qa.mjs",
+    "smoke": "node render.mjs --test",
+    "render": "node render.mjs",
+    "export": "node export.mjs",
+    "test:web": "node preview-test.mjs"
+  }
+}
