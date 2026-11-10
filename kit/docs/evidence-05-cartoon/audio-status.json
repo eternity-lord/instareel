@@ -1,0 +1,25 @@
+{
+  "duration": 38.0,
+  "sampleRate": 48000,
+  "bpm": 84,
+  "voiceUsed": false,
+  "voiceReason": "User requested narration removal; no voice file opened or mixed.",
+  "sfxUsed": true,
+  "music": "Original gentle instrumental: warm sine pads and soft piano-like arpeggio, no external recording.",
+  "timingMode": "Reading-timed captions on a new cartoon animation; no voice or spoken alignment",
+  "lastWordHoldMinimum": 0.9,
+  "mastering": "-20 LUFS / -3 dBTP / LRA 7",
+  "loudness": {
+    "input_i": "-22.74",
+    "input_tp": "-11.62",
+    "input_lra": "2.20",
+    "input_thresh": "-32.76",
+    "output_i": "-19.94",
+    "output_tp": "-9.03",
+    "output_lra": "2.00",
+    "output_thresh": "-29.95",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.06"
+  },
+  "revision": "cartoon educational edition; music and gentle timed SFX, no narrator"
+}

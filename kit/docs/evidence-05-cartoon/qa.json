@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "duration": 38,
+  "scenes": [
+    {
+      "scene": "hook",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "d75bf0cdaf906f23cea75cf1dd77fbafde87bb95a11620cc3d622690ea3a899f"
+    },
+    {
+      "scene": "oil",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "90222f9d31314c679dfff007eabd309ad84045d7da4125370018d595f6f925bd"
+    },
+    {
+      "scene": "skin",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "a39780d24387cca32a7148f909d8826f7d5e691e0129878b0ac7f272e2c33322"
+    },
+    {
+      "scene": "thick",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "8a68c04e7d6ea3cc834455bead3eabdb985354c43b03117d248c84c7f955fc3c"
+    },
+    {
+      "scene": "seal",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "5e08a5becc75b2570672e86ff3e12a5fbb0b426ae5882c5392c35d49ca0697c1"
+    },
+    {
+      "scene": "tool",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "006a86eb0dd150692a1ec44d8336a7d5da6ea4a5452a47bae1197da5ed24bf1e"
+    },
+    {
+      "scene": "fix",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "06487b94afa9acd3312cfff3113fb86ee66ce61958807e391a1a23e857a9f1eb"
+    },
+    {
+      "scene": "cta",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "41e6468e0414b2f11bd7c3d9afcd00351d4d31bfd4f32156f34017d7991987b0"
+    }
+  ],
+  "checkedWords": 57,
+  "trailerHeadingRemoved": true,
+  "captionSafeZones": true,
+  "localFont": true,
+  "noEmoji": true,
+  "loopBoundaryDomIdentical": true,
+  "loopRaster": {
+    "maxChannelDelta": 0,
+    "meanChannelDelta": 0,
+    "fractionOver5": 0
+  },
+  "activeCssAnimations": 0,
+  "browserErrors": []
+}

@@ -1,3 +1,5 @@
+> **نسخهٔ کارتونی جدید ۰۵:** پیوست تازه، برخلاف راهنمای ماکروی پایین، جهان کارتونی را خواسته است. renderer فعال `education` و خروجی مستقل `nail-reel-05-cartoon.mp4` است. [راهنمای آن](docs/reel-05-cartoon-guide.md) مرجع اجرای فعلی است؛ راهنمای ماکرو و فایل قبلی برای نسخهٔ جداگانه حفظ شده‌اند. نریشن خاموش است.
+
 # nail-reel-kit — studio brief for the coding agent
 
 The owner gives you **scenes** (`input/scenario.json`) and **reference video/images** (`input/refs/`). **Everything else is yours**: story expansion, characters, illustration, animation, sound, rendering. Do not ask questions; decide, build, verify, and report. Target: the most professional result you can produce. The reel is for **@ayda.nailroom** (Instagram) and must be able to earn views.
