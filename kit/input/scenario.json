@@ -1,0 +1,177 @@
+{
+ "title": "اولین روز بعد از ناخن جدید",
+ "fps": 30,
+ "hold": 1.0,
+ "endCardSeconds": 3,
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "تازه ناخن کاشتی و عاشقشون شدی",
+   "mood": "love",
+   "sfx": [
+    {
+     "k": "chime",
+     "t": 0.1
+    }
+   ],
+   "idea": "Nailie bounces into a warm studio-light frame; nails catch a specular sweep; sparkles and floating drawn hearts; camera slow push-in."
+  },
+  {
+   "id": "light",
+   "text": "انقدر که هی دستت رو جلوی نور می‌گیری",
+   "mood": "happy",
+   "sfx": [
+    {
+     "k": "whoosh",
+     "t": 0.0
+    }
+   ],
+   "idea": "Window light shaft with dust particles; hand sways and rotates into the beam, nails flare (bloom + star glints); parallax curtains."
+  },
+  {
+   "id": "phone",
+   "text": "ده دقیقه بعد می‌خوای گوشی رو باز کنی",
+   "mood": "happy",
+   "sfx": [
+    {
+     "k": "tap",
+     "t": 1.6
+    }
+   ],
+   "idea": "Phone glides in with glow; lock screen with drawn lock icon and clock; finger approaches with anticipation and taps."
+  },
+  {
+   "id": "phone-fail",
+   "text": "ولی صفحه اصلاً ناخن رو نمی‌فهمه",
+   "mood": "angry",
+   "sfx": [
+    {
+     "k": "error",
+     "t": 0.3
+    }
+   ],
+   "idea": "Phone buzzes and shakes, red X pops with ripple; anger marks, steam puffs; nail clicks on glass without response; camera shake."
+  },
+  {
+   "id": "can",
+   "text": "قوطی نوشابه؟ ماموریت غیرممکن",
+   "mood": "shock",
+   "sfx": [
+    {
+     "k": "tick",
+     "t": 0.4
+    }
+   ],
+   "idea": "Metallic can with condensation drops; nail slips under the tab repeatedly, tab clinks back; fizz bubbles; dramatic zoom on the tab."
+  },
+  {
+   "id": "zipper",
+   "text": "زیپ و دکمه هم که دیگه هیچی",
+   "mood": "tired",
+   "sfx": [
+    {
+     "k": "whoosh",
+     "t": 0.0
+    }
+   ],
+   "idea": "Jacket close-up; zipper slider gets stuck on fabric, nail can't pinch the button; defeated slump; camera pans down the zip."
+  },
+  {
+   "id": "planning",
+   "text": "حتی دستشویی رفتن هم برنامه‌ریزی می‌خواد",
+   "mood": "tired",
+   "sfx": [
+    {
+     "k": "tick",
+     "t": 0.3
+    },
+    {
+     "k": "tick",
+     "t": 0.8
+    }
+   ],
+   "idea": "Big clock face, spinning hands; drawn checklist items tick in; Nailie reviewing a step plan with a tiny whiteboard; comedic timing."
+  },
+  {
+   "id": "typing",
+   "text": "تایپ؟ هر پیام سه تا غلط املایی",
+   "mood": "angry",
+   "sfx": [
+    {
+     "k": "tick",
+     "t": 0.2
+    },
+    {
+     "k": "tick",
+     "t": 0.5
+    }
+   ],
+   "idea": "Keyboard in perspective, nails clacking wrong keys; letters fly out as typo bubbles with red underline; screen-shake on each error."
+  },
+  {
+   "id": "thread",
+   "text": "یه تار پشمی و همه‌چی تموم می‌شه",
+   "mood": "shock",
+   "sfx": [
+    {
+     "k": "whoosh",
+     "t": 0.0
+    },
+    {
+     "k": "pop",
+     "t": 1.4
+    }
+   ],
+   "idea": "Sweater sleeve with a loose yarn thread; nail snags, thread stretches (elastic physics), freeze-frame, 'comic burst' with exclamation; zoom-punch."
+  },
+  {
+   "id": "mirror",
+   "text": "ولی همین که تو آینه نگاشون می‌کنی",
+   "mood": "calm",
+   "sfx": [
+    {
+     "k": "chime",
+     "t": 0.3
+    }
+   ],
+   "idea": "Soft golden mirror with bloom; calm music swell; slow motion nail sparkles; depth-of-field; reflection of the hand."
+  },
+  {
+   "id": "joy",
+   "text": "همه‌ی سختی‌ها یادت می‌ره",
+   "mood": "love",
+   "sfx": [
+    {
+     "k": "pop",
+     "t": 0.2
+    }
+   ],
+   "idea": "Confetti cannon, drawn hearts, hand dances with squash and stretch; background palette warms; camera orbit."
+  },
+  {
+   "id": "cta",
+   "text": "ناخن خوشگل یعنی درد می‌کشیم ولی شیک! این رو برای دوستت بفرست",
+   "mood": "smug",
+   "sfx": [
+    {
+     "k": "chime",
+     "t": 0.2
+    }
+   ],
+   "idea": "Nailie points to a share arrow; button pulse; transitions into end-card: logo-style @ayda.nailroom, 'فالو کن' CTA, nails sparkle; loop back to scene 1 pose."
+  }
+ ],
+ "cast": [
+  {
+   "name": "Nailie",
+   "role": "hero",
+   "desc": "round pink blob, tiny nail-brush antenna with a gel-drop tip, big glossy eyes, long glossy almond-nail hands used in close-ups"
+  },
+  {
+   "name": "Client",
+   "role": "secondary",
+   "desc": "round peach blob with a small bottle-cap tuft, round glasses optional, expressive brows"
+  }
+ ],
+ "note": "EXAMPLE. Replace with your own scenes. Only 'text' is required per scene; 'idea', 'mood', 'sfx' are optional hints and the agent must fill gaps itself."
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=540,height=960">
+<style>
+@font-face{font-family:Vazirmatn;font-weight:800;src:url(/assets/fonts/Vazirmatn-ExtraBold.woff2)}
+@font-face{font-family:Vazirmatn;font-weight:500;src:url(/assets/fonts/Vazirmatn-Medium.woff2)}
+*{margin:0;box-sizing:border-box}html,body{background:#000}
+#stage{width:540px;height:960px;position:relative;overflow:hidden;font-family:Vazirmatn,sans-serif;color:#fff}
+#scene{position:absolute;inset:0}
+#cap{position:absolute;top:125px;inset-inline:28px;text-align:center;font-weight:800;font-size:34px;line-height:1.85;z-index:5;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+.w{display:inline-block;padding:0 7px;margin:0 2px;border-radius:9px}
+.w.on{background:#f5b73b;color:#1d2150;text-shadow:none}
+#wm{position:absolute;left:24px;bottom:200px;font:500 17px Vazirmatn;opacity:.7;z-index:6;direction:ltr}
+</style></head><body>
+<div id="stage"><div id="scene"></div><div id="cap"></div><div id="wm"></div></div>
+<script>
+// ---- Engine: everything is a pure function of t ----
+const REG={};window.registerScene=(id,r)=>{REG[id]=r};
+let SC,BR,S=[],TOT=0,cur=-1;
+window.__ready=(async()=>{
+  await document.fonts.ready;
+  SC=await (await fetch('/input/scenario.json')).json();BR=await (await fetch('/brand.json')).json();
+  let TM={};try{const r=await fetch('/out/timing.json');if(r.ok)TM=await r.json()}catch(e){}
+  SC.hold=SC.hold??1;SC.endCardSeconds=SC.endCardSeconds??3;
+  let t=0;SC.scenes.forEach(s=>{const m=TM[s.id];if(m){s.words=m.words;s.dur=m.dur}s.words=s.words||s.text.split(' ').map((w,i)=>({w,t0:.15+i*BR.wordDuration,t1:.15+(i+1)*BR.wordDuration}));
+    s.dur=s.dur||s.words[s.words.length-1].t1+SC.hold;s.start=t;t+=s.dur;S.push(s)});
+  TOT=t+SC.endCardSeconds;window.__duration=TOT;
+  document.getElementById('wm').textContent=BR.handle;
+  window.__seek(0);
+})();
+window.__seek=function(t){
+  if(!S.length)return;
+  const el=document.getElementById('scene'),cap=document.getElementById('cap');
+  let i=S.length-1;while(i>0&&S[i].start>t)i--;
+  const s=S[i],lt=t-s.start;
+  const endCard=t>=TOT-SC.endCardSeconds;
+  if(i!==cur){cur=i;el.innerHTML='';(REG[s.id]||REG.__placeholder).mount(el,s)}
+  (REG[s.id]||REG.__placeholder).update(el,Math.min(1,lt/s.dur),lt);
+  cap.innerHTML=endCard?'':s.words.map(w=>`<span class="w${lt>=w.t0&&lt<w.t1?' on':''}">${w.w}</span>`).join(' ');
+  document.getElementById('wm').style.opacity=endCard?0:.7;
+  if(endCard&&REG.__endcard)REG.__endcard(el,(t-(TOT-SC.endCardSeconds))/SC.endCardSeconds,BR);
+};
+// Placeholder so the pipeline can be smoke-tested. REPLACE with real scene renderers in src/scenes/*.js
+registerScene('__placeholder',{mount(el,s){el.innerHTML='<div id="ph" style="position:absolute;inset:0;background:#26342f"></div>'},
+  update(el,p){el.firstChild.style.background=`hsl(${160+p*60},25%,${18+p*8}%)`}});
+</script>
+<!-- AGENT: add <script src="/src/scenes/NAME.js"></script> lines here, plus GSAP from node_modules -->
+</body></html>
