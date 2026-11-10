@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "decodedFrames": 1140,
+  "duration": 38,
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "codec": "H.264 High",
+  "pixelFormat": "yuv420p",
+  "audio": "AAC stereo / 48000 Hz",
+  "aacPeakDbFS": -9.1,
+  "aacMeanDbFS": -22.0,
+  "faststart": true,
+  "bytes": 9651018,
+  "sha256": "8831ff012fe254ec57aaf3ac6894e9a71e8dbad69f0f309cf5c30d6004dcba2a"
+}

@@ -1,22 +1,15 @@
 {
   "title": "چرا ژل ناخن زود می‌پره؟ ۵ دلیل",
-  "style": {
-    "look": "NOT cartoon, NOT childish. Premium editorial / macro-cinematic look for an adult audience: dark luxury palette (obsidian #0b0a0c, champagne gold #d9b88f, blush #f2c6cf, ivory #f4efe9), thin gold technical line-art, glossy physically-based materials, soft bokeh, film grain, subtle chromatic aberration, anamorphic light streaks. No characters, no mascots, no emoji, no real human skin or faces (avoid uncanny realism: show nails as glossy objects and technical cross-sections).",
-    "tools": "Three.js with MeshPhysicalMaterial (transmission, clearcoat, iridescence, thickness), procedural/studio environment lighting, post-processing (bloom, depth of field, grain) via the 'postprocessing' package; SVG for technical drawings with stroke-dash draw-on; GSAP paused timelines driven by window.__seek(t); seeded particles. SwiftShader WebGL in headless Chromium is enabled. Everything deterministic.",
-    "typography": "Big confident Persian kinetic type (Vazirmatn ExtraBold) with the karaoke yellow word-pill as defined in README; secondary labels thin and small, never covering the product. Keep text in safe zones.",
-    "motion": "Slow-motion hero moments + sharp speed-ramps; macro push-ins, orbits, crane-ups, rack focus; every scene has a continuous camera move and at least 3 moving layers; transitions via light sweeps and match cuts on glossy highlights.",
-    "audio": "Minimal ambient pad + soft pulse (bpm 80-90), liquid/glass/click SFX; calm authoritative voice (see voice-prompts.md). Set brand.json music.bpm to 84 for this reel."
-  },
   "accuracy": "Educational claims must stay general and cautious: these are COMMON reasons for gel lifting (skin/oil left on the nail surface, thick or under-cured layers, unsealed free edge, using nails as tools). Do not promise exact durations or medical results.",
   "hold": 0.9,
   "endCardSeconds": 3,
-  "goal": "High-save, high-share educational reel. 30-38 s. Hook = relatable pain in 1 s, one reason per scene, satisfying macro visuals, 'save + send' CTA. Loop back to the droplet.",
+  "goal": "High-save, high-share educational reel in the cartoon style. 30-38 s. Hook in 1 s, one reason per scene, 'save + send' CTA, loop back to the opening.",
   "scenes": [
     {
       "id": "hook",
       "text": "ژل ناخنت چرا زود می‌پره؟",
       "mood": "shock",
-      "idea": "Pure black void. A single gel droplet (clear, amber-tinted, physically-based glass/gel material) falls in extreme slow motion through a hard champagne-gold rim light and lands on a mirror-black glossy plate; ripple rings expand, then a hairline crack races across the glossy surface and a corner lifts. Macro depth of field, light streak flare. Kinetic type slams in word by word.",
+      "idea": "MOTION HIGH. Gely proudly sticks onto a nail and high-fives Nailie with sparkles; time-lapse of calendar pages flipping and the sky changing; Gely slowly peels and tumbles off with a comedic bounce; Nailie's eyes go huge. Title question slams in with screen shake. Whip-pan to the next scene.",
       "sfx": [
         {
           "k": "pop",
@@ -32,7 +25,7 @@
       "id": "oil",
       "text": "دلیل اول: چربی نامرئی روی سطح ناخن",
       "mood": "calm",
-      "idea": "Technical cross-section drawing animates on dark navy-black: thin gold line draws the nail plate profile (stroke draw-on), tiny glowing oil dots drift on its surface; a translucent gel layer hovers and fails to bond, leaving a shimmering air gap; thin leader lines with small labels pop. Subtle grid, parallax camera drift, shallow DOF on background dots.",
+      "idea": "Oily, a slick shiny yellow blob, lounges on the nail surface making rainbow sheen puddles; Gely runs in, tries to stick, slips on the oil like on ice, squeaky cartoon slide across the whole frame; Nailie holds a cleansing pad, too late. Camera tracks the slide, speed lines.",
       "sfx": [
         {
           "k": "tick",
@@ -48,7 +41,7 @@
       "id": "skin",
       "text": "دلیل دوم: پوست نازکی که روی ناخن می‌مونه",
       "mood": "calm",
-      "idea": "Same technical language: a near-invisible translucent film (cuticle remnant) shown as a shimmering sheet over the nail plate; gel is applied on top and the film peels at the edge like a corner of tape, the gel layer rolls up with it; highlight ring pulses on the lift point. Slow push-in with rack focus.",
+      "idea": "Skinny, a thin ghost-like transparent film blob, clings innocently to the nail; Gely sticks onto Skinny, thinking it is the nail; Skinny peels away at the corner and floats off carrying Gely like a flag in the wind. Camera follows with a rack focus. Funny panic face.",
       "sfx": [
         {
           "k": "tick",
@@ -64,7 +57,7 @@
       "id": "thick",
       "text": "دلیل سوم: لایه‌ی ضخیم و کم‌پخت",
       "mood": "calm",
-      "idea": "Side-by-side exploded stack view: thin even layers glowing evenly vs one thick layer with trapped micro-bubbles and an under-cured soft core (gradient from glossy top to dull milky bottom), a heat-map style color scan sweeps through. Layers animate apart and snap back. Orbit camera 20 degrees.",
+      "idea": "Thicc, a chubby layer blob packed with bubbles, wobbles like jelly; the UV lamp beams its light but only the crust cures, shown as light rays stopping at the top while the doughy core stays soft; Thicc sags and collapses with a splat and bubbles popping. Cross-section cutaway view in cartoon style.",
       "sfx": [
         {
           "k": "pop",
@@ -80,7 +73,7 @@
       "id": "seal",
       "text": "دلیل چهارم: لبه‌ی ناخن که سیل نشده",
       "mood": "calm",
-      "idea": "Side profile of the nail tip: blue water droplets creep in through the unsealed free edge as an animated liquid-capillary line crawling under the gel; then the edge gets a gold sealing cap sweep and the water bounces off in slow motion. Macro close-up, light sweep across the seal.",
+      "idea": "Drippy, a tiny blue water-droplet ninja, sneaks under the unsealed edge of the nail in stealth style (spotlight sweep); Gely tries to close the door; Nailie swipes a gold cap line along the edge, door slams shut with a clink and Drippy bounces off with a comedic boing. Macro push-in.",
       "sfx": [
         {
           "k": "tick",
@@ -96,7 +89,7 @@
       "id": "tool",
       "text": "دلیل پنجم: استفاده از ناخن به‌جای ابزار",
       "mood": "angry",
-      "idea": "Dramatic slow-motion: a nail edge forced under a metallic can-tab like a lever; red force arrows and a stress heat-map bloom on the nail; a crack propagates through the gel like glass, fragments float in micro-gravity with bright rim light. Hard screen shake on the impact, bass hit.",
+      "idea": "Can-Tab smirks; a nail used as a lever pries the tab; red stress lines flash, a crack zigzags through Gely, who shatters into cartoon sparkles and puffs (no gore) in slow motion with screen shake; Nailie facepalms, sweat drop.",
       "sfx": [
         {
           "k": "tick",
@@ -116,7 +109,7 @@
       "id": "fix",
       "text": "اجرای درست، به ماندگاری بیشتر کمک می‌کنه",
       "mood": "love",
-      "idea": "Resolution: a perfect almond nail as a glossy macro object on dark glass, clearcoat reflections, a slow light sweep and an iridescent chrome-powder glint travelling across it; floating gold dust, camera crane-up, very calm; reflections ripple on the plate below.",
+      "idea": "Resolution: everything done right, Gely hugs the nail tightly with a happy face, glossy shine sweeps across, sparkles, calendar flips fast again but Gely stays put; Nailie thumbs-up; camera crane-up. Warm color shift.",
       "sfx": [
         {
           "k": "chime",
@@ -132,7 +125,7 @@
       "id": "cta",
       "text": "ذخیره کن و برای کسی بفرست که ناخنش همیشه می‌پره",
       "mood": "smug",
-      "idea": "Elegant minimal end: kinetic type 'ذخیره کن' with a bookmark icon draw-on, a send-arrow draws and flies; a gold liquid sweep wipes into the end-card @ayda.nailroom on black with a soft glint on the lettering. Loop: the opening droplet appears as the last beat.",
+      "idea": "Nailie and Gely hold a big bookmark and a send arrow, point at the viewer together; the arrow flies off; quick match-cut loop back to the opening high-five; end-card @ayda.nailroom.",
       "sfx": [
         {
           "k": "pop",
@@ -145,7 +138,47 @@
       ]
     }
   ],
-  "reelId": "05",
-  "renderer": "macro",
-  "audioStyle": "macro"
+  "format": [
+    "Same cartoon world as scenarios 01-04 (round blob characters, navy/violet background, plush shading, cinematic camera moves). Educational comedy: each reason is a cute villain that makes Gely slip off. Higher motion, one clear visual explanation per scene. Not childish: witty, fast, modern."
+  ],
+  "cast": [
+    {
+      "name": "Nailie",
+      "role": "nail artist (hero)",
+      "desc": "round pink blob, tiny nail-brush antenna with a gel-drop tip, big glossy eyes, long glossy almond-nail hands in close-ups"
+    },
+    {
+      "name": "Gely",
+      "role": "the gel (protagonist)",
+      "desc": "cute translucent amber gel-drop blob, determined sticky hero who just wants to hold on"
+    },
+    {
+      "name": "Oily",
+      "role": "villain 1",
+      "desc": "slick shiny yellow oil blob that makes everything slippery"
+    },
+    {
+      "name": "Skinny",
+      "role": "villain 2",
+      "desc": "thin translucent ghost-like film blob that clings and peels"
+    },
+    {
+      "name": "Thicc",
+      "role": "villain 3",
+      "desc": "chubby layer blob full of bubbles with a raw doughy core"
+    },
+    {
+      "name": "Drippy",
+      "role": "villain 4",
+      "desc": "tiny blue water-droplet ninja that sneaks under edges"
+    },
+    {
+      "name": "Can-Tab",
+      "role": "villain 5",
+      "desc": "cute-menacing soda can with a smirking tab (also seen in earlier episodes)"
+    }
+  ],
+  "reelId": "05-cartoon",
+  "renderer": "education",
+  "audioStyle": "education"
 }
