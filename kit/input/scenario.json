@@ -1,32 +1,47 @@
 {
-  "title": "ناخن شماره ۷: ماموریت زنده‌ موندن",
-  "format": "Movie-trailer parody. Cinematic letterbox bars, film grain, dramatic title cards, slow-mo hits, camera shakes, orchestral-style sting feel. Cute (never scary): villains are everyday objects with cartoon faces.",
+  "title": "ناخن شماره ۸: انتقام استون",
+  "format": "Sequel to scenario 02 (same movie-trailer parody: letterbox bars, film grain, dramatic title cards). HIGHER motion than 02: tracking shots, whip-pans, dolly zoom, orbit, barrel roll, speed lines, parallax, screen shake on hits, cuts on the beat. Cute, never scary.",
   "hold": 0.7,
   "endCardSeconds": 3,
-  "goal": "Share-worthy, high-motion reel. 28-36 s total. Strong 1-second cinematic hook, escalating gags, payoff, loop with the 'nail #8' tease.",
+  "goal": "Share-worthy sequel reel. 32-40 s. Hook in 1 s, one wow-motion beat every 2-3 s, a twist ending that teases the next episode, loop-friendly.",
   "cast": [
     {
       "name": "Number 7",
-      "role": "hero",
-      "desc": "tiny pink almond-nail-shaped blob, huge eyes, small bandage on its head, brave but terrified"
+      "role": "returning hero",
+      "desc": "tiny pink almond-nail blob with a small bandage, braver now"
     },
     {
       "name": "Gel",
-      "role": "mentor/knight",
-      "desc": "glossy translucent-blue blob knight, helmet shaped like a gel drop, brush sword, calm and heroic"
+      "role": "mentor knight",
+      "desc": "glossy translucent-blue knight blob with a gel-drop helmet and a brush sword"
     },
     {
-      "name": "Villains",
-      "role": "props with faces",
-      "desc": "car door, soda can, loose sweater thread: cute-menacing cartoon faces, never gory"
+      "name": "Number 8",
+      "role": "rookie",
+      "desc": "glossy ruby-red almond-nail blob, tiny sunglasses, big attitude, skates on a nail file"
+    },
+    {
+      "name": "Acetone",
+      "role": "villain",
+      "desc": "cute-menacing glass bottle with a glowing green eye, cap like a crown, green vapor tentacles"
+    },
+    {
+      "name": "Cotton army",
+      "role": "minions",
+      "desc": "fluffy white cotton-ball blobs with tiny angry eyes, march in formation"
+    },
+    {
+      "name": "Number 9",
+      "role": "twist",
+      "desc": "giant sleepy toenail blob in a tiny sock hat, rises like a kaiju"
     }
   ],
   "scenes": [
     {
       "id": "hook",
-      "text": "در دنیایی بی‌رحم... ناخن‌ها شکننده‌ان",
-      "mood": "tired",
-      "idea": "Epic cinematic opener: black screen, dust and light shafts, slow push-in on a tiny pink nail-shaped blob (Number 7) with a small bandage on its head standing alone on a giant fingertip landscape like a canyon. Low brass sting, title letterbox bars slide in.",
+      "text": "ناخن شماره هفت زنده موند... ولی دشمن برگشته",
+      "mood": "shock",
+      "idea": "MOTION HIGH. Open on a quick slow-mo recap flash of Number 7's victory pose, then a toxic-green shadow sweeps across the frame and shatters it like glass; giant title card slams in 'قسمت ۲' with screen shake and green fume particles. Whip-pan to black.",
       "sfx": [
         {
           "k": "whoosh",
@@ -34,31 +49,15 @@
         },
         {
           "k": "error",
-          "t": 1.8
+          "t": 1.5
         }
       ]
     },
     {
-      "id": "door",
-      "text": "اینجا درِ ماشین منتظره",
-      "mood": "shock",
-      "idea": "Giant car door looms with a menacing cartoon grin, slamming in slow motion toward Number 7; time freeze, camera whip-zoom, Number 7 dives out of the way, door slams with a shockwave and cracks the ground.",
-      "sfx": [
-        {
-          "k": "tick",
-          "t": 0.5
-        },
-        {
-          "k": "pop",
-          "t": 2.2
-        }
-      ]
-    },
-    {
-      "id": "can",
-      "text": "اینجا قوطی نوشابه کمین کرده",
+      "id": "acetone",
+      "text": "از اعماق یه شیشه‌ی کوچیک... استون بیدار شد",
       "mood": "angry",
-      "idea": "Soda can villain with a sly face and a pull-tab smirk, fizz fog, tab clicks like a switchblade; Number 7 sneaks past in stealth-movie style with a spotlight sweep.",
+      "idea": "Dolly-in on a dark vanity shelf: a glass acetone bottle slowly opens one glowing green eye; the cap lifts like a crown, vapor tentacles uncoil and fill the frame, smell-waves ripple the whole image with a heat-haze distortion. Cute-menacing, never gory.",
       "sfx": [
         {
           "k": "tick",
@@ -71,26 +70,86 @@
       ]
     },
     {
-      "id": "thread",
-      "text": "و یه تار پشمی... که هیچ‌کس ازش جون سالم به در نبرد",
-      "mood": "shock",
-      "idea": "Camera low-angle: a loose sweater thread whips like a lasso and snags Number 7; dramatic freeze, 'wanted' poster style card pops with the thread's cute-menacing face; Number 7 gulps, sweat drop.",
+      "id": "army",
+      "text": "پنبه‌های سفید، ارتش بی‌رحمش",
+      "mood": "angry",
+      "idea": "Top-down then low-angle: an army of fluffy cotton-ball minions with tiny angry eyes marches in perfect rows, then multiplies and swarms across a pastel table like a wave; camera crane sweeps over them, parallax of marching legs, dust puffs on every beat.",
+      "sfx": [
+        {
+          "k": "tick",
+          "t": 0.3
+        },
+        {
+          "k": "tick",
+          "t": 0.7
+        },
+        {
+          "k": "tick",
+          "t": 1.1
+        },
+        {
+          "k": "whoosh",
+          "t": 2.0
+        }
+      ]
+    },
+    {
+      "id": "rookie",
+      "text": "و ناخن شماره هشت وارد شد!",
+      "mood": "happy",
+      "idea": "Smash cut to bright color: Number 8, a glossy ruby-red rookie blob with tiny sunglasses and attitude, drops from above onto a nail file used as a skateboard; sparks fly from the grit, a power slide stops dead at camera with a 'wanted' freeze-frame and cool title card.",
+      "sfx": [
+        {
+          "k": "pop",
+          "t": 0.2
+        },
+        {
+          "k": "whoosh",
+          "t": 0.8
+        }
+      ]
+    },
+    {
+      "id": "chase",
+      "text": "سریع‌تر از سوهان... بدون ترمز!",
+      "mood": "happy",
+      "idea": "MOTION MAX. High-speed parkour chase across a giant hand landscape: knuckle bridges, rings as hoops, bracelet as a zip-line, cuticle-cliff jumps; tracking shot with speed lines and motion blur, camera barrel-rolls on jumps, cotton minions bounce off walls in pursuit.",
       "sfx": [
         {
           "k": "whoosh",
           "t": 0.0
         },
         {
-          "k": "error",
-          "t": 2.8
+          "k": "pop",
+          "t": 0.7
+        },
+        {
+          "k": "whoosh",
+          "t": 1.3
         }
       ]
     },
     {
-      "id": "hero",
-      "text": "تا اینکه یه قهرمان از راه رسید",
+      "id": "melt",
+      "text": "ولی استون دست‌بردار نبود",
+      "mood": "shock",
+      "idea": "Acetone's vapor wave catches Number 8; its red color starts melting and dripping, face goes pale; dramatic dolly-zoom as the green cloud closes in, Number 8 clings to the edge of a nail with trembling hands; heartbeat pulse in the picture.",
+      "sfx": [
+        {
+          "k": "error",
+          "t": 0.5
+        },
+        {
+          "k": "tick",
+          "t": 1.4
+        }
+      ]
+    },
+    {
+      "id": "team",
+      "text": "تا اینکه شماره هفت و ژل رسیدن",
       "mood": "love",
-      "idea": "Smash cut to bright light: Gel, a glossy translucent-blue blob knight with a gel-drop helmet and brush sword, descends in slow motion with a lens flare and cape of sparkles; Number 7 looks up with heart eyes; epic orchestral swell.",
+      "idea": "Backlit slow-motion silhouette in the green fog: Number 7 and Gel stride in side by side, cape of sparkles fluttering, fog parts like curtains; 360-degree orbit around the trio, then a snap-zoom to Number 8's relieved face.",
       "sfx": [
         {
           "k": "chime",
@@ -103,10 +162,10 @@
       ]
     },
     {
-      "id": "combo",
-      "text": "سه لایه، یه لامپ، یه معجزه",
+      "id": "final",
+      "text": "یه تاپ‌کت... و همه‌چی تموم شد!",
       "mood": "happy",
-      "idea": "Fast action montage: base coat, color coat, top coat slashed on like sword moves with speed lines; a UV lamp glows and a power-up ring pulses; Number 7 becomes glossy, armored and sparkling; hard cuts on the beat.",
+      "idea": "Fast action beat on the audio hits: Gel slashes a top-coat shield across the screen, vapor bounces off in a rainbow-gloss reflection, the beam reflects back and pushes Acetone into his bottle, cap closes with a big clink, ground-shake; Acetone starts snoring bubbles. Freeze-frame high-five.",
       "sfx": [
         {
           "k": "whoosh",
@@ -114,52 +173,52 @@
         },
         {
           "k": "pop",
-          "t": 0.8
+          "t": 0.7
         },
         {
-          "k": "pop",
-          "t": 1.4
+          "k": "tick",
+          "t": 1.6
         },
         {
           "k": "chime",
-          "t": 2.4
+          "t": 2.2
         }
       ]
     },
     {
-      "id": "win",
-      "text": "ناخن شماره هفت... هنوز سرپاست",
-      "mood": "smug",
-      "idea": "Slow-motion hero pose: car door, can and thread villains bounce harmlessly off glossy Number 7 in a cartoon fight; Number 7 flicks the bandage off; sunset rim light, golden dust.",
+      "id": "twist",
+      "text": "ولی صبر کن... یکی داره از پا میاد",
+      "mood": "shock",
+      "idea": "Quiet beat then twist: everything calm, then the whole frame rumbles; from the bottom edge a gigantic sleepy toenail blob, Number 9, in a tiny sock-hat slowly rises like a kaiju, sleepy eyes opening, lens flare behind it. Camera tilts up in awe, title sting 'ناخن شماره نُه'.",
       "sfx": [
         {
-          "k": "pop",
-          "t": 0.8
+          "k": "error",
+          "t": 0.4
         },
         {
-          "k": "chime",
-          "t": 2.0
+          "k": "whoosh",
+          "t": 1.5
         }
       ]
     },
     {
       "id": "cta",
-      "text": "تگ کن اونی رو که ناخناش همیشه می‌شکنه",
+      "text": "تگ کن اونی رو که از استون می‌ترسه",
       "mood": "smug",
-      "idea": "Number 7 and Gel face the viewer and point at the camera together; a tiny 'coming soon' stinger: a small blob nail #8 peeks in with a bandage, setting up the loop back to the opening; end-card @ayda.nailroom.",
+      "idea": "Everyone (7, 8, Gel, sleepy 9) lines up and points at the viewer together; sparkling nail-lamp spotlight; quick match-cut loop back to the opening title; end-card @ayda.nailroom.",
       "sfx": [
         {
           "k": "pop",
-          "t": 0.4
+          "t": 0.3
         },
         {
           "k": "chime",
-          "t": 1.6
+          "t": 1.4
         }
       ]
     }
   ],
-  "reelId": "02",
-  "renderer": "trailer",
+  "reelId": "03",
+  "renderer": "sequel",
   "audioStyle": "cinematic"
 }

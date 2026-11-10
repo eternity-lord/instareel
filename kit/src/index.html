@@ -30,9 +30,9 @@ window.__seek=function(t){
   }).join(' ')+'</span>').join('');
  }
  const idx=end?S.length-1:S.indexOf(s);
- document.getElementById('eyebrow').textContent=end?'AYDA · NAIL ROOM':SC.renderer==='trailer'?'':idx===0?'قصه‌های کوچیکِ میز ناخن':'پنج جمله، یک عالمه صبر';
+ document.getElementById('eyebrow').textContent=end?'AYDA · NAIL ROOM':['trailer','sequel'].includes(SC.renderer)?'':idx===0?'قصه‌های کوچیکِ میز ناخن':'پنج جمله، یک عالمه صبر';
  document.getElementById('wm').textContent=BR.handle;
- document.getElementById('counter').textContent=end?'ادامه دارد…':`۸ / ${String(idx+1).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d])}`;
+ document.getElementById('counter').textContent=end?'ادامه دارد…':`${String(S.length).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d])} / ${String(idx+1).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d])}`;
  document.getElementById('track').innerHTML=S.map((_,i)=>`<div class="dot"><div class="fill" style="width:${i<idx?100:i===idx?p*100:0}%"></div></div>`).join('');
  // Final 0.3 seconds lands on the exact opening pose, including typography.
  if(end&&p>=.98){cur=null;window.__seek(0);return;}
@@ -41,8 +41,8 @@ window.__seek=function(t){
 </script><script>
 window.__ready=(async()=>{
  [SC,BR]=await Promise.all(['/input/scenario.json','/brand.json'].map(async u=>{const r=await fetch(u);if(!r.ok)throw new Error(u+': '+r.status);return r.json()}));
- if(!['studio','trailer'].includes(SC.renderer||'studio'))throw new Error('Unknown scene module');
- await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='/src/scenes/'+(SC.renderer||'studio')+'.js';script.onload=resolve;script.onerror=reject;document.head.append(script);});
+ if(!['studio','trailer','sequel'].includes(SC.renderer||'studio'))throw new Error('Unknown scene module');
+ for(const name of SC.renderer==='sequel'?['trailer','sequel']:[SC.renderer||'studio'])await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='/src/scenes/'+name+'.js';script.onload=resolve;script.onerror=reject;document.head.append(script);});
  document.title=SC.title+' — آیدا نیل‌روم';
  await Promise.all([document.fonts.load('800 34px Vazirmatn'),document.fonts.load('500 15px Vazirmatn')]);await document.fonts.ready;
  let TM={};const r=await fetch(SC.reelId&&SC.reelId!=='01'?`/out/${SC.reelId}/timing.json`:'/out/timing.json');if(r.ok)TM=await r.json();
@@ -50,7 +50,7 @@ window.__ready=(async()=>{
  const canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');ctx.font='800 34px Vazirmatn';
  for(const scene of SC.scenes){
   const m=TM[scene.id];
-  if(SC.renderer==='trailer'&&m&&m.words.map(w=>w.w).join(' ')!==scene.text.split(/\s+/).join(' '))throw new Error('Stale word timing for '+scene.id+'; rerun audio generation');
+  if(['trailer','sequel'].includes(SC.renderer)&&m&&m.words.map(w=>w.w).join(' ')!==scene.text.split(/\s+/).join(' '))throw new Error('Stale word timing for '+scene.id+'; rerun audio generation');
   const words=m?.words||scene.words||scene.text.split(/\s+/).map((w,i)=>({w,t0:.15+i*BR.wordDuration,t1:.15+(i+1)*BR.wordDuration}));
   const s={...scene,words,start:t,dur:m?.dur||scene.dur||words.at(-1).t1+(SC.hold??.8),pages:[]};
   // Measured 2-line pages. Keep a phrase together, but never overflow 470 CSS px.

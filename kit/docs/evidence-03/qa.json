@@ -1,0 +1,119 @@
+{
+  "passed": true,
+  "duration": 39,
+  "scenes": [
+    {
+      "scene": "hook",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "75afee6bdb7d3e29739a53e174fcdd090eb7ef92cedfdfa2156abe4ef0fa2a07"
+    },
+    {
+      "scene": "acetone",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "87917f8efcd5b00a0833f7eea574c4f93f088e08dcda1d3228f71ea4e28c4590"
+    },
+    {
+      "scene": "army",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "33df7ba3aad8ffff2521c1b636b00ce069e71bf78de4a8f4a023828fa5a9af7c"
+    },
+    {
+      "scene": "rookie",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "be833c85683a02e0f51759479d3f374b095c1b10cd538838b769984ffad06b4d"
+    },
+    {
+      "scene": "chase",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "65c61e196bc08a0cf74bc18dffee19f21db063daded875bd21b495b0beb375ba"
+    },
+    {
+      "scene": "melt",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "2b42f96805dffbce4d3dfd69764245ea53dddaf5d292de3698e26bd25f0d8a02"
+    },
+    {
+      "scene": "team",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "79107926e1aa37bb20259a78f4243aaab5483d99d26d542bbf0dc5681927a476"
+    },
+    {
+      "scene": "final",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "020286b719c84682fbc406d4da8b19c155cb48cf192e6f746a12ea7cddfcbb7f"
+    },
+    {
+      "scene": "twist",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "dce1b04bd575791c0911895a8bc4468cd769fec133c0d97227f4fa9797ababf8"
+    },
+    {
+      "scene": "cta",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "63f60dc2c2a5995c46495188ee351c1198dc82ebc3d7c91cb3c00e71aa7d31f6"
+    }
+  ],
+  "checkedWords": 64,
+  "trailerHeadingRemoved": true,
+  "captionSafeZones": true,
+  "localFont": true,
+  "noEmoji": true,
+  "loopBoundaryDomIdentical": true,
+  "loopRaster": {
+    "maxChannelDelta": 0,
+    "meanChannelDelta": 0,
+    "fractionOver5": 0
+  },
+  "activeCssAnimations": 0,
+  "browserErrors": []
+}
