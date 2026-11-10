@@ -16,6 +16,14 @@ if(process.platform==='linux'&&!fs.existsSync(path.join(libs,'lib/libnspr4.so'))
  execFileSync('tar',['-xf',archive,'-C',libs]);fs.unlinkSync(archive);
 }
 export const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+export const PROJECT=JSON.parse(fs.readFileSync(path.join(ROOT,'input/scenario.json'),'utf8'));
+export const REEL_ID=PROJECT.reelId||'01';
+if(!/^\d{2}$/.test(REEL_ID))throw new Error('Invalid reelId');
+export const STEM=`nail-reel-${REEL_ID}`;
+export const OUTDIR=path.join(ROOT,'out',REEL_ID==='01'?'':REEL_ID);
+export const AUDIO=REEL_ID==='01'?path.join(ROOT,'audio/mix.wav'):path.join(OUTDIR,'mix.wav');
+export const DELIVERY=path.join(ROOT,'deliverables',REEL_ID==='01'?'':`reel-${REEL_ID}`);
+
 export function ffmpegPath(){
  if(process.env.FFMPEG_PATH)return process.env.FFMPEG_PATH;
  try{return execFileSync('which',['ffmpeg'],{encoding:'utf8'}).trim();}catch{}

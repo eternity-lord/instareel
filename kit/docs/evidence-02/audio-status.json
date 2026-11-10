@@ -1,0 +1,22 @@
+{
+  "duration": 34.0,
+  "sampleRate": 48000,
+  "seed": 207,
+  "voiceUsed": false,
+  "voiceReason": "Instrumental cinematic edition. No TTS generated or real voice used.",
+  "timingMode": "reading-timing",
+  "mastering": "-17 LUFS / -2 dBTP / LRA 9",
+  "loudness": {
+    "input_i": "-23.99",
+    "input_tp": "-6.41",
+    "input_lra": "5.70",
+    "input_thresh": "-33.99",
+    "output_i": "-16.10",
+    "output_tp": "-2.00",
+    "output_lra": "4.50",
+    "output_thresh": "-26.10",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.90"
+  },
+  "music": "Original deterministic brass-like/strings-like synthesis, ostinato and tuned percussion; no samples or external recording."
+}

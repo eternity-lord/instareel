@@ -8,3 +8,5 @@ kit/audio/mix.wav
 kit/deliverables/*
 !kit/deliverables/README.md
 !kit/deliverables/nail-reel-01.mp4
+
+!kit/deliverables/nail-reel-02.mp4

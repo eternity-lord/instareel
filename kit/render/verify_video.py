@@ -11,7 +11,11 @@ import subprocess
 import imageio_ffmpeg
 
 ROOT = Path(__file__).resolve().parents[1]
-video = ROOT / 'out/nail-reel-01.mp4'
+scenario = json.loads((ROOT/'input/scenario.json').read_text())
+reel_id = scenario.get('reelId', '01')
+assert re.fullmatch(r'\d{2}', reel_id)
+OUT = ROOT/'out'/('' if reel_id == '01' else reel_id)
+video = OUT/f'nail-reel-{reel_id}.mp4'
 ffmpeg = os.getenv('FFMPEG_PATH') or shutil.which('ffmpeg') or imageio_ffmpeg.get_ffmpeg_exe()
 result = subprocess.run([ffmpeg, '-hide_banner', '-nostats', '-err_detect', 'explode',
                          '-threads', '2', '-i', str(video), '-map', '0:v:0', '-map', '0:a:0',
@@ -22,8 +26,9 @@ assert 'Video: h264 (High)' in log, log
 assert '1080x1920' in log and 'yuv420p' in log and '30 fps' in log, log
 assert re.search(r'Audio: aac .*48000 Hz, stereo', log), log
 frames = int(re.findall(r'^frame=(\d+)', result.stdout, re.M)[-1])
-manifest = json.loads((ROOT / 'out/render-manifest.json').read_text())
-assert frames == manifest['frames'] == 1050, frames
+manifest = json.loads((OUT / 'render-manifest.json').read_text())
+assert frames == manifest['frames'] == round(manifest['duration']*30), frames
+assert 28 <= manifest['duration'] <= 38
 assert video.stat().st_size < 100_000_000
 peak = float(re.search(r'max_volume: ([\-\d.]+) dB', log).group(1))
 mean = float(re.search(r'mean_volume: ([\-\d.]+) dB', log).group(1))
@@ -50,6 +55,6 @@ status = {'passed': True, 'decodedFrames': frames, 'duration': manifest['duratio
           'pixelFormat': 'yuv420p', 'audio': 'AAC stereo / 48000 Hz',
           'aacPeakDbFS': peak, 'aacMeanDbFS': mean, 'faststart': True,
           'bytes': video.stat().st_size, 'sha256': hashlib.sha256(video.read_bytes()).hexdigest()}
-(ROOT / 'out/video-qa.json').write_text(json.dumps(status, indent=2))
-(ROOT / 'out/decode-log.txt').write_text(log)
+(OUT / 'video-qa.json').write_text(json.dumps(status, indent=2))
+(OUT / 'decode-log.txt').write_text(log)
 print(json.dumps(status, indent=2))

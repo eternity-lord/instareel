@@ -12,12 +12,12 @@ function compare(a,b){
 }
 import fs from 'node:fs';
 import path from 'node:path';
-import {ROOT,serve,openScene} from './lib.mjs';
+import {ROOT,serve,openScene,OUTDIR,PROJECT} from './lib.mjs';
 const server=await serve();let browser;
 try{
  const session=await openScene(server);browser=session.browser;const {page,errors}=session;
  const data=await page.evaluate(()=>({duration:window.__duration,scenes:window.__scenes}));
- assert.equal(data.scenes.length,8);assert.ok(data.duration>=28&&data.duration<=38);
+ assert.equal(data.scenes.length,8);assert.ok(data.duration>=28&&data.duration<=(PROJECT.renderer==='trailer'?36:38));
  const capture=async t=>{await page.evaluate(t=>window.__seek(t),t);return {dom:await page.content(),buf:await page.screenshot({type:'png'})};};
  const checks=[];
  for(const s of data.scenes){
@@ -47,6 +47,6 @@ try{
  const animations=await page.evaluate(()=>document.getAnimations().length);assert.equal(animations,0);
  assert.deepEqual(errors,[]);
  const report={passed:true,duration:data.duration,scenes:checks,checkedWords:words,captionSafeZones:true,localFont:true,noEmoji:true,loopBoundaryDomIdentical:true,loopRaster,activeCssAnimations:animations,browserErrors:errors};
- fs.writeFileSync(path.join(ROOT,'out/qa.json'),JSON.stringify(report,null,2));
+ fs.writeFileSync(path.join(OUTDIR,'qa.json'),JSON.stringify(report,null,2));
  console.log(JSON.stringify(report,null,2));
 }finally{await browser?.close();server.close();}
