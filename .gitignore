@@ -1,0 +1,9 @@
+node_modules/
+__pycache__/
+.venv/
+kit/out/*
+!kit/out/.gitkeep
+kit/audio/mix.wav
+
+kit/deliverables/*
+!kit/deliverables/README.md

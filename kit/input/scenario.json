@@ -1,177 +1,160 @@
 {
- "title": "اولین روز بعد از ناخن جدید",
- "fps": 30,
- "hold": 1.0,
+ "title": "۵ جمله‌ای که هر ناخن‌کار هر روز می‌شنوه",
+ "hold": 0.8,
  "endCardSeconds": 3,
+ "goal": "Shareable 'tag your nail artist' reel. Target 28-38 s total. Strong 1-second hook, one gag per scene, wholesome payoff, loop back to scene 1 pose.",
+ "cast": [
+  {
+   "name": "Nailie",
+   "role": "nail artist (hero)",
+   "desc": "round pink blob, tiny nail-brush antenna with a gel-drop tip, big glossy eyes, calm and patient, long glossy almond-nail hands in close-ups"
+  },
+  {
+   "name": "Client",
+   "role": "customer",
+   "desc": "round peach-cream blob with a small bottle-cap tuft on top, very expressive brows, always smiling politely while asking for impossible things"
+  }
+ ],
  "scenes": [
   {
    "id": "hook",
-   "text": "تازه ناخن کاشتی و عاشقشون شدی",
-   "mood": "love",
-   "sfx": [
-    {
-     "k": "chime",
-     "t": 0.1
-    }
-   ],
-   "idea": "Nailie bounces into a warm studio-light frame; nails catch a specular sweep; sparkles and floating drawn hearts; camera slow push-in."
-  },
-  {
-   "id": "light",
-   "text": "انقدر که هی دستت رو جلوی نور می‌گیری",
+   "text": "۵ جمله‌ای که هر ناخن‌کار هر روز می‌شنوه",
    "mood": "happy",
+   "idea": "Hook, must grab in 1 s: Nailie sits at her tiny table, nail lamp glowing; Client blob bounces in; a giant hand-drawn number 5 smashes into frame with squash and sparkle trails over glossy nails. Fast push-in, confetti-less, bright and cute.",
    "sfx": [
     {
      "k": "whoosh",
      "t": 0.0
-    }
-   ],
-   "idea": "Window light shaft with dust particles; hand sways and rotates into the beam, nails flare (bloom + star glints); parallax curtains."
-  },
-  {
-   "id": "phone",
-   "text": "ده دقیقه بعد می‌خوای گوشی رو باز کنی",
-   "mood": "happy",
-   "sfx": [
+    },
     {
-     "k": "tap",
-     "t": 1.6
+     "k": "pop",
+     "t": 0.5
     }
-   ],
-   "idea": "Phone glides in with glow; lock screen with drawn lock icon and clock; finger approaches with anticipation and taps."
+   ]
   },
   {
-   "id": "phone-fail",
-   "text": "ولی صفحه اصلاً ناخن رو نمی‌فهمه",
-   "mood": "angry",
-   "sfx": [
-    {
-     "k": "error",
-     "t": 0.3
-    }
-   ],
-   "idea": "Phone buzzes and shakes, red X pops with ripple; anger marks, steam puffs; nail clicks on glass without response; camera shake."
-  },
-  {
-   "id": "can",
-   "text": "قوطی نوشابه؟ ماموریت غیرممکن",
+   "id": "short",
+   "text": "میگه یه کم کوتاهش کن... یعنی سه سانت!",
    "mood": "shock",
+   "idea": "Client pinches fingers 'just a tiny bit'. Cut to Nailie's thought bubble: a giant ruler measures a long nail, the 'tiny bit' stretches to three centimeters, nail clippings pile up like a mountain. Nailie's eyes widen, antenna droops.",
+   "sfx": [
+    {
+     "k": "tick",
+     "t": 0.8
+    },
+    {
+     "k": "pop",
+     "t": 2.6
+    }
+   ]
+  },
+  {
+   "id": "simple",
+   "text": "میگه طرح ساده می‌خوام... یعنی گل، نگین، فرنچ و خط طلایی",
+   "mood": "angry",
+   "idea": "Client: 'simple!' with a calm smile. Thought bubble list pops item by item (flower, gems, french tip, gold line), every item pops with a ding and the nail design gets absurdly busy; Nailie's brush antenna spins like a helicopter.",
+   "sfx": [
+    {
+     "k": "pop",
+     "t": 1.0
+    },
+    {
+     "k": "pop",
+     "t": 1.6
+    },
+    {
+     "k": "pop",
+     "t": 2.2
+    },
+    {
+     "k": "chime",
+     "t": 3.0
+    }
+   ]
+  },
+  {
+   "id": "hurry",
+   "text": "میگه عجله ندارم... ده دقیقه بعد: تموم نشد؟",
+   "mood": "tired",
+   "idea": "Client relaxed on a cushion with a drink: 'no rush'. Fast clock montage (clock hands spin, sun to moon), Client suddenly checks a tiny watch and panics, Nailie's gel lamp timer ticks, steam from Nailie.",
    "sfx": [
     {
      "k": "tick",
      "t": 0.4
-    }
-   ],
-   "idea": "Metallic can with condensation drops; nail slips under the tab repeatedly, tab clinks back; fizz bubbles; dramatic zoom on the tab."
-  },
-  {
-   "id": "zipper",
-   "text": "زیپ و دکمه هم که دیگه هیچی",
-   "mood": "tired",
-   "sfx": [
+    },
     {
      "k": "whoosh",
-     "t": 0.0
-    }
-   ],
-   "idea": "Jacket close-up; zipper slider gets stuck on fabric, nail can't pinch the button; defeated slump; camera pans down the zip."
-  },
-  {
-   "id": "planning",
-   "text": "حتی دستشویی رفتن هم برنامه‌ریزی می‌خواد",
-   "mood": "tired",
-   "sfx": [
-    {
-     "k": "tick",
-     "t": 0.3
+     "t": 1.4
     },
     {
-     "k": "tick",
-     "t": 0.8
+     "k": "error",
+     "t": 3.0
     }
-   ],
-   "idea": "Big clock face, spinning hands; drawn checklist items tick in; Nailie reviewing a step plan with a tiny whiteboard; comedic timing."
+   ]
   },
   {
-   "id": "typing",
-   "text": "تایپ؟ هر پیام سه تا غلط املایی",
-   "mood": "angry",
-   "sfx": [
-    {
-     "k": "tick",
-     "t": 0.2
-    },
-    {
-     "k": "tick",
-     "t": 0.5
-    }
-   ],
-   "idea": "Keyboard in perspective, nails clacking wrong keys; letters fly out as typo bubbles with red underline; screen-shake on each error."
-  },
-  {
-   "id": "thread",
-   "text": "یه تار پشمی و همه‌چی تموم می‌شه",
+   "id": "photo",
+   "text": "میگه عین عکس بزن... عکسی که فیلتر خورده!",
    "mood": "shock",
+   "idea": "Client holds up a phone: nails are glittering 3D crystals with impossible sparkles and a sparkle filter. Nailie compares the photo and her real nail, her jaw drops; magnifier zoom, 'filter' sparkles rain.",
    "sfx": [
     {
-     "k": "whoosh",
-     "t": 0.0
+     "k": "chime",
+     "t": 0.6
     },
     {
      "k": "pop",
-     "t": 1.4
+     "t": 2.8
     }
-   ],
-   "idea": "Sweater sleeve with a loose yarn thread; nail snags, thread stretches (elastic physics), freeze-frame, 'comic burst' with exclamation; zoom-punch."
+   ]
   },
   {
-   "id": "mirror",
-   "text": "ولی همین که تو آینه نگاشون می‌کنی",
-   "mood": "calm",
+   "id": "trust",
+   "text": "میگه هر چی خودت صلاح می‌دونی... نه نه اون رنگ نه!",
+   "mood": "angry",
+   "idea": "Client gives a thumbs up: 'your choice!'. Nailie happily picks a color; Client freezes, eyes shrink, waves both hands in panic, color swatches fly by like cards; Nailie slumps comically.",
+   "sfx": [
+    {
+     "k": "pop",
+     "t": 0.6
+    },
+    {
+     "k": "error",
+     "t": 2.4
+    }
+   ]
+  },
+  {
+   "id": "payoff",
+   "text": "ولی وقتی ناخن‌ها تموم می‌شه... وای عاشقشونم!",
+   "mood": "love",
+   "idea": "Warm light sweeps in; glossy finished nails fill the frame in macro with a specular sweep and sparkles; Client's eyes become hearts and hugs the air; Nailie melts into a happy puddle, all the earlier chaos forgotten; hearts float.",
    "sfx": [
     {
      "k": "chime",
      "t": 0.3
-    }
-   ],
-   "idea": "Soft golden mirror with bloom; calm music swell; slow motion nail sparkles; depth-of-field; reflection of the hand."
-  },
-  {
-   "id": "joy",
-   "text": "همه‌ی سختی‌ها یادت می‌ره",
-   "mood": "love",
-   "sfx": [
+    },
     {
      "k": "pop",
-     "t": 0.2
+     "t": 2.2
     }
-   ],
-   "idea": "Confetti cannon, drawn hearts, hand dances with squash and stretch; background palette warms; camera orbit."
+   ]
   },
   {
    "id": "cta",
-   "text": "ناخن خوشگل یعنی درد می‌کشیم ولی شیک! این رو برای دوستت بفرست",
+   "text": "اینو برای ناخن‌کارت بفرست",
    "mood": "smug",
+   "idea": "Nailie winks at the viewer and points at a share arrow; Client sneaks in from the side, pinches fingers 'just a little' again for the loop gag; end with the same pose as scene 1 for a seamless loop; then end-card with @ayda.nailroom.",
    "sfx": [
     {
+     "k": "pop",
+     "t": 0.3
+    },
+    {
      "k": "chime",
-     "t": 0.2
+     "t": 1.5
     }
-   ],
-   "idea": "Nailie points to a share arrow; button pulse; transitions into end-card: logo-style @ayda.nailroom, 'فالو کن' CTA, nails sparkle; loop back to scene 1 pose."
+   ]
   }
- ],
- "cast": [
-  {
-   "name": "Nailie",
-   "role": "hero",
-   "desc": "round pink blob, tiny nail-brush antenna with a gel-drop tip, big glossy eyes, long glossy almond-nail hands used in close-ups"
-  },
-  {
-   "name": "Client",
-   "role": "secondary",
-   "desc": "round peach blob with a small bottle-cap tuft, round glasses optional, expressive brows"
-  }
- ],
- "note": "EXAMPLE. Replace with your own scenes. Only 'text' is required per scene; 'idea', 'mood', 'sfx' are optional hints and the agent must fill gaps itself."
+ ]
 }
