@@ -15,6 +15,10 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 SR = 48000
 SC = json.loads((ROOT / 'input/scenario.json').read_text())
+if SC.get('audioStyle') == 'cinematic':
+    import runpy
+    runpy.run_path(str(ROOT/'audio/cinematic_audio.py'), run_name='__main__')
+    raise SystemExit(0)
 BR = json.loads((ROOT / 'brand.json').read_text())
 OUT = ROOT / 'out'
 OUT.mkdir(exist_ok=True)

@@ -1,0 +1,98 @@
+{
+  "passed": true,
+  "duration": 34,
+  "scenes": [
+    {
+      "scene": "hook",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "8c4b520aa9936989028bb2fbcb4c9c3038b3b94429e32228ce2d6936e3198181"
+    },
+    {
+      "scene": "door",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "a060bd784ef07e6e5a6b2c1dd8c74cf770c7e9240a679f4ac648df79fe7099b8"
+    },
+    {
+      "scene": "can",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "978cd988afbe73e66d7be0fb3c8dda7a48187af32a05d04688e1c568502c51c9"
+    },
+    {
+      "scene": "thread",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "fe136b4ca868f9a1c04cc13f9cc207ba8ab181f391831519cf917820c7828c4d"
+    },
+    {
+      "scene": "hero",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "d3d65d5573fb1121448d4cbb156567d13baa3792b755122975869d38e4a1ac35"
+    },
+    {
+      "scene": "combo",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "9416c419039285f6bbc29a4a6dad6a4b1874ca7b65a18ac76594b1ae903c302a"
+    },
+    {
+      "scene": "win",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "b508a0d56aa48eb6e168b24b5043fde1c34fbdc90b1d05abd9bfa05692f39ea7"
+    },
+    {
+      "scene": "cta",
+      "randomAccess": true,
+      "raster": {
+        "maxChannelDelta": 0,
+        "meanChannelDelta": 0,
+        "fractionOver5": 0
+      },
+      "hash": "03b78571bf1cfff629d747359199e98c911f39b4e0756a71174512038e780f6c"
+    }
+  ],
+  "checkedWords": 52,
+  "captionSafeZones": true,
+  "localFont": true,
+  "noEmoji": true,
+  "loopBoundaryDomIdentical": true,
+  "loopRaster": {
+    "maxChannelDelta": 0,
+    "meanChannelDelta": 0,
+    "fractionOver5": 0
+  },
+  "activeCssAnimations": 0,
+  "browserErrors": []
+}

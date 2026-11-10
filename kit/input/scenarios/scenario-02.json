@@ -1,0 +1,162 @@
+{
+ "title": "ناخن شماره ۷: ماموریت زنده‌ موندن",
+ "format": "Movie-trailer parody. Cinematic letterbox bars, film grain, dramatic title cards, slow-mo hits, camera shakes, orchestral-style sting feel. Cute (never scary): villains are everyday objects with cartoon faces.",
+ "hold": 0.7,
+ "endCardSeconds": 3,
+ "goal": "Share-worthy, high-motion reel. 28-36 s total. Strong 1-second cinematic hook, escalating gags, payoff, loop with the 'nail #8' tease.",
+ "cast": [
+  {
+   "name": "Number 7",
+   "role": "hero",
+   "desc": "tiny pink almond-nail-shaped blob, huge eyes, small bandage on its head, brave but terrified"
+  },
+  {
+   "name": "Gel",
+   "role": "mentor/knight",
+   "desc": "glossy translucent-blue blob knight, helmet shaped like a gel drop, brush sword, calm and heroic"
+  },
+  {
+   "name": "Villains",
+   "role": "props with faces",
+   "desc": "car door, soda can, loose sweater thread: cute-menacing cartoon faces, never gory"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "در دنیایی بی‌رحم... ناخن‌ها شکننده‌ان",
+   "mood": "tired",
+   "idea": "Epic cinematic opener: black screen, dust and light shafts, slow push-in on a tiny pink nail-shaped blob (Number 7) with a small bandage on its head standing alone on a giant fingertip landscape like a canyon. Low brass sting, title letterbox bars slide in.",
+   "sfx": [
+    {
+     "k": "whoosh",
+     "t": 0.0
+    },
+    {
+     "k": "error",
+     "t": 1.8
+    }
+   ]
+  },
+  {
+   "id": "door",
+   "text": "اینجا درِ ماشین منتظره",
+   "mood": "shock",
+   "idea": "Giant car door looms with a menacing cartoon grin, slamming in slow motion toward Number 7; time freeze, camera whip-zoom, Number 7 dives out of the way, door slams with a shockwave and cracks the ground.",
+   "sfx": [
+    {
+     "k": "tick",
+     "t": 0.5
+    },
+    {
+     "k": "pop",
+     "t": 2.2
+    }
+   ]
+  },
+  {
+   "id": "can",
+   "text": "اینجا قوطی نوشابه کمین کرده",
+   "mood": "angry",
+   "idea": "Soda can villain with a sly face and a pull-tab smirk, fizz fog, tab clicks like a switchblade; Number 7 sneaks past in stealth-movie style with a spotlight sweep.",
+   "sfx": [
+    {
+     "k": "tick",
+     "t": 0.4
+    },
+    {
+     "k": "whoosh",
+     "t": 2.0
+    }
+   ]
+  },
+  {
+   "id": "thread",
+   "text": "و یه تار پشمی... که هیچ‌کس ازش جون سالم به در نبرد",
+   "mood": "shock",
+   "idea": "Camera low-angle: a loose sweater thread whips like a lasso and snags Number 7; dramatic freeze, 'wanted' poster style card pops with the thread's cute-menacing face; Number 7 gulps, sweat drop.",
+   "sfx": [
+    {
+     "k": "whoosh",
+     "t": 0.0
+    },
+    {
+     "k": "error",
+     "t": 2.8
+    }
+   ]
+  },
+  {
+   "id": "hero",
+   "text": "تا اینکه یه قهرمان از راه رسید",
+   "mood": "love",
+   "idea": "Smash cut to bright light: Gel, a glossy translucent-blue blob knight with a gel-drop helmet and brush sword, descends in slow motion with a lens flare and cape of sparkles; Number 7 looks up with heart eyes; epic orchestral swell.",
+   "sfx": [
+    {
+     "k": "chime",
+     "t": 0.2
+    },
+    {
+     "k": "pop",
+     "t": 1.8
+    }
+   ]
+  },
+  {
+   "id": "combo",
+   "text": "سه لایه، یه لامپ، یه معجزه",
+   "mood": "happy",
+   "idea": "Fast action montage: base coat, color coat, top coat slashed on like sword moves with speed lines; a UV lamp glows and a power-up ring pulses; Number 7 becomes glossy, armored and sparkling; hard cuts on the beat.",
+   "sfx": [
+    {
+     "k": "whoosh",
+     "t": 0.0
+    },
+    {
+     "k": "pop",
+     "t": 0.8
+    },
+    {
+     "k": "pop",
+     "t": 1.4
+    },
+    {
+     "k": "chime",
+     "t": 2.4
+    }
+   ]
+  },
+  {
+   "id": "win",
+   "text": "ناخن شماره هفت... هنوز سرپاست",
+   "mood": "smug",
+   "idea": "Slow-motion hero pose: car door, can and thread villains bounce harmlessly off glossy Number 7 in a cartoon fight; Number 7 flicks the bandage off; sunset rim light, golden dust.",
+   "sfx": [
+    {
+     "k": "pop",
+     "t": 0.8
+    },
+    {
+     "k": "chime",
+     "t": 2.0
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "text": "تگ کن اونی رو که ناخناش همیشه می‌شکنه",
+   "mood": "smug",
+   "idea": "Number 7 and Gel face the viewer and point at the camera together; a tiny 'coming soon' stinger: a small blob nail #8 peeks in with a bandage, setting up the loop back to the opening; end-card @ayda.nailroom.",
+   "sfx": [
+    {
+     "k": "pop",
+     "t": 0.4
+    },
+    {
+     "k": "chime",
+     "t": 1.6
+    }
+   ]
+  }
+ ]
+}

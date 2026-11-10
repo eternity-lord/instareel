@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "duration": 34
+  },
+  "downloads": true,
+  "rangeRequests": true,
+  "invalidRange416": true,
+  "lightbox": true,
+  "mobileNoOverflow": true,
+  "browserErrors": []
+}
