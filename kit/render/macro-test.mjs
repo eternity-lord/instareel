@@ -14,7 +14,8 @@ const prior={
  '04':'8228407802df67ab8a7e91076d23c30435e1c4a25206a1105829e53b245775f6'
 };
 for(const [id,sha] of Object.entries(prior))assert.equal(createHash('sha256').update(fs.readFileSync(path.join(ROOT,`deliverables/nail-reel-${id}.mp4`))).digest('hex'),sha);
-const status=JSON.parse(fs.readFileSync(path.join(OUTDIR,'audio-status.json')));assert.equal(status.voiceUsed,true);assert.equal(status.bpm,84);assert.equal(status.duration,38);
+const narration=JSON.parse(fs.readFileSync(path.join(ROOT,'brand.json'))).voice.enabled;
+const status=JSON.parse(fs.readFileSync(path.join(OUTDIR,'audio-status.json')));assert.equal(status.voiceUsed,narration);assert.equal(status.bpm,84);assert.equal(status.duration,38);
 const timing=JSON.parse(fs.readFileSync(path.join(OUTDIR,'timing.json')));
 for(const s of Object.values(timing))assert.ok(s.dur-s.words.at(-1).t1>=.8999);
 const server=await serve();let browser;
@@ -33,6 +34,6 @@ try{
  assert.equal(state.materials.blush.type,'MeshPhysicalMaterial');assert.ok(state.materials.gel.transmission>0);assert.ok(state.materials.blush.iridescence>0);
  for(const c of state.controls){assert.ok(c.cameraMoves,c.scene);assert.ok(c.imageMoves,c.scene);assert.equal(c.canvasCount,1);}
  assert.deepEqual(session.errors,[]);
- const report={passed:true,originalScenarioArchived:true,accuracyEditOnly:'fix line removes fixed-duration promise',kitZipSha256:'aea211c12fb01261701357f23877a29a82ad45a14541279899901f44085e58fd',kitArchive:'reference/kit-v2/',priorVideoSha256:prior,voiceUsed:true,timingMode:status.timingMode,lastWordHoldMinimum:.9,bpm:84,...state,browserErrors:session.errors};
+ const report={passed:true,originalScenarioArchived:true,accuracyEditOnly:'fix line removes fixed-duration promise',kitZipSha256:'aea211c12fb01261701357f23877a29a82ad45a14541279899901f44085e58fd',kitArchive:'reference/kit-v2/',priorVideoSha256:prior,voiceUsed:narration,timingMode:status.timingMode,lastWordHoldMinimum:.9,bpm:84,...state,browserErrors:session.errors};
  fs.writeFileSync(path.join(OUTDIR,'macro-qa.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));
 }finally{await browser?.close();server.close();}

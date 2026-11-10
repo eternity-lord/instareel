@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "voiceRemoved": true,
+  "musicOnly": true,
+  "videoReencoded": false,
+  "originalVideoStreamHash": "SHA256=3bb07b8ddcd12e56f1296e3b2e370ea9e14d0462b9f73bf1a9bb13baf80a4f5f",
+  "revisedVideoStreamHash": "SHA256=3bb07b8ddcd12e56f1296e3b2e370ea9e14d0462b9f73bf1a9bb13baf80a4f5f",
+  "captionTimingUnchanged": true,
+  "originalMp4Sha256": "201976283247253bb4c3591f732304e65dfe5abf59b87e9c42f46a3f73324d5c",
+  "revisedMp4Sha256": "c3afa0d4bc48407ca3cac53fe238da4867565048df3e14f627c34e911ea2a8ed"
+}

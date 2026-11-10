@@ -27,11 +27,11 @@
     "opacity": 0.7
   },
   "voice": {
-    "enabled": true,
+    "enabled": false,
     "engine": "Arena synthetic speech",
     "voice": "voice-00",
     "rate": "+0%",
-    "note": "User-auditioned synthetic Persian feminine educational narration; not a real person clone."
+    "note": "Reel 05 revision: music only by user request. Prior synthetic voice source files retained only for historical reproducibility; never mixed in current output."
   },
   "music": {
     "enabled": true,
