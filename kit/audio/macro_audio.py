@@ -4,6 +4,10 @@ from pathlib import Path
 import numpy as np
 import imageio_ffmpeg
 ROOT=Path(__file__).resolve().parents[1]
+if not json.loads((ROOT/'brand.json').read_text()).get('voice',{}).get('enabled',True):
+ import runpy
+ runpy.run_path(str(ROOT/'audio/macro_music.py'),run_name='__main__')
+ raise SystemExit(0)
 SC=json.loads((ROOT/'input/scenario.json').read_text());OUT=ROOT/'out/05';OUT.mkdir(parents=True,exist_ok=True)
 SR=48000;FF=imageio_ffmpeg.get_ffmpeg_exe();rng=np.random.default_rng(505)
 def load(p):

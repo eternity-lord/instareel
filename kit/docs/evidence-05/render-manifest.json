@@ -5,7 +5,7 @@
   "frames": 1140,
   "width": 1080,
   "height": 1920,
-  "bytes": 13147452,
+  "bytes": 13145554,
   "codec": "H.264 High / yuv420p",
   "audio": "AAC stereo 48 kHz",
   "samples": [
@@ -33,5 +33,6 @@
     "out/05/frames/f01040.jpg",
     "out/05/frames/f01089.jpg",
     "out/05/frames/f01139.jpg"
-  ]
+  ],
+  "revision": "Music only; original encoded H.264 stream copied without re-encoding"
 }

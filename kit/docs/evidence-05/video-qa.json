@@ -8,9 +8,9 @@
   "codec": "H.264 High",
   "pixelFormat": "yuv420p",
   "audio": "AAC stereo / 48000 Hz",
-  "aacPeakDbFS": -2.0,
-  "aacMeanDbFS": -21.1,
+  "aacPeakDbFS": -9.8,
+  "aacMeanDbFS": -22.0,
   "faststart": true,
-  "bytes": 13147452,
-  "sha256": "201976283247253bb4c3591f732304e65dfe5abf59b87e9c42f46a3f73324d5c"
+  "bytes": 13145554,
+  "sha256": "c3afa0d4bc48407ca3cac53fe238da4867565048df3e14f627c34e911ea2a8ed"
 }

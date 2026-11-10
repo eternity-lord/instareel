@@ -1,0 +1,99 @@
+{
+  "duration": 38.0,
+  "sampleRate": 48000,
+  "seed": 505,
+  "bpm": 84,
+  "voiceUsed": true,
+  "voice": "User-selected voice-00, synthetic Persian feminine",
+  "timingMode": "speech-envelope weighted estimate; not forced alignment; no fixed 150ms guarantee",
+  "lastWordHoldMinimum": 0.9,
+  "atempo": 1.422,
+  "clips": [
+    {
+      "scene": "hook",
+      "trimStart": 0.14,
+      "trimEnd": 3.84,
+      "rawDuration": 4.051895833333333,
+      "atempo": 1.422,
+      "processedDuration": 2.6000833333333335,
+      "sceneDuration": 3.6333333333333333
+    },
+    {
+      "scene": "oil",
+      "trimStart": 0.13,
+      "trimEnd": 4.56,
+      "rawDuration": 4.6904375,
+      "atempo": 1.422,
+      "processedDuration": 3.1149583333333335,
+      "sceneDuration": 4.133333333333334
+    },
+    {
+      "scene": "skin",
+      "trimStart": 0.15,
+      "trimEnd": 5.32,
+      "rawDuration": 5.503145833333333,
+      "atempo": 1.422,
+      "processedDuration": 3.6405208333333334,
+      "sceneDuration": 4.666666666666667
+    },
+    {
+      "scene": "thick",
+      "trimStart": 0.15,
+      "trimEnd": 4.83,
+      "rawDuration": 5.0735625,
+      "atempo": 1.422,
+      "processedDuration": 3.3021458333333333,
+      "sceneDuration": 4.333333333333333
+    },
+    {
+      "scene": "seal",
+      "trimStart": 0.16,
+      "trimEnd": 5.11,
+      "rawDuration": 5.329,
+      "atempo": 1.422,
+      "processedDuration": 3.4855833333333335,
+      "sceneDuration": 4.5
+    },
+    {
+      "scene": "tool",
+      "trimStart": 0.15,
+      "trimEnd": 5.25,
+      "rawDuration": 5.503145833333333,
+      "atempo": 1.422,
+      "processedDuration": 3.5899375,
+      "sceneDuration": 4.6
+    },
+    {
+      "scene": "fix",
+      "trimStart": 0.14,
+      "trimEnd": 4.65,
+      "rawDuration": 4.852979166666667,
+      "atempo": 1.422,
+      "processedDuration": 3.1738958333333334,
+      "sceneDuration": 4.2
+    },
+    {
+      "scene": "cta",
+      "trimStart": 0.14,
+      "trimEnd": 5.7,
+      "rawDuration": 5.886270833333334,
+      "atempo": 1.422,
+      "processedDuration": 3.904541666666667,
+      "sceneDuration": 4.933333333333334
+    }
+  ],
+  "mastering": "-17 LUFS / -2 dBTP / LRA 9",
+  "loudness": {
+    "input_i": "-20.63",
+    "input_tp": "-5.27",
+    "input_lra": "4.60",
+    "input_thresh": "-31.93",
+    "output_i": "-17.29",
+    "output_tp": "-2.00",
+    "output_lra": "3.30",
+    "output_thresh": "-28.38",
+    "normalization_type": "dynamic",
+    "target_offset": "0.29"
+  },
+  "music": "Original deterministic ambient sine pad and soft pulse, no external music"
+}

@@ -10,8 +10,8 @@
     "03": "32afdd2525605388535f14ffa48c89ef0d3c2dacb3f365d98a53e8f6d7555de3",
     "04": "8228407802df67ab8a7e91076d23c30435e1c4a25206a1105829e53b245775f6"
   },
-  "voiceUsed": true,
-  "timingMode": "speech-envelope weighted estimate; not forced alignment; no fixed 150ms guarantee",
+  "voiceUsed": false,
+  "timingMode": "Frozen original caption/scene times; visual stream unchanged, no spoken alignment",
   "lastWordHoldMinimum": 0.9,
   "bpm": 84,
   "engine": "Three.js / MeshPhysicalMaterial / GSAP / postprocessing",
