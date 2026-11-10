@@ -1,8 +1,8 @@
 # خروجی‌های نهایی
 
-[دانلود ویدیوی نهایی از GitHub Releases](https://github.com/eternity-lord/instareel/releases/download/reel-01-v1.0.0/nail-reel-01.mp4) · [همهٔ فایل‌های انتشار](https://github.com/eternity-lord/instareel/releases/tag/reel-01-v1.0.0)
+[دانلود ویدیوی نهایی از GitHub](https://github.com/eternity-lord/instareel/raw/refs/heads/main/kit/deliverables/nail-reel-01.mp4) · [صفحهٔ ویدیو](https://github.com/eternity-lord/instareel/blob/main/kit/deliverables/nail-reel-01.mp4)
 
-فایل‌های حجیم خروجی در این پوشه تولید می‌شوند و عمداً وارد Git نمی‌شوند. منبع قابل‌بازتولید، ورودی، موسیقی‌ساز، رندرر و تست‌ها در مخزن هستند.
+فایل‌های حجیم خروجی در این پوشه تولید می‌شوند. فقط MP4 نهایی برای دانلود مستقیم در Git ثبت شده است؛ سایر خروجی‌های تولیدشده وارد Git نمی‌شوند. منبع قابل‌بازتولید، ورودی، موسیقی‌ساز، رندرر و تست‌ها در مخزن هستند.
 
 - `nail-reel-01.mp4` — ریل نهایی ۳۵ ثانیه‌ای، 1080×1920، 30fps
 - `cover.png` — کاور خوانا در اندازهٔ بندانگشتی
