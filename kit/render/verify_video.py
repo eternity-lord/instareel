@@ -28,7 +28,7 @@ assert re.search(r'Audio: aac .*48000 Hz, stereo', log), log
 frames = int(re.findall(r'^frame=(\d+)', result.stdout, re.M)[-1])
 manifest = json.loads((OUT / 'render-manifest.json').read_text())
 assert frames == manifest['frames'] == round(manifest['duration']*30), frames
-assert (34 if scenario.get('renderer')=='journey' else 32 if scenario.get('renderer')=='sequel' else 28) <= manifest['duration'] <= (42 if scenario.get('renderer')=='journey' else 40 if scenario.get('renderer')=='sequel' else 38)
+assert (30 if scenario.get('renderer')=='macro' else 34 if scenario.get('renderer')=='journey' else 32 if scenario.get('renderer')=='sequel' else 28) <= manifest['duration'] <= (42 if scenario.get('renderer')=='journey' else 40 if scenario.get('renderer')=='sequel' else 38)
 assert video.stat().st_size < 100_000_000
 peak = float(re.search(r'max_volume: ([\-\d.]+) dB', log).group(1))
 mean = float(re.search(r'mean_volume: ([\-\d.]+) dB', log).group(1))

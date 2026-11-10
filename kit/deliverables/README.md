@@ -2,6 +2,8 @@
 
 ## ویدیوهای ثبت‌شده در Git
 
+- [دانلود ریل ۰۵ — پنج علت رایج جداشدن ژل](https://github.com/eternity-lord/instareel/raw/refs/heads/main/kit/deliverables/nail-reel-05.mp4) — ۳۸ ثانیه، با نریشن مصنوعی
+
 - [دانلود ریل ۰۴ — ناخن شمارهٔ ۹، از پا تا اوج](https://github.com/eternity-lord/instareel/raw/refs/heads/main/kit/deliverables/nail-reel-04.mp4) — ۳۹٫۶ ثانیه
 
 - [دانلود ریل ۰۳ — ناخن شمارهٔ ۸، انتقام استون](https://github.com/eternity-lord/instareel/raw/refs/heads/main/kit/deliverables/nail-reel-03.mp4) — ۳۹ ثانیه
@@ -9,7 +11,7 @@
 - [دانلود ریل ۰۲ — ناخن شمارهٔ ۷، مأموریت زنده‌موندن](https://github.com/eternity-lord/instareel/raw/refs/heads/main/kit/deliverables/nail-reel-02.mp4) — ۳۴ ثانیه
 - [دانلود ریل ۰۱ — پنج جمله، یک عالمه صبر](https://github.com/eternity-lord/instareel/raw/refs/heads/main/kit/deliverables/nail-reel-01.mp4) — ۳۵ ثانیه
 
-هر چهار Full HD عمودی، 30fps، H.264 High / yuv420p و AAC stereo 48kHz هستند. هر چهار نسخه موسیقی و افکت دارند، بدون گوینده. فقط MP4های نهایی برای دانلود مستقیم در Git ثبت می‌شوند؛ فایل‌های تولیدشدهٔ دیگر عمداً ignored هستند و با دستورهای README بازسازی می‌شوند.
+هر پنج Full HD عمودی، 30fps، H.264 High / yuv420p و AAC stereo 48kHz هستند. نسخه‌های ۰۱–۰۴ موسیقی و افکت دارند و بدون گوینده‌اند؛ نسخهٔ ۰۵ نریشن مصنوعی دارد. فقط MP4های نهایی برای دانلود مستقیم در Git ثبت می‌شوند؛ فایل‌های تولیدشدهٔ دیگر عمداً ignored هستند و با دستورهای README بازسازی می‌شوند.
 
 ## فایل‌های همراه ریل ۰۲
 
@@ -32,3 +34,7 @@
 ## فایل‌های همراه ریل ۰۴
 
 در `kit/deliverables/reel-04/` پس از export، مجموعهٔ MP4/کاور/شیت/صوت/گزارش/زمان‌بندی/شواهد ساخته می‌شود. ویدیوی اصلی `nail-reel-04.mp4`، گزارش پایدار `kit/docs/REPORT-04.md` و شواهد `kit/docs/evidence-04/` هستند. سه MP4 قبلی بدون تغییر باقی می‌مانند.
+
+## فایل‌های همراه ریل ۰۵
+
+`kit/deliverables/reel-05/` پس از export: ویدیو، کاور، style frame، `character-sheet.png` (در این نسخه شیت متریال/نما، نه کاراکتر)، contact sheet، کارت پایان، mix.wav، زمان‌بندی و گزارش‌ها. سورس نریشن مصنوعی در `kit/audio/voice/05/` برای بازسازی در Git حفظ شده است. شواهد پایدار `kit/docs/evidence-05/`؛ آموزش عمومی و بدون تضمین ماندگاری.

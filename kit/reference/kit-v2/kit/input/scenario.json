@@ -1,0 +1,161 @@
+{
+ "title": "۵ جمله‌ای که هر ناخن‌کار هر روز می‌شنوه",
+ "hold": 0.8,
+ "endCardSeconds": 3,
+ "goal": "Shareable 'tag your nail artist' reel. Target 28-38 s total. Strong 1-second hook, one gag per scene, wholesome payoff, loop back to scene 1 pose.",
+ "cast": [
+  {
+   "name": "Nailie",
+   "role": "nail artist (hero)",
+   "desc": "round pink blob, tiny nail-brush antenna with a gel-drop tip, big glossy eyes, calm and patient, long glossy almond-nail hands in close-ups"
+  },
+  {
+   "name": "Client",
+   "role": "customer",
+   "desc": "round peach-cream blob with a small bottle-cap tuft on top, very expressive brows, always smiling politely while asking for impossible things"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "hook",
+   "text": "۵ جمله‌ای که هر ناخن‌کار هر روز می‌شنوه",
+   "mood": "happy",
+   "idea": "Hook, must grab in 1 s: Nailie sits at her tiny table, nail lamp glowing; Client blob bounces in; a giant hand-drawn number 5 smashes into frame with squash and sparkle trails over glossy nails. Fast push-in, confetti-less, bright and cute.",
+   "sfx": [
+    {
+     "k": "whoosh",
+     "t": 0.0
+    },
+    {
+     "k": "pop",
+     "t": 0.5
+    }
+   ],
+   "say": "پنج جمله‌ای که هر ناخن‌کار هر روز می‌شنوه"
+  },
+  {
+   "id": "short",
+   "text": "میگه یه کم کوتاهش کن... یعنی سه سانت!",
+   "mood": "shock",
+   "idea": "Client pinches fingers 'just a tiny bit'. Cut to Nailie's thought bubble: a giant ruler measures a long nail, the 'tiny bit' stretches to three centimeters, nail clippings pile up like a mountain. Nailie's eyes widen, antenna droops.",
+   "sfx": [
+    {
+     "k": "tick",
+     "t": 0.8
+    },
+    {
+     "k": "pop",
+     "t": 2.6
+    }
+   ]
+  },
+  {
+   "id": "simple",
+   "text": "میگه طرح ساده می‌خوام... یعنی گل، نگین، فرنچ و خط طلایی",
+   "mood": "angry",
+   "idea": "Client: 'simple!' with a calm smile. Thought bubble list pops item by item (flower, gems, french tip, gold line), every item pops with a ding and the nail design gets absurdly busy; Nailie's brush antenna spins like a helicopter.",
+   "sfx": [
+    {
+     "k": "pop",
+     "t": 1.0
+    },
+    {
+     "k": "pop",
+     "t": 1.6
+    },
+    {
+     "k": "pop",
+     "t": 2.2
+    },
+    {
+     "k": "chime",
+     "t": 3.0
+    }
+   ]
+  },
+  {
+   "id": "hurry",
+   "text": "میگه عجله ندارم... ده دقیقه بعد: تموم نشد؟",
+   "mood": "tired",
+   "idea": "Client relaxed on a cushion with a drink: 'no rush'. Fast clock montage (clock hands spin, sun to moon), Client suddenly checks a tiny watch and panics, Nailie's gel lamp timer ticks, steam from Nailie.",
+   "sfx": [
+    {
+     "k": "tick",
+     "t": 0.4
+    },
+    {
+     "k": "whoosh",
+     "t": 1.4
+    },
+    {
+     "k": "error",
+     "t": 3.0
+    }
+   ]
+  },
+  {
+   "id": "photo",
+   "text": "میگه عین عکس بزن... عکسی که فیلتر خورده!",
+   "mood": "shock",
+   "idea": "Client holds up a phone: nails are glittering 3D crystals with impossible sparkles and a sparkle filter. Nailie compares the photo and her real nail, her jaw drops; magnifier zoom, 'filter' sparkles rain.",
+   "sfx": [
+    {
+     "k": "chime",
+     "t": 0.6
+    },
+    {
+     "k": "pop",
+     "t": 2.8
+    }
+   ]
+  },
+  {
+   "id": "trust",
+   "text": "میگه هر چی خودت صلاح می‌دونی... نه نه اون رنگ نه!",
+   "mood": "angry",
+   "idea": "Client gives a thumbs up: 'your choice!'. Nailie happily picks a color; Client freezes, eyes shrink, waves both hands in panic, color swatches fly by like cards; Nailie slumps comically.",
+   "sfx": [
+    {
+     "k": "pop",
+     "t": 0.6
+    },
+    {
+     "k": "error",
+     "t": 2.4
+    }
+   ]
+  },
+  {
+   "id": "payoff",
+   "text": "ولی وقتی ناخن‌ها تموم می‌شه... وای عاشقشونم!",
+   "mood": "love",
+   "idea": "Warm light sweeps in; glossy finished nails fill the frame in macro with a specular sweep and sparkles; Client's eyes become hearts and hugs the air; Nailie melts into a happy puddle, all the earlier chaos forgotten; hearts float.",
+   "sfx": [
+    {
+     "k": "chime",
+     "t": 0.3
+    },
+    {
+     "k": "pop",
+     "t": 2.2
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "text": "اینو برای ناخن‌کارت بفرست",
+   "mood": "smug",
+   "idea": "Nailie winks at the viewer and points at a share arrow; Client sneaks in from the side, pinches fingers 'just a little' again for the loop gag; end with the same pose as scene 1 for a seamless loop; then end-card with @ayda.nailroom.",
+   "sfx": [
+    {
+     "k": "pop",
+     "t": 0.3
+    },
+    {
+     "k": "chime",
+     "t": 1.5
+    }
+   ]
+  }
+ ]
+}

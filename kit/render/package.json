@@ -4,8 +4,11 @@
   "type": "module",
   "dependencies": {
     "@sparticuz/chromium": "^143.0.4",
+    "gsap": "^3.12.5",
     "playwright": "^1.58.2",
     "pngjs": "^7.0.0",
+    "postprocessing": "^6.36.4",
+    "three": "^0.170.0",
     "vazirmatn": "^33.0.3"
   },
   "scripts": {

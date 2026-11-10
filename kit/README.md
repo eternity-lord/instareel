@@ -7,6 +7,11 @@ The owner gives you **scenes** (`input/scenario.json`) and **reference video/ima
 - `input/refs/*`: study first (`ffmpeg -i ref.mp4 -vf fps=1,scale=360:-1 refs_%02d.jpg`). Extract and match the **style system**: background treatment, palette, round-blob proportions, flat-shaded character construction, face construction, line/shape weight, caption position and the yellow word-highlight, pacing, composition. **Do not trace or reuse the reference's actual characters, logos or marks**: create an original cast in the same family (the owner wants this look, at a much higher production quality).
 - `input/post_copy.md`, `brand.json`: handle, palette, fonts, safe zones, voice/music switches.
 
+- **Style override**: if `scenario.json` has a `style` field, it OVERRIDES the cartoon/blob guidance above (and the cartoon look of `input/refs`). Follow `style` exactly (e.g. photoreal-leaning 3D macro, no mascots). SFX kinds available: pop, whoosh, chime, tick, error, drip, swish, click, shimmer.
+
+## Style override
+If `input/scenario.json` has a `style` block, it **overrides** every cartoon/blob/character direction in this README (cast, plush shading, mascots). Follow `style.look/tools/typography/motion/audio` and `accuracy` exactly. Quality bar, pipeline gates, engine contract, karaoke subtitles, safe zones, handle and render rules still apply.
+
 ## Hard constraints
 - Output `out/nail-reel-01.mp4` (1080x1920, 30 fps, H.264 High, yuv420p, AAC 48 kHz, faststart), plus `out/cover.png`, `out/style-frame.png`, `out/character-sheet.png`, `out/contact-sheet.png`, `out/REPORT.md`.
 - **Faceless page**: no real human face or real person's voice. Cartoon characters are fine. Voice, if any, is synthetic (see Audio).

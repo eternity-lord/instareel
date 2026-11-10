@@ -1,0 +1,14 @@
+{
+  "synthetic": true,
+  "voice": "voice-00",
+  "sha256": {
+    "hook.wav": "3c042abf516672d08779f3fa70055d7d44f1ba3d662327e301135c982ab650c1",
+    "skin.wav": "dd45c453e7f2f6e485cfdfc4707e95e64c4ea224769e4d7b5071d72d141d4bbb",
+    "oil.wav": "35a94884b77f4b11e4d99e5f1b2d6d0f25f4311d316fdd416fbff68349754718",
+    "thick.wav": "c412d2054e61eb98f0053085a7b0eaac187c5d978eb3a76657b32490af3faeb4",
+    "fix.wav": "3c20c1e9e35cc1812001b08716cd09ba312451ea15dbc9b10828e95ce15df699",
+    "seal.wav": "4f2d973f12087dd8d1d1b34f1ee17ec3761d5611a508a691daf9f83722ca240d",
+    "tool.wav": "01be8d231e218ce031b2a0d4fb5ad736eeea24a086bae11f768a9529d8ca584f",
+    "cta.wav": "89b450082d6f5a7981c959c9a9536b5667406803219c312bc24499368eb3be66"
+  }
+}

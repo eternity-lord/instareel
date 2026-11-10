@@ -1,164 +1,90 @@
 {
-  "title": "ناخن شماره ۹: از پا تا اوج",
-  "format": "Third episode but a new genre: heartwarming underdog story + glow-up makeover (Pixar-like warmth with comedy). Keep the cinematic bars/grain look from 02/03 but warmer. Built as ONE continuous 'camera journey' with match-cut portals through objects (sock hole, door, mirror-like shine). Beat-synced montage at 100 bpm for the glow-up. High motion: orbits, whip-pans, rack focus, parallax, speed ramps, squash-and-stretch. Cute, never scary.",
-  "hold": 0.7,
+  "title": "چرا ژل ناخن زود می‌پره؟ ۵ دلیل",
+  "style": {
+    "look": "NOT cartoon, NOT childish. Premium editorial / macro-cinematic look for an adult audience: dark luxury palette (obsidian #0b0a0c, champagne gold #d9b88f, blush #f2c6cf, ivory #f4efe9), thin gold technical line-art, glossy physically-based materials, soft bokeh, film grain, subtle chromatic aberration, anamorphic light streaks. No characters, no mascots, no emoji, no real human skin or faces (avoid uncanny realism: show nails as glossy objects and technical cross-sections).",
+    "tools": "Three.js with MeshPhysicalMaterial (transmission, clearcoat, iridescence, thickness), procedural/studio environment lighting, post-processing (bloom, depth of field, grain) via the 'postprocessing' package; SVG for technical drawings with stroke-dash draw-on; GSAP paused timelines driven by window.__seek(t); seeded particles. SwiftShader WebGL in headless Chromium is enabled. Everything deterministic.",
+    "typography": "Big confident Persian kinetic type (Vazirmatn ExtraBold) with the karaoke yellow word-pill as defined in README; secondary labels thin and small, never covering the product. Keep text in safe zones.",
+    "motion": "Slow-motion hero moments + sharp speed-ramps; macro push-ins, orbits, crane-ups, rack focus; every scene has a continuous camera move and at least 3 moving layers; transitions via light sweeps and match cuts on glossy highlights.",
+    "audio": "Minimal ambient pad + soft pulse (bpm 80-90), liquid/glass/click SFX; calm authoritative voice (see voice-prompts.md). Set brand.json music.bpm to 84 for this reel."
+  },
+  "accuracy": "Educational claims must stay general and cautious: these are COMMON reasons for gel lifting (skin/oil left on the nail surface, thick or under-cured layers, unsealed free edge, using nails as tools). Do not promise exact durations or medical results.",
+  "hold": 0.9,
   "endCardSeconds": 3,
-  "goal": "Emotional + shareable. 34-42 s. 1-second hook, glow-up transformation as the wow moment, a 'tag someone' CTA, and a tease for episode 5 (Number 10).",
-  "cast": [
-    {
-      "name": "Number 9",
-      "role": "hero",
-      "desc": "giant sleepy toenail blob, tiny sock hat, huge gentle eyes; after glow-up: glossy lilac with a gem"
-    },
-    {
-      "name": "Number 7",
-      "role": "cameo",
-      "desc": "tiny pink almond-nail blob with a bandage"
-    },
-    {
-      "name": "Number 8",
-      "role": "cameo",
-      "desc": "ruby-red rookie blob with sunglasses"
-    },
-    {
-      "name": "Gel",
-      "role": "cameo",
-      "desc": "glossy translucent-blue knight blob"
-    },
-    {
-      "name": "Ducky",
-      "role": "sidekick",
-      "desc": "rubber duck in the spa with a sly wink and a tiny towel"
-    },
-    {
-      "name": "Number 10",
-      "role": "tease",
-      "desc": "giant thumbnail blob silhouette, thumbs-up"
-    },
-    {
-      "name": "Fans",
-      "role": "crowd",
-      "desc": "colorful fingernail blobs with tiny glow-sticks and cameras"
-    }
-  ],
+  "goal": "High-save, high-share educational reel. 30-38 s. Hook = relatable pain in 1 s, one reason per scene, satisfying macro visuals, 'save + send' CTA. Loop back to the droplet.",
   "scenes": [
     {
       "id": "hook",
-      "text": "هیچ‌کس ناخن پا رو نمی‌بینه...",
-      "mood": "tired",
-      "idea": "Dark cozy sock cave, one dust-lit ray from a hole high above. Camera creeps in on Number 9, the giant sleepy toenail blob in a tiny sock hat, hugging his knees, a single sad blink. Through the hole, glimpses of bright fingernails getting compliments. Slow dolly-in, soft piano feel.",
+      "text": "ژل ناخنت چرا زود می‌پره؟",
+      "mood": "shock",
+      "idea": "Pure black void. A single gel droplet (clear, amber-tinted, physically-based glass/gel material) falls in extreme slow motion through a hard champagne-gold rim light and lands on a mirror-black glossy plate; ripple rings expand, then a hairline crack races across the glossy surface and a corner lifts. Macro depth of field, light streak flare. Kinetic type slams in word by word.",
+      "sfx": [
+        {
+          "k": "pop",
+          "t": 0.4
+        },
+        {
+          "k": "error",
+          "t": 1.6
+        }
+      ]
+    },
+    {
+      "id": "oil",
+      "text": "دلیل اول: چربی نامرئی روی سطح ناخن",
+      "mood": "calm",
+      "idea": "Technical cross-section drawing animates on dark navy-black: thin gold line draws the nail plate profile (stroke draw-on), tiny glowing oil dots drift on its surface; a translucent gel layer hovers and fails to bond, leaving a shimmering air gap; thin leader lines with small labels pop. Subtle grid, parallax camera drift, shallow DOF on background dots.",
       "sfx": [
         {
           "k": "tick",
           "t": 0.5
         },
         {
-          "k": "error",
+          "k": "pop",
           "t": 1.8
         }
       ]
     },
     {
-      "id": "tired",
-      "text": "شماره نُه خسته بود... خسته از تو جوراب بودن",
-      "mood": "sad",
-      "idea": "Split-screen/parallax montage: upstairs, glossy fingernails get hearts, camera flashes and a coffee-mug photo shoot; downstairs Number 9 gets only lint and a dangling thread. Hearts float up past him and don't stop. He tries to wave, nobody sees. Camera tilts up and down between the two worlds.",
-      "sfx": [
-        {
-          "k": "pop",
-          "t": 0.8
-        },
-        {
-          "k": "pop",
-          "t": 1.6
-        }
-      ]
-    },
-    {
-      "id": "break",
-      "text": "پس یه تصمیم گرفت: بیرون زدن!",
-      "mood": "angry",
-      "idea": "He stands up with determination, cracks his knuckles (cute), runs and headbutts the sock toe; fabric rips in slow-mo with threads flying; MATCH CUT: the camera flies through the hole like a portal into the next scene. Speed lines, screen shake.",
-      "sfx": [
-        {
-          "k": "whoosh",
-          "t": 0.0
-        },
-        {
-          "k": "pop",
-          "t": 1.4
-        }
-      ]
-    },
-    {
-      "id": "shoe",
-      "text": "از لابه‌لای کفش... تا رسید به یه جای عجیب",
-      "mood": "shock",
-      "idea": "One-take illusion: camera tracks beside Number 9 as he rolls and bounces like a ball through shoe-world: lace bridges, insole trampoline, sandal-strap swing, dropping down a staircase; clumsy comedy, camera whip-pans on each bounce, dust trails, ends with a door he crashes through.",
-      "sfx": [
-        {
-          "k": "whoosh",
-          "t": 0.0
-        },
-        {
-          "k": "pop",
-          "t": 0.8
-        },
-        {
-          "k": "pop",
-          "t": 1.6
-        }
-      ]
-    },
-    {
-      "id": "spa",
-      "text": "آب گرم، سوهان، و یه کم ناز",
+      "id": "skin",
+      "text": "دلیل دوم: پوست نازکی که روی ناخن می‌مونه",
       "mood": "calm",
-      "idea": "Door bursts open to a bright pastel spa: warm foot-bath with bubbles, steam, soft ring light. A rubber-duck sidekick winks and points at the bath. Number 9 dips in, ahh face, foam hat, tiny sponge scrubs, file sparks like glitter. Warm color grade shift from cool blue to peach. Slow orbit.",
+      "idea": "Same technical language: a near-invisible translucent film (cuticle remnant) shown as a shimmering sheet over the nail plate; gel is applied on top and the film peels at the edge like a corner of tape, the gel layer rolls up with it; highlight ring pulses on the lift point. Slow push-in with rack focus.",
       "sfx": [
-        {
-          "k": "chime",
-          "t": 0.2
-        },
         {
           "k": "tick",
-          "t": 1.6
+          "t": 0.4
+        },
+        {
+          "k": "whoosh",
+          "t": 2.0
         }
       ]
     },
     {
-      "id": "glow",
-      "text": "ژل، رنگ، براقی!",
-      "mood": "love",
-      "idea": "MOTION MAX beat-synced glow-up montage, a hard cut on each word: base coat sweep, lilac color wipe, sparkle gem pop. Final spin transformation: 360-degree orbit with a light-sweep reveals Number 9 glossy, lilac with a gem and a huge specular shine, star glints, camera flare.",
+      "id": "thick",
+      "text": "دلیل سوم: لایه‌ی ضخیم و کم‌پخت",
+      "mood": "calm",
+      "idea": "Side-by-side exploded stack view: thin even layers glowing evenly vs one thick layer with trapped micro-bubbles and an under-cured soft core (gradient from glossy top to dull milky bottom), a heat-map style color scan sweeps through. Layers animate apart and snap back. Orbit camera 20 degrees.",
       "sfx": [
         {
           "k": "pop",
-          "t": 0.2
-        },
-        {
-          "k": "pop",
-          "t": 0.7
+          "t": 0.5
         },
         {
           "k": "chime",
-          "t": 1.1
+          "t": 2.0
         }
       ]
     },
     {
-      "id": "walk",
-      "text": "و برای اولین بار... همه برگشتن نگاش کنن",
-      "mood": "happy",
-      "idea": "Catwalk on a sunny beach boardwalk: Number 9 strides in slow-motion wearing tiny sandals, crowd of fingernails (Number 7, Number 8, Gel, many colors) turn their heads, flash photography, confetti, parallax palm trees; camera tracks low and then cranes up. Wind in the sock hat.",
+      "id": "seal",
+      "text": "دلیل چهارم: لبه‌ی ناخن که سیل نشده",
+      "mood": "calm",
+      "idea": "Side profile of the nail tip: blue water droplets creep in through the unsealed free edge as an animated liquid-capillary line crawling under the gel; then the edge gets a gold sealing cap sweep and the water bounces off in slow motion. Macro close-up, light sweep across the seal.",
       "sfx": [
         {
-          "k": "chime",
-          "t": 0.2
-        },
-        {
-          "k": "pop",
-          "t": 1.5
+          "k": "tick",
+          "t": 0.6
         },
         {
           "k": "pop",
@@ -167,38 +93,46 @@
       ]
     },
     {
-      "id": "heart",
-      "text": "شماره نُه دیگه نامرئی نبود",
-      "mood": "love",
-      "idea": "Emotional beat: close-up on Number 9, a happy tear and a smile, hearts bubbling up around him; slow pull-back reveals the whole foot with a ring-light halo and sparkles; the sock hole is patched with a little heart patch. Quiet, warm, rack focus.",
+      "id": "tool",
+      "text": "دلیل پنجم: استفاده از ناخن به‌جای ابزار",
+      "mood": "angry",
+      "idea": "Dramatic slow-motion: a nail edge forced under a metallic can-tab like a lever; red force arrows and a stress heat-map bloom on the nail; a crack propagates through the gel like glass, fragments float in micro-gravity with bright rim light. Hard screen shake on the impact, bass hit.",
       "sfx": [
         {
-          "k": "chime",
-          "t": 0.3
+          "k": "tick",
+          "t": 0.8
+        },
+        {
+          "k": "error",
+          "t": 1.3
+        },
+        {
+          "k": "whoosh",
+          "t": 1.9
         }
       ]
     },
     {
-      "id": "tease",
-      "text": "ولی یه سایه‌ی بزرگ‌تر داره میاد... شماره ده!",
-      "mood": "shock",
-      "idea": "Sudden rumble: the sunny sky darkens, a giant shadow slides across the beach; the camera tilts up to a huge thumbnail blob silhouette blotting out the sun, thumbs-up pose, lens flare behind. Title sting. Everyone gasps, sand shakes, waves recede.",
+      "id": "fix",
+      "text": "اجرای درست، به ماندگاری بیشتر کمک می‌کنه",
+      "mood": "love",
+      "idea": "Resolution: a perfect almond nail as a glossy macro object on dark glass, clearcoat reflections, a slow light sweep and an iridescent chrome-powder glint travelling across it; floating gold dust, camera crane-up, very calm; reflections ripple on the plate below.",
       "sfx": [
         {
-          "k": "error",
-          "t": 0.2
+          "k": "chime",
+          "t": 0.3
         },
         {
-          "k": "whoosh",
-          "t": 1.4
+          "k": "pop",
+          "t": 2.0
         }
       ]
     },
     {
       "id": "cta",
-      "text": "تگ کن اونی رو که ناخن پاش رو نادیده می‌گیره",
+      "text": "ذخیره کن و برای کسی بفرست که ناخنش همیشه می‌پره",
       "mood": "smug",
-      "idea": "All the nails and the duck line up and point at the viewer; Number 9 winks and shows a sparkling shine; quick match-cut loop back to the dark sock cave of scene 1, now with a heart patch; end-card @ayda.nailroom.",
+      "idea": "Elegant minimal end: kinetic type 'ذخیره کن' with a bookmark icon draw-on, a send-arrow draws and flies; a gold liquid sweep wipes into the end-card @ayda.nailroom on black with a soft glint on the lettering. Loop: the opening droplet appears as the last beat.",
       "sfx": [
         {
           "k": "pop",
@@ -206,12 +140,12 @@
         },
         {
           "k": "chime",
-          "t": 1.5
+          "t": 1.8
         }
       ]
     }
   ],
-  "reelId": "04",
-  "renderer": "journey",
-  "audioStyle": "journey"
+  "reelId": "05",
+  "renderer": "macro",
+  "audioStyle": "macro"
 }
