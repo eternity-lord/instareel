@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "change": "Remove extra top heading from reel 02 and cover",
+  "aacStreamUnchanged": true,
+  "aacStreamHash": "SHA256=8fa18fec57416b2d37346d8d09907765a90778c50e4d36f8f1eae35bf5879658",
+  "reel01Unchanged": true,
+  "reel01Sha256": "e898dc46419c97566494254064d92515e7d2cdc93240918605944f0a1ee4e19c"
+}

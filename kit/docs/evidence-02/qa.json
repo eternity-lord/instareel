@@ -10,7 +10,7 @@
         "meanChannelDelta": 0,
         "fractionOver5": 0
       },
-      "hash": "8c4b520aa9936989028bb2fbcb4c9c3038b3b94429e32228ce2d6936e3198181"
+      "hash": "4fbc409a6a780446c7651a77cf2d6e4882c4d6c87add61d07a6ff45d99e2bbb4"
     },
     {
       "scene": "door",
@@ -20,7 +20,7 @@
         "meanChannelDelta": 0,
         "fractionOver5": 0
       },
-      "hash": "a060bd784ef07e6e5a6b2c1dd8c74cf770c7e9240a679f4ac648df79fe7099b8"
+      "hash": "8ee17cb140cf01caf93b6332db4872abf7178fa8c555d3e2af829777c9ee0cda"
     },
     {
       "scene": "can",
@@ -30,7 +30,7 @@
         "meanChannelDelta": 0,
         "fractionOver5": 0
       },
-      "hash": "978cd988afbe73e66d7be0fb3c8dda7a48187af32a05d04688e1c568502c51c9"
+      "hash": "f045e3f40f6ac41e075ad6222f5dededf828c7748d74a879a5470d36f1c4739c"
     },
     {
       "scene": "thread",
@@ -40,7 +40,7 @@
         "meanChannelDelta": 0,
         "fractionOver5": 0
       },
-      "hash": "fe136b4ca868f9a1c04cc13f9cc207ba8ab181f391831519cf917820c7828c4d"
+      "hash": "9919a1e9a1269022dc5d9b8edaf0110a7c6a4be0f12e1ed3cdb0129d9ac47c4f"
     },
     {
       "scene": "hero",
@@ -50,7 +50,7 @@
         "meanChannelDelta": 0,
         "fractionOver5": 0
       },
-      "hash": "d3d65d5573fb1121448d4cbb156567d13baa3792b755122975869d38e4a1ac35"
+      "hash": "e26cbc8e8dd0f6fe2b33013a8fde1641e793ddb3b25b5d3e1b06fd47049cb3d0"
     },
     {
       "scene": "combo",
@@ -60,7 +60,7 @@
         "meanChannelDelta": 0,
         "fractionOver5": 0
       },
-      "hash": "9416c419039285f6bbc29a4a6dad6a4b1874ca7b65a18ac76594b1ae903c302a"
+      "hash": "df6e2ab268b7b653b5e6e5288ba06a8014c8bc430bac266605513e581fad4348"
     },
     {
       "scene": "win",
@@ -70,7 +70,7 @@
         "meanChannelDelta": 0,
         "fractionOver5": 0
       },
-      "hash": "b508a0d56aa48eb6e168b24b5043fde1c34fbdc90b1d05abd9bfa05692f39ea7"
+      "hash": "f7064a404d96c3bf970e79ff423e499e3de84e7125a0f76410c1889005822bd7"
     },
     {
       "scene": "cta",
@@ -80,10 +80,11 @@
         "meanChannelDelta": 0,
         "fractionOver5": 0
       },
-      "hash": "03b78571bf1cfff629d747359199e98c911f39b4e0756a71174512038e780f6c"
+      "hash": "9aaab70e41f0fd8904665c73d0c92c970a3498dce0e95bbe276a9e5afa93b080"
     }
   ],
   "checkedWords": 52,
+  "trailerHeadingRemoved": true,
   "captionSafeZones": true,
   "localFont": true,
   "noEmoji": true,

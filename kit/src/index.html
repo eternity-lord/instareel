@@ -30,7 +30,7 @@ window.__seek=function(t){
   }).join(' ')+'</span>').join('');
  }
  const idx=end?S.length-1:S.indexOf(s);
- document.getElementById('eyebrow').textContent=end?'AYDA · NAIL ROOM':SC.renderer==='trailer'?'ناخن شمارهٔ ۷ / یک تریلر کوچک':idx===0?'قصه‌های کوچیکِ میز ناخن':'پنج جمله، یک عالمه صبر';
+ document.getElementById('eyebrow').textContent=end?'AYDA · NAIL ROOM':SC.renderer==='trailer'?'':idx===0?'قصه‌های کوچیکِ میز ناخن':'پنج جمله، یک عالمه صبر';
  document.getElementById('wm').textContent=BR.handle;
  document.getElementById('counter').textContent=end?'ادامه دارد…':`۸ / ${String(idx+1).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d])}`;
  document.getElementById('track').innerHTML=S.map((_,i)=>`<div class="dot"><div class="fill" style="width:${i<idx?100:i===idx?p*100:0}%"></div></div>`).join('');

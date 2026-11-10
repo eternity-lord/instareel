@@ -13,7 +13,7 @@ try{
  await page.evaluate(()=>{
   const s=window.__scenes.find(s=>s.id==='win');window.__seek(s.start+2.2);
   document.getElementById('cap').innerHTML='<span class="line">ناخن شمارهٔ <span class="w on">۷</span></span><span class="line">مأموریت زنده‌موندن</span>';
-  document.getElementById('eyebrow').textContent='یک تریلر کوچک، یک قهرمان خیلی کوچک';
+  document.getElementById('eyebrow').textContent='';
   document.getElementById('counter').textContent='قسمت ۰۲';
  });
  await page.screenshot({path:path.join(OUTDIR,'cover.png')});

@@ -33,10 +33,11 @@ try{
   const state=await page.evaluate(t=>{
    window.__seek(t);const cap=document.getElementById('cap'),box=cap.getBoundingClientRect();
    const selected=[...cap.querySelectorAll('.on')].map(e=>e.textContent);
-   return {selected,boxes:[...cap.querySelectorAll('.w')].map(e=>{const b=e.getBoundingClientRect();return{x:b.x,y:b.y,right:b.right,bottom:b.bottom};}),loaded:document.fonts.check('800 34px Vazirmatn'),box:{y:box.y,bottom:box.bottom},emoji:/\p{Extended_Pictographic}/u.test(document.getElementById('stage').textContent)};
+   return {selected,eyebrow:document.getElementById('eyebrow').textContent,boxes:[...cap.querySelectorAll('.w')].map(e=>{const b=e.getBoundingClientRect();return{x:b.x,y:b.y,right:b.right,bottom:b.bottom};}),loaded:document.fonts.check('800 34px Vazirmatn'),box:{y:box.y,bottom:box.bottom},emoji:/\p{Extended_Pictographic}/u.test(document.getElementById('stage').textContent)};
   },s.start+(w.t0+w.t1)/2);
   assert.deepEqual(state.selected,[w.w],`Highlight ${s.id}: ${w.w}`);
   assert.ok(state.loaded);assert.ok(!state.emoji);
+  if(PROJECT.renderer==='trailer')assert.equal(state.eyebrow,'','Trailer must not have an extra heading above captions');
   for(const b of state.boxes)assert.ok(b.x>=15&&b.right<=525&&b.y>=125&&b.bottom<=310,JSON.stringify({scene:s.id,b}));
   words++;
  }
@@ -46,7 +47,7 @@ try{
  // Ensure no global CSS animations or wall-clock timers drive the scene.
  const animations=await page.evaluate(()=>document.getAnimations().length);assert.equal(animations,0);
  assert.deepEqual(errors,[]);
- const report={passed:true,duration:data.duration,scenes:checks,checkedWords:words,captionSafeZones:true,localFont:true,noEmoji:true,loopBoundaryDomIdentical:true,loopRaster,activeCssAnimations:animations,browserErrors:errors};
+ const report={passed:true,duration:data.duration,scenes:checks,checkedWords:words,trailerHeadingRemoved:PROJECT.renderer==='trailer',captionSafeZones:true,localFont:true,noEmoji:true,loopBoundaryDomIdentical:true,loopRaster,activeCssAnimations:animations,browserErrors:errors};
  fs.writeFileSync(path.join(OUTDIR,'qa.json'),JSON.stringify(report,null,2));
  console.log(JSON.stringify(report,null,2));
 }finally{await browser?.close();server.close();}
