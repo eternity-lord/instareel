@@ -1,0 +1,29 @@
+{
+  "duration": 39.6,
+  "sampleRate": 48000,
+  "seed": 409,
+  "bpm": 100,
+  "voiceUsed": false,
+  "voiceReason": "Original instrumental edition; no human voice or TTS generated.",
+  "timingMode": "reading-timing",
+  "lastWordHold": 0.7,
+  "glowBeats": [
+    18,
+    18.6,
+    19.2
+  ],
+  "mastering": "-17 LUFS / -2 dBTP / LRA 9",
+  "loudness": {
+    "input_i": "-24.15",
+    "input_tp": "-6.52",
+    "input_lra": "6.70",
+    "input_thresh": "-34.15",
+    "output_i": "-15.85",
+    "output_tp": "-2.00",
+    "output_lra": "3.70",
+    "output_thresh": "-25.88",
+    "normalization_type": "dynamic",
+    "target_offset": "-1.15"
+  },
+  "music": "Original warm piano-like additive synthesis, plucked strings and soft percussion; no sampled recordings."
+}

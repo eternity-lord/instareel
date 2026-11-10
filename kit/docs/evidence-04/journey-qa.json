@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "originalScenarioUnchanged": true,
+  "priorVideoSha256": {
+    "01": "e898dc46419c97566494254064d92515e7d2cdc93240918605944f0a1ee4e19c",
+    "02": "90736f21a9ef457c7f5db2182a32faec9ab366c993a7bf0093be0dcfb5dc9be9",
+    "03": "32afdd2525605388535f14ffa48c89ef0d3c2dacb3f365d98a53e8f6d7555de3"
+  },
+  "lastWordHold": 0.7,
+  "bpm": 100,
+  "glowPhases": [
+    {
+      "lilac": false,
+      "gem": false
+    },
+    {
+      "lilac": true,
+      "gem": false
+    },
+    {
+      "lilac": true,
+      "gem": true
+    }
+  ],
+  "portals": [
+    {
+      "from": "hook",
+      "to": "tired",
+      "meanChannelDelta": 0
+    },
+    {
+      "from": "tired",
+      "to": "break",
+      "meanChannelDelta": 0
+    },
+    {
+      "from": "break",
+      "to": "shoe",
+      "meanChannelDelta": 0
+    },
+    {
+      "from": "shoe",
+      "to": "spa",
+      "meanChannelDelta": 0
+    },
+    {
+      "from": "spa",
+      "to": "glow",
+      "meanChannelDelta": 0
+    },
+    {
+      "from": "glow",
+      "to": "walk",
+      "meanChannelDelta": 0
+    },
+    {
+      "from": "walk",
+      "to": "heart",
+      "meanChannelDelta": 0
+    },
+    {
+      "from": "heart",
+      "to": "tease",
+      "meanChannelDelta": 0
+    },
+    {
+      "from": "tease",
+      "to": "cta",
+      "meanChannelDelta": 0
+    }
+  ],
+  "validSvgSamples": 60,
+  "browserErrors": []
+}
