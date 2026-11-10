@@ -55,10 +55,11 @@ export async function serve({port=0,home='/src/index.html'}={}){
 }
 export async function openScene(server,{width=540,height=960,scale=2}={}){
  // This project is vector-only: CPU Skia avoids the much slower SwiftShader GPU path.
- const cpu=process.env.STUDIO_CPU_RASTER!=='0';
+ const cpu=PROJECT.renderer!=='macro'&&process.env.STUDIO_CPU_RASTER!=='0';
  const graphicsArgs=cpu?chromium.args.filter(a=>!/^--(use-|in-process-gpu|enable-unsafe-swiftshader)/.test(a)):chromium.args;
  const browser=await playwright.launch({executablePath:process.env.CHROMIUM_PATH||await chromium.executablePath(),args:[...graphicsArgs,...(cpu?['--disable-gpu','--disable-gpu-compositing']:[]),'--force-color-profile=srgb'],env:{...process.env,LD_LIBRARY_PATH:[path.join(libs,'lib'),process.env.LD_LIBRARY_PATH].filter(Boolean).join(':')},headless:true});
  const page=await browser.newPage({viewport:{width,height},deviceScaleFactor:scale});
+ if(PROJECT.renderer==='macro')page.setDefaultTimeout(120000);
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  page.on('response',r=>{if(r.status()>=400&&!r.url().endsWith('/favicon.ico'))errors.push(`${r.status()} ${r.url()}`);});
  await page.goto(`http://127.0.0.1:${server.address().port}/src/index.html`);
