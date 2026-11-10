@@ -2,10 +2,12 @@
 
 ## ویدیوهای ثبت‌شده در Git
 
+- [دانلود ریل ۰۳ — ناخن شمارهٔ ۸، انتقام استون](https://github.com/eternity-lord/instareel/raw/refs/heads/main/kit/deliverables/nail-reel-03.mp4) — ۳۹ ثانیه
+
 - [دانلود ریل ۰۲ — ناخن شمارهٔ ۷، مأموریت زنده‌موندن](https://github.com/eternity-lord/instareel/raw/refs/heads/main/kit/deliverables/nail-reel-02.mp4) — ۳۴ ثانیه
 - [دانلود ریل ۰۱ — پنج جمله، یک عالمه صبر](https://github.com/eternity-lord/instareel/raw/refs/heads/main/kit/deliverables/nail-reel-01.mp4) — ۳۵ ثانیه
 
-هر دو Full HD عمودی، 30fps، H.264 High / yuv420p و AAC stereo 48kHz هستند. هر دو نسخه موسیقی و افکت دارند، بدون گوینده. فقط MP4های نهایی برای دانلود مستقیم در Git ثبت می‌شوند؛ فایل‌های تولیدشدهٔ دیگر عمداً ignored هستند و با دستورهای README بازسازی می‌شوند.
+هر سه Full HD عمودی، 30fps، H.264 High / yuv420p و AAC stereo 48kHz هستند. هر سه نسخه موسیقی و افکت دارند، بدون گوینده. فقط MP4های نهایی برای دانلود مستقیم در Git ثبت می‌شوند؛ فایل‌های تولیدشدهٔ دیگر عمداً ignored هستند و با دستورهای README بازسازی می‌شوند.
 
 ## فایل‌های همراه ریل ۰۲
 
@@ -20,3 +22,7 @@
 گزارش‌ها و راهنمای پایدار در `kit/docs/` هستند. خروجی‌های کاری `kit/out/02/` را جای ذخیرهٔ پایدار در نظر نگیرید.
 
 داستان ریل دوم فانتزی است؛ ژل ناخن را شکست‌ناپذیر نمی‌کند. بازدید یا وایرال‌شدن تضمین‌پذیر نیست.
+
+## فایل‌های همراه ریل ۰۳
+
+در `kit/deliverables/reel-03/` پس از export، همان مجموعهٔ MP4/کاور/شیت/صوت/گزارش و شواهد با نام `nail-reel-03.mp4` ایجاد می‌شود. گزارش پایدار: `kit/docs/REPORT-03.md` و `kit/docs/evidence-03/`. ویدیوهای ۰۱ و نسخهٔ اصلاح‌شدهٔ ۰۲ تغییر نکرده‌اند.

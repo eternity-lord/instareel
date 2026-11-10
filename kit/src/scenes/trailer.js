@@ -183,5 +183,5 @@ for(const id of [...ids,'__endcard'])registerScene(id,{
  mount(el){el.innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" aria-hidden="true">${defs}<g id="trailer-world"></g></svg>`;},
  update(el,p,t,brand){el.querySelector('#trailer-world').innerHTML=id==='__endcard'?endcard(p,t,brand):scene(id,p,t);}
 });
-window.Trailer={defs,hero,gel,door,can,yarn,scene,text,pill,star};
+window.Trailer={defs,hero,gel,door,can,yarn,scene,text,pill,star,landscape,cinema,brush,eyes,heart};
 })();

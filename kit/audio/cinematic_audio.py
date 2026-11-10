@@ -15,7 +15,11 @@ SC = json.loads((ROOT/'input/scenario.json').read_text())
 OUT = ROOT/'out'/SC.get('reelId', '02')
 OUT.mkdir(parents=True, exist_ok=True)
 SR = 48000
-DURS = {'hook':3.2, 'door':3.2, 'can':3.2, 'thread':5., 'hero':3.6, 'combo':4.4, 'win':3.8, 'cta':4.6}
+SEQUEL = SC.get('reelId') == '03'
+DURS = ({'hook':3.7,'acetone':3.8,'army':2.7,'rookie':3.2,'chase':4.5,'melt':3.1,'team':3.7,'final':3.8,'twist':3.6,'cta':3.9}
+        if SEQUEL else {'hook':3.2, 'door':3.2, 'can':3.2, 'thread':5., 'hero':3.6, 'combo':4.4, 'win':3.8, 'cta':4.6})
+HERO,WIN,LAYER,IMPACT,FOG,TENSION = ('team','final','final','rookie','acetone','melt') if SEQUEL else ('hero','win','combo','door','can','thread')
+SEED = 308 if SEQUEL else 207
 timing = {}
 starts = {}
 cursor = 0
@@ -36,7 +40,7 @@ TOTAL = round(cursor + SC.get('endCardSeconds', 3), 4)
 N = round(TOTAL*SR)
 score = np.zeros((N, 2), dtype=np.float32)
 fx = np.zeros_like(score)
-rng = np.random.default_rng(207)
+rng = np.random.default_rng(SEED)
 
 def add(track, signal, at, gain=1, pan=0):
     i = round(at*SR)
@@ -91,7 +95,7 @@ chords = [[146.83,174.61,220],[116.54,146.83,174.61],[98,116.54,146.83],[110,146
 bar = 0
 while bar*4*beat<TOTAL:
     at=bar*4*beat
-    heroic=at>=starts['hero']
+    heroic=at>=starts[HERO]
     chord=([146.83,185,220] if bar%2==0 else [130.81,164.81,196]) if heroic else chords[bar%4]
     gain=.09 if heroic else .055
     for note in chord:
@@ -103,29 +107,42 @@ while bar*4*beat<TOTAL:
         add(score,boom(.5),at+step*beat,.16 if heroic else .11)
     bar+=1
 # Distinct cue points align the score with cuts, not just a generic loop bed.
-for key,notes in [('hook',[73.42,110]),('door',[73.42,87.31]),('thread',[98,146.83]),
-                  ('hero',[146.83,185,220,293.66]),('win',[146.83,185,220,369.99])]:
+for key,notes in [('hook',[73.42,110]),(IMPACT,[73.42,87.31]),(TENSION,[98,146.83]),
+                  (HERO,[146.83,185,220,293.66]),(WIN,[146.83,185,220,369.99])]:
     for j,f in enumerate(notes):
-        add(score,brass(f,1.35),starts[key]+j*.018,.13 if key in ('hero','win') else .1,pan=(j-1)*.2)
+        add(score,brass(f,1.35),starts[key]+j*.018,.13 if key in (HERO,WIN) else .1,pan=(j-1)*.2)
 for scene in SC['scenes']:
     for cue in scene.get('sfx',[]):
         add(fx,effect(cue['k']),starts[scene['id']]+cue['t'],.26,pan=.18*math.sin(starts[scene['id']]))
 # Motivated foley: soft slam, fizz, lasso, three coat strikes and shield bounces.
-add(fx,boom(),starts['door']+2.18,.42)
+add(fx,boom(),starts[IMPACT]+2.18,.42)
 fizz=np.convolve(rng.standard_normal(round(1.9*SR)),np.ones(9)/9,'same')
-add(fx,fizz*np.sin(np.linspace(0,np.pi,len(fizz))),starts['can']+.65,.025,pan=.25)
+add(fx,fizz*np.sin(np.linspace(0,np.pi,len(fizz))),starts[FOG]+.65,.025,pan=.25)
 for i in range(3):
-    add(fx,effect('whoosh'),starts['combo']+i*.8,.19,pan=(i-1)*.3)
-    add(fx,boom(.35),starts['combo']+.16+i*.8,.14)
-    add(fx,effect('pop'),starts['win']+.3+i*.75,.17)
+    add(fx,effect('whoosh'),starts[LAYER]+i*.8,.19,pan=(i-1)*.3)
+    add(fx,boom(.35),starts[LAYER]+.16+i*.8,.14)
+    add(fx,effect('pop'),starts[WIN]+.3+i*.75,.17)
 for i,note in enumerate([587.33,739.99,880,1174.66]):
-    add(score,bell(note,1),starts['hero']+.2+i*.13,.11,pan=(i-1.5)*.2)
-    add(score,bell(note,1),starts['combo']+2.4+i*.1,.10)
+    add(score,bell(note,1),starts[HERO]+.2+i*.13,.11,pan=(i-1.5)*.2)
+    add(score,bell(note,1),starts[LAYER]+2.4+i*.1,.10)
 # A gently comic #8 tease, followed by an end-card resolution.
 for i,note in enumerate([440,493.88,415.3]):
     add(score,string(note,.4),starts['cta']+2+i*.23,.13)
 for note in [146.83,185,220,293.66]:
     add(score,brass(note,2.5),TOTAL-3,.08)
+if SEQUEL:
+    # March, fast skate chase, heartbeat and a quiet-before-kaiju reveal.
+    for i in range(6):
+        add(fx,effect('tick'),starts['army']+i*.4,.12,pan=(-.25 if i%2 else .25))
+    for i in range(4):
+        add(fx,effect('whoosh'),starts['chase']+i*1.05,.19,pan=(i%2-.5)*.7)
+    for i in range(4):
+        add(fx,boom(.24),starts['melt']+i*.68,.16)
+    quiet=round(starts['twist']*SR);end=min(N,quiet+round(.68*SR))
+    score[quiet:end]*=.15
+    add(fx,boom(1.2),starts['twist']+.8,.24)
+    for i,note in enumerate([110,146.83,174.61]):
+        add(score,brass(note,1.4),starts['twist']+1.15+i*.04,.1)
 combined=score+fx
 combined*=min(1,.88/max(1e-8,float(np.abs(combined).max())))
 fade=round(.025*SR)
@@ -142,7 +159,7 @@ res=subprocess.run([ffmpeg,'-hide_banner','-y','-i',str(raw),'-af',
 raw.unlink()
 loudness,_=json.JSONDecoder().raw_decode(res.stderr[res.stderr.rfind('{'):])
 (OUT/'timing.json').write_text(json.dumps(timing,ensure_ascii=False,indent=2))
-status={'duration':TOTAL,'sampleRate':SR,'seed':207,'voiceUsed':False,
+status={'duration':TOTAL,'sampleRate':SR,'seed':SEED,'voiceUsed':False,
         'voiceReason':'Instrumental cinematic edition. No TTS generated or real voice used.',
         'timingMode':'reading-timing','mastering':'-17 LUFS / -2 dBTP / LRA 9','loudness':loudness,
         'music':'Original deterministic brass-like/strings-like synthesis, ostinato and tuned percussion; no samples or external recording.'}
