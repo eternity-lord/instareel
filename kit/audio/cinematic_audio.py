@@ -8,6 +8,7 @@ import shutil
 import subprocess
 import wave
 import numpy as np
+from music_source import music_bed
 import imageio_ffmpeg
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -143,6 +144,7 @@ if SEQUEL:
     add(fx,boom(1.2),starts['twist']+.8,.24)
     for i,note in enumerate([110,146.83,174.61]):
         add(score,brass(note,1.4),starts['twist']+1.15+i*.04,.1)
+score, music_source = music_bed(ROOT, score, SR)
 combined=score+fx
 combined*=min(1,.88/max(1e-8,float(np.abs(combined).max())))
 fade=round(.025*SR)
@@ -163,5 +165,7 @@ status={'duration':TOTAL,'sampleRate':SR,'seed':SEED,'voiceUsed':False,
         'voiceReason':'Instrumental cinematic edition. No TTS generated or real voice used.',
         'timingMode':'reading-timing','mastering':'-17 LUFS / -2 dBTP / LRA 9','loudness':loudness,
         'music':'Original deterministic brass-like/strings-like synthesis, ostinato and tuned percussion; no samples or external recording.'}
+status['musicSource'] = music_source
+if music_source['mode'] != 'synthesized': status['music'] = music_source['mode']
 (OUT/'audio-status.json').write_text(json.dumps(status,ensure_ascii=False,indent=2))
 print(json.dumps(status,ensure_ascii=False,indent=2))

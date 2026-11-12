@@ -7,6 +7,7 @@ import shutil
 import subprocess
 import wave
 import numpy as np
+from music_source import music_bed
 import imageio_ffmpeg
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -112,6 +113,7 @@ for i,note in enumerate([659.25,783.99,1046.5,987.77]):
 # Gentle comic low note, not a horror cue.
 add(score,brass(98,.9),starts['tease']+.6,.12)
 for note in [130.81,164.81,196,261.63]:add(score,piano(note,2.8),TOTAL-3,.14)
+score, music_source = music_bed(ROOT, score, SR)
 combined=score+fx
 combined*=min(1,.85/max(1e-8,float(np.abs(combined).max())))
 fade=round(.03*SR)
@@ -127,5 +129,7 @@ raw.unlink()
 loudness,_=json.JSONDecoder().raw_decode(res.stderr[res.stderr.rfind('{'):])
 (OUT/'timing.json').write_text(json.dumps(timing,ensure_ascii=False,indent=2))
 status=dict(duration=TOTAL,sampleRate=SR,seed=409,bpm=100,voiceUsed=False,voiceReason='Original instrumental edition; no human voice or TTS generated.',timingMode='reading-timing',lastWordHold=.7,glowBeats=[18,18.6,19.2],mastering='-17 LUFS / -2 dBTP / LRA 9',loudness=loudness,music='Original warm piano-like additive synthesis, plucked strings and soft percussion; no sampled recordings.')
+status['musicSource'] = music_source
+if music_source['mode'] != 'synthesized': status['music'] = music_source['mode']
 (OUT/'audio-status.json').write_text(json.dumps(status,indent=2))
 print(json.dumps(status,indent=2))
