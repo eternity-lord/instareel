@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "protectedPreviousReels": {
+    "01": "e898dc46419c97566494254064d92515e7d2cdc93240918605944f0a1ee4e19c",
+    "02": "90736f21a9ef457c7f5db2182a32faec9ab366c993a7bf0093be0dcfb5dc9be9",
+    "03": "32afdd2525605388535f14ffa48c89ef0d3c2dacb3f365d98a53e8f6d7555de3",
+    "04": "8228407802df67ab8a7e91076d23c30435e1c4a25206a1105829e53b245775f6",
+    "05": "c3afa0d4bc48407ca3cac53fe238da4867565048df3e14f627c34e911ea2a8ed",
+    "05-cartoon": "8831ff012fe254ec57aaf3ac6894e9a71e8dbad69f0f309cf5c30d6004dcba2a"
+  },
+  "noVoice": true,
+  "captionReadingHoldMinimum": 0.6,
+  "svgFiniteAttributes": true,
+  "svgReferencesResolved": true,
+  "timeSamples": 45,
+  "utilityCardAllInstructionsVisibleFrom": 0.3,
+  "utilityCardReadableUntil": 3.4,
+  "utilityCardStableSeconds": 3.1,
+  "hookFirstHighlight": 0.2,
+  "drawnTypeBadges": 4,
+  "followPromiseAndTease": true,
+  "rendering": "Deterministic 2.5D vector cartoon",
+  "browserErrors": []
+}

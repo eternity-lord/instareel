@@ -1,83 +1,146 @@
 {
-  "title": "چرا ژل ناخن زود می‌پره؟ ۵ دلیل",
-  "accuracy": "Educational claims must stay general and cautious: these are COMMON reasons for gel lifting (skin/oil left on the nail surface, thick or under-cured layers, unsealed free edge, using nails as tools). Do not promise exact durations or medical results.",
-  "hold": 0.9,
+  "title": "۴ تیپ مشتری ناخن: تو کدومی؟",
+  "format": "Same cartoon blob world, cast and pacing DNA as the best-performing scenario 01 (relatable client behaviours, one gag per scene, hook number sticker, wholesome payoff) but a NEW mechanic: 'which type are you?' identity-quiz with four client types, each with a drawn badge. Not a phrase list.",
+  "hold": 0.6,
   "endCardSeconds": 3,
-  "goal": "High-save, high-share educational reel in the cartoon style. 30-38 s. Hook in 1 s, one reason per scene, 'save + send' CTA, loop back to the opening.",
+  "endCardText": [
+    "قسمت بعد: ۴ تیپ ناخن‌کار 👀",
+    "هر هفته یه قسمت",
+    "فالو کن",
+    "@ayda.nailroom"
+  ],
+  "goal": "Fix what the insights of scenario 01 showed: strong skip-rate and saves/shares, but 0 comments, only 2 follows, and most drop-off in the first seconds. Targets: instant hook (no intro), low-friction comment (emoji per type), concrete follow reason (series promise + next-episode tease), saveable utility card, specific tag CTA. 28-34 s.",
+  "insightsBasis": "Scenario 01 insights (1,727 views, avg watch 14 s of 36 s, skip rate lower than usual, share/save/repost rates higher than usual, comment rate 0%, 2 follows, 62% Reels tab + 34% Explore = mostly non-followers). Small sample: treat as directional.",
+  "growth": [
+    "Hook line is a curiosity question answered by the whole video; first frame already funny; no logo/title animation longer than 0.8 s.",
+    "Comment mechanic = reply with the type's emoji (clock, camera, friend, can) — one tap, no typing effort. Pin the same ask.",
+    "Follow reason: visible series promise + 'next episode' tease in the end-card and caption.",
+    "Save mechanic: the utility card scene (3 s, readable).",
+    "Share mechanic: 'tag type three' is specific; keep one targeted tag ask."
+  ],
+  "cast": [
+    {
+      "name": "Nailie",
+      "role": "nail artist (hero)",
+      "desc": "round pink blob, tiny nail-brush antenna with a gel-drop tip, big glossy eyes, deadpan patience"
+    },
+    {
+      "name": "Client",
+      "role": "customer",
+      "desc": "round peach-cream blob with a small bottle-cap tuft, expressive brows; shown in four behaviours"
+    },
+    {
+      "name": "Friend",
+      "role": "extra",
+      "desc": "small lavender blob with big opinions, whispers into Client's ear"
+    }
+  ],
   "scenes": [
     {
       "id": "hook",
-      "text": "ژل ناخنت چرا زود می‌پره؟",
+      "text": "ناخن‌کارت تو دلش تو رو چی صدا می‌کنه؟",
+      "mood": "smug",
+      "idea": "NO slow intro: frame 1 is already the funniest image. Nailie flips a tiny notebook toward the camera with big hand-written nicknames scribbling themselves out while Client sits oblivious and smiling; giant sticker '۴ تیپ مشتری' slams in within 0.8 s. Fast push-in, sparkle trails. Caption text visible from 0.2 s.",
+      "sfx": [
+        {
+          "k": "whoosh",
+          "t": 0.0
+        },
+        {
+          "k": "pop",
+          "t": 0.6
+        }
+      ]
+    },
+    {
+      "id": "late",
+      "text": "تیپ اول: ساعت‌نشناس... چهل دقیقه دیر میاد!",
+      "mood": "tired",
+      "idea": "Client strolls in with a coffee, drawn clock icon pops above her; Nailie's wall clock shows 40 minutes ago with a tiny 'ترافیک بود' excuse bubble; then Client says 'ten minutes please' while holding up ten fingers and Nailie's eye twitches. Clock hands whirl, camera whip-pan between faces. Type-1 icon: drawn clock badge.",
+      "sfx": [
+        {
+          "k": "tick",
+          "t": 0.5
+        },
+        {
+          "k": "error",
+          "t": 2.2
+        }
+      ]
+    },
+    {
+      "id": "shots",
+      "text": "تیپ دوم: اسکرین‌شات‌باز... چهل تا عکس، ولی میگه عین همین!",
       "mood": "shock",
-      "idea": "MOTION HIGH. Gely proudly sticks onto a nail and high-fives Nailie with sparkles; time-lapse of calendar pages flipping and the sky changing; Gely slowly peels and tumbles off with a comedic bounce; Nailie's eyes go huge. Title question slams in with screen shake. Whip-pan to the next scene.",
+      "idea": "Client opens a phone and an avalanche of screenshots pours out of it like a waterfall of different nail styles; Nailie gets buried to her antenna; Client points at one photo: 'exactly this!' while every photo is totally different. Type-2 icon: drawn camera badge. Speed lines, screen shake on each photo thud.",
       "sfx": [
         {
           "k": "pop",
+          "t": 0.5
+        },
+        {
+          "k": "pop",
+          "t": 1.0
+        },
+        {
+          "k": "error",
+          "t": 2.6
+        }
+      ]
+    },
+    {
+      "id": "friend",
+      "text": "تیپ سوم: دوست‌آورنده... هر دو دقیقه یه نظر جدید!",
+      "mood": "angry",
+      "idea": "Client arrives with a tiny Friend blob who whispers in her ear; the design on a mock nail changes every two seconds in a jump-cut loop (flower, stripes, gems, stripes again); Nailie's brush antenna spins like a helicopter, Friend gives a thumbs up each time. Type-3 icon: drawn two-heads badge. Whip-cut rhythm.",
+      "sfx": [
+        {
+          "k": "tick",
           "t": 0.4
+        },
+        {
+          "k": "tick",
+          "t": 1.0
+        },
+        {
+          "k": "tick",
+          "t": 1.6
+        },
+        {
+          "k": "whoosh",
+          "t": 2.4
+        }
+      ]
+    },
+    {
+      "id": "tool",
+      "text": "تیپ چهارم: ناخن به‌جای ابزار... و بعد میگه خودش شکست!",
+      "mood": "shock",
+      "idea": "Client opens a soda can with her nail, pops a sticker off a box, scrapes a label; a tiny crack zigzags across the nail in slow motion with comic 'crack' lettering; she turns innocently: 'it broke by itself!' while Nailie's eyes slowly turn to the camera (deadpan). Type-4 icon: drawn can badge (callback to earlier episodes).",
+      "sfx": [
+        {
+          "k": "tick",
+          "t": 0.5
         },
         {
           "k": "error",
           "t": 1.6
-        }
-      ]
-    },
-    {
-      "id": "oil",
-      "text": "دلیل اول: چربی نامرئی روی سطح ناخن",
-      "mood": "calm",
-      "idea": "Oily, a slick shiny yellow blob, lounges on the nail surface making rainbow sheen puddles; Gely runs in, tries to stick, slips on the oil like on ice, squeaky cartoon slide across the whole frame; Nailie holds a cleansing pad, too late. Camera tracks the slide, speed lines.",
-      "sfx": [
-        {
-          "k": "tick",
-          "t": 0.5
         },
         {
           "k": "pop",
-          "t": 1.8
+          "t": 2.6
         }
       ]
     },
     {
-      "id": "skin",
-      "text": "دلیل دوم: پوست نازکی که روی ناخن می‌مونه",
-      "mood": "calm",
-      "idea": "Skinny, a thin ghost-like transparent film blob, clings innocently to the nail; Gely sticks onto Skinny, thinking it is the nail; Skinny peels away at the corner and floats off carrying Gely like a flag in the wind. Camera follows with a rack focus. Funny panic face.",
+      "id": "payoff",
+      "text": "ولی یه تیپ پنجم هم هست... که میگه دستت درد نکنه!",
+      "mood": "love",
+      "idea": "Warm light sweep; Client shows the finished glossy nails in macro and says thank you with hearts in her eyes; Nailie melts into a puddle and all the earlier chaos (clock, screenshots, friend, can) float away as tiny doodles; sparkles and hearts, camera crane-up.",
       "sfx": [
-        {
-          "k": "tick",
-          "t": 0.4
-        },
-        {
-          "k": "whoosh",
-          "t": 2.0
-        }
-      ]
-    },
-    {
-      "id": "thick",
-      "text": "دلیل سوم: لایه‌ی ضخیم و کم‌پخت",
-      "mood": "calm",
-      "idea": "Thicc, a chubby layer blob packed with bubbles, wobbles like jelly; the UV lamp beams its light but only the crust cures, shown as light rays stopping at the top while the doughy core stays soft; Thicc sags and collapses with a splat and bubbles popping. Cross-section cutaway view in cartoon style.",
-      "sfx": [
-        {
-          "k": "pop",
-          "t": 0.5
-        },
         {
           "k": "chime",
-          "t": 2.0
-        }
-      ]
-    },
-    {
-      "id": "seal",
-      "text": "دلیل چهارم: لبه‌ی ناخن که سیل نشده",
-      "mood": "calm",
-      "idea": "Drippy, a tiny blue water-droplet ninja, sneaks under the unsealed edge of the nail in stealth style (spotlight sweep); Gely tries to close the door; Nailie swipes a gold cap line along the edge, door slams shut with a clink and Drippy bounces off with a comedic boing. Macro push-in.",
-      "sfx": [
-        {
-          "k": "tick",
-          "t": 0.6
+          "t": 0.3
         },
         {
           "k": "pop",
@@ -86,99 +149,51 @@
       ]
     },
     {
-      "id": "tool",
-      "text": "دلیل پنجم: استفاده از ناخن به‌جای ابزار",
-      "mood": "angry",
-      "idea": "Can-Tab smirks; a nail used as a lever pries the tab; red stress lines flash, a crack zigzags through Gely, who shatters into cartoon sparkles and puffs (no gore) in slow motion with screen shake; Nailie facepalms, sweat drop.",
+      "id": "card",
+      "text": "ذخیره کن: وقت‌شناس باش، یه عکس بیار، دست نزن",
+      "mood": "calm",
+      "idea": "SAVE-WORTHY UTILITY CARD, clean and readable for 3 s: a neat rounded card slides in titled 'کارت مشتری ایده‌آل' with three drawn icons appearing one by one (clock, single photo, hand-stop sign with check marks); a big bookmark icon bounces in the corner. Nailie nods approvingly. Text must stay on screen long enough to read.",
       "sfx": [
         {
-          "k": "tick",
-          "t": 0.8
-        },
-        {
-          "k": "error",
-          "t": 1.3
-        },
-        {
-          "k": "whoosh",
-          "t": 1.9
-        }
-      ]
-    },
-    {
-      "id": "fix",
-      "text": "اجرای درست، به ماندگاری بیشتر کمک می‌کنه",
-      "mood": "love",
-      "idea": "Resolution: everything done right, Gely hugs the nail tightly with a happy face, glossy shine sweeps across, sparkles, calendar flips fast again but Gely stays put; Nailie thumbs-up; camera crane-up. Warm color shift.",
-      "sfx": [
-        {
-          "k": "chime",
-          "t": 0.3
+          "k": "pop",
+          "t": 0.5
         },
         {
           "k": "pop",
-          "t": 2.0
+          "t": 1.2
+        },
+        {
+          "k": "pop",
+          "t": 1.9
+        },
+        {
+          "k": "chime",
+          "t": 2.6
         }
       ]
     },
     {
       "id": "cta",
-      "text": "ذخیره کن و برای کسی بفرست که ناخنش همیشه می‌پره",
+      "text": "تو کدوم تیپی؟ با ایموجیش جواب بده و تیپ سه رو تگ کن!",
       "mood": "smug",
-      "idea": "Nailie and Gely hold a big bookmark and a send arrow, point at the viewer together; the arrow flies off; quick match-cut loop back to the opening high-five; end-card @ayda.nailroom.",
+      "idea": "The four type badges (clock, camera, two-heads, can) line up as a row on screen with matching little emoji hints shown as drawn icons; Nailie points at the viewer; a send arrow flies. End-card (3 s): 'قسمت بعد: ۴ تیپ ناخن‌کار' + big 'فالو کن' pill + @ayda.nailroom, with the series promise 'هر هفته یه قسمت'.",
       "sfx": [
         {
           "k": "pop",
           "t": 0.3
         },
         {
+          "k": "whoosh",
+          "t": 1.4
+        },
+        {
           "k": "chime",
-          "t": 1.8
+          "t": 2.2
         }
       ]
     }
   ],
-  "format": [
-    "Same cartoon world as scenarios 01-04 (round blob characters, navy/violet background, plush shading, cinematic camera moves). Educational comedy: each reason is a cute villain that makes Gely slip off. Higher motion, one clear visual explanation per scene. Not childish: witty, fast, modern."
-  ],
-  "cast": [
-    {
-      "name": "Nailie",
-      "role": "nail artist (hero)",
-      "desc": "round pink blob, tiny nail-brush antenna with a gel-drop tip, big glossy eyes, long glossy almond-nail hands in close-ups"
-    },
-    {
-      "name": "Gely",
-      "role": "the gel (protagonist)",
-      "desc": "cute translucent amber gel-drop blob, determined sticky hero who just wants to hold on"
-    },
-    {
-      "name": "Oily",
-      "role": "villain 1",
-      "desc": "slick shiny yellow oil blob that makes everything slippery"
-    },
-    {
-      "name": "Skinny",
-      "role": "villain 2",
-      "desc": "thin translucent ghost-like film blob that clings and peels"
-    },
-    {
-      "name": "Thicc",
-      "role": "villain 3",
-      "desc": "chubby layer blob full of bubbles with a raw doughy core"
-    },
-    {
-      "name": "Drippy",
-      "role": "villain 4",
-      "desc": "tiny blue water-droplet ninja that sneaks under edges"
-    },
-    {
-      "name": "Can-Tab",
-      "role": "villain 5",
-      "desc": "cute-menacing soda can with a smirking tab (also seen in earlier episodes)"
-    }
-  ],
-  "reelId": "05-cartoon",
-  "renderer": "education",
-  "audioStyle": "education"
+  "reelId": "08",
+  "renderer": "quiz",
+  "audioStyle": "quiz"
 }

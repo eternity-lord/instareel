@@ -1,0 +1,199 @@
+{
+  "title": "۴ تیپ مشتری ناخن: تو کدومی؟",
+  "format": "Same cartoon blob world, cast and pacing DNA as the best-performing scenario 01 (relatable client behaviours, one gag per scene, hook number sticker, wholesome payoff) but a NEW mechanic: 'which type are you?' identity-quiz with four client types, each with a drawn badge. Not a phrase list.",
+  "hold": 0.6,
+  "endCardSeconds": 3,
+  "endCardText": [
+    "قسمت بعد: ۴ تیپ ناخن‌کار 👀",
+    "هر هفته یه قسمت",
+    "فالو کن",
+    "@ayda.nailroom"
+  ],
+  "goal": "Fix what the insights of scenario 01 showed: strong skip-rate and saves/shares, but 0 comments, only 2 follows, and most drop-off in the first seconds. Targets: instant hook (no intro), low-friction comment (emoji per type), concrete follow reason (series promise + next-episode tease), saveable utility card, specific tag CTA. 28-34 s.",
+  "insightsBasis": "Scenario 01 insights (1,727 views, avg watch 14 s of 36 s, skip rate lower than usual, share/save/repost rates higher than usual, comment rate 0%, 2 follows, 62% Reels tab + 34% Explore = mostly non-followers). Small sample: treat as directional.",
+  "growth": [
+    "Hook line is a curiosity question answered by the whole video; first frame already funny; no logo/title animation longer than 0.8 s.",
+    "Comment mechanic = reply with the type's emoji (clock, camera, friend, can) — one tap, no typing effort. Pin the same ask.",
+    "Follow reason: visible series promise + 'next episode' tease in the end-card and caption.",
+    "Save mechanic: the utility card scene (3 s, readable).",
+    "Share mechanic: 'tag type three' is specific; keep one targeted tag ask."
+  ],
+  "cast": [
+    {
+      "name": "Nailie",
+      "role": "nail artist (hero)",
+      "desc": "round pink blob, tiny nail-brush antenna with a gel-drop tip, big glossy eyes, deadpan patience"
+    },
+    {
+      "name": "Client",
+      "role": "customer",
+      "desc": "round peach-cream blob with a small bottle-cap tuft, expressive brows; shown in four behaviours"
+    },
+    {
+      "name": "Friend",
+      "role": "extra",
+      "desc": "small lavender blob with big opinions, whispers into Client's ear"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "ناخن‌کارت تو دلش تو رو چی صدا می‌کنه؟",
+      "mood": "smug",
+      "idea": "NO slow intro: frame 1 is already the funniest image. Nailie flips a tiny notebook toward the camera with big hand-written nicknames scribbling themselves out while Client sits oblivious and smiling; giant sticker '۴ تیپ مشتری' slams in within 0.8 s. Fast push-in, sparkle trails. Caption text visible from 0.2 s.",
+      "sfx": [
+        {
+          "k": "whoosh",
+          "t": 0.0
+        },
+        {
+          "k": "pop",
+          "t": 0.6
+        }
+      ]
+    },
+    {
+      "id": "late",
+      "text": "تیپ اول: ساعت‌نشناس... چهل دقیقه دیر میاد!",
+      "mood": "tired",
+      "idea": "Client strolls in with a coffee, drawn clock icon pops above her; Nailie's wall clock shows 40 minutes ago with a tiny 'ترافیک بود' excuse bubble; then Client says 'ten minutes please' while holding up ten fingers and Nailie's eye twitches. Clock hands whirl, camera whip-pan between faces. Type-1 icon: drawn clock badge.",
+      "sfx": [
+        {
+          "k": "tick",
+          "t": 0.5
+        },
+        {
+          "k": "error",
+          "t": 2.2
+        }
+      ]
+    },
+    {
+      "id": "shots",
+      "text": "تیپ دوم: اسکرین‌شات‌باز... چهل تا عکس، ولی میگه عین همین!",
+      "mood": "shock",
+      "idea": "Client opens a phone and an avalanche of screenshots pours out of it like a waterfall of different nail styles; Nailie gets buried to her antenna; Client points at one photo: 'exactly this!' while every photo is totally different. Type-2 icon: drawn camera badge. Speed lines, screen shake on each photo thud.",
+      "sfx": [
+        {
+          "k": "pop",
+          "t": 0.5
+        },
+        {
+          "k": "pop",
+          "t": 1.0
+        },
+        {
+          "k": "error",
+          "t": 2.6
+        }
+      ]
+    },
+    {
+      "id": "friend",
+      "text": "تیپ سوم: دوست‌آورنده... هر دو دقیقه یه نظر جدید!",
+      "mood": "angry",
+      "idea": "Client arrives with a tiny Friend blob who whispers in her ear; the design on a mock nail changes every two seconds in a jump-cut loop (flower, stripes, gems, stripes again); Nailie's brush antenna spins like a helicopter, Friend gives a thumbs up each time. Type-3 icon: drawn two-heads badge. Whip-cut rhythm.",
+      "sfx": [
+        {
+          "k": "tick",
+          "t": 0.4
+        },
+        {
+          "k": "tick",
+          "t": 1.0
+        },
+        {
+          "k": "tick",
+          "t": 1.6
+        },
+        {
+          "k": "whoosh",
+          "t": 2.4
+        }
+      ]
+    },
+    {
+      "id": "tool",
+      "text": "تیپ چهارم: ناخن به‌جای ابزار... و بعد میگه خودش شکست!",
+      "mood": "shock",
+      "idea": "Client opens a soda can with her nail, pops a sticker off a box, scrapes a label; a tiny crack zigzags across the nail in slow motion with comic 'crack' lettering; she turns innocently: 'it broke by itself!' while Nailie's eyes slowly turn to the camera (deadpan). Type-4 icon: drawn can badge (callback to earlier episodes).",
+      "sfx": [
+        {
+          "k": "tick",
+          "t": 0.5
+        },
+        {
+          "k": "error",
+          "t": 1.6
+        },
+        {
+          "k": "pop",
+          "t": 2.6
+        }
+      ]
+    },
+    {
+      "id": "payoff",
+      "text": "ولی یه تیپ پنجم هم هست... که میگه دستت درد نکنه!",
+      "mood": "love",
+      "idea": "Warm light sweep; Client shows the finished glossy nails in macro and says thank you with hearts in her eyes; Nailie melts into a puddle and all the earlier chaos (clock, screenshots, friend, can) float away as tiny doodles; sparkles and hearts, camera crane-up.",
+      "sfx": [
+        {
+          "k": "chime",
+          "t": 0.3
+        },
+        {
+          "k": "pop",
+          "t": 2.2
+        }
+      ]
+    },
+    {
+      "id": "card",
+      "text": "ذخیره کن: وقت‌شناس باش، یه عکس بیار، دست نزن",
+      "mood": "calm",
+      "idea": "SAVE-WORTHY UTILITY CARD, clean and readable for 3 s: a neat rounded card slides in titled 'کارت مشتری ایده‌آل' with three drawn icons appearing one by one (clock, single photo, hand-stop sign with check marks); a big bookmark icon bounces in the corner. Nailie nods approvingly. Text must stay on screen long enough to read.",
+      "sfx": [
+        {
+          "k": "pop",
+          "t": 0.5
+        },
+        {
+          "k": "pop",
+          "t": 1.2
+        },
+        {
+          "k": "pop",
+          "t": 1.9
+        },
+        {
+          "k": "chime",
+          "t": 2.6
+        }
+      ]
+    },
+    {
+      "id": "cta",
+      "text": "تو کدوم تیپی؟ با ایموجیش جواب بده و تیپ سه رو تگ کن!",
+      "mood": "smug",
+      "idea": "The four type badges (clock, camera, two-heads, can) line up as a row on screen with matching little emoji hints shown as drawn icons; Nailie points at the viewer; a send arrow flies. End-card (3 s): 'قسمت بعد: ۴ تیپ ناخن‌کار' + big 'فالو کن' pill + @ayda.nailroom, with the series promise 'هر هفته یه قسمت'.",
+      "sfx": [
+        {
+          "k": "pop",
+          "t": 0.3
+        },
+        {
+          "k": "whoosh",
+          "t": 1.4
+        },
+        {
+          "k": "chime",
+          "t": 2.2
+        }
+      ]
+    }
+  ],
+  "reelId": "08",
+  "renderer": "quiz",
+  "audioStyle": "quiz"
+}
