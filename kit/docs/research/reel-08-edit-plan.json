@@ -1,0 +1,21 @@
+{
+  "edition": "08-recut",
+  "stage": "Research and playbook completed before animation implementation",
+  "research": {
+    "kit/docs/research/reel-attention-research.md": "9dc96ae0aa3fee6522c8718914fbcdc3d670b3ed2fb54e0eb674483b65f5941c",
+    "kit/docs/EDITING-PLAYBOOK.md": "99b55af09f5cedad0e40e73072e921d526bc7f7254002ef084f5e9e8bdf69861"
+  },
+  "edlDurations": [
+    1.9,
+    3.2,
+    3.5,
+    3.4,
+    3.5,
+    3.1,
+    3.8,
+    3.6
+  ],
+  "endCardSeconds": 3,
+  "totalSeconds": 29,
+  "guaranteedExplore": false
+}
