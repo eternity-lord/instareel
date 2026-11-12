@@ -65,3 +65,17 @@ cd render && npm i && npx playwright install chromium --with-deps   # once
 - [ ] Style/characters consistent across all scenes; style-frame quality held everywhere.
 - [ ] Audio in sync, no clipping; MP4 plays, 1080x1920, < 100 MB.
 - [ ] `out/REPORT.md` lists what was built, known flaws, how to edit text/timing.
+
+## Active edition: scenario 08 research-informed recut
+
+The current input is `08-recut` (29s, no voice, gentle instrumental), made after the research and playbook were saved.
+- [Research and evidence limits](docs/research/reel-attention-research.md)
+- [Reusable editing playbook](docs/EDITING-PLAYBOOK.md)
+- [Build report](docs/REPORT-08-recut.md) / [publication and measurement guide](docs/reel-08-recut-guide.md)
+- New MP4: `deliverables/nail-reel-08-recut.mp4`; original `nail-reel-08.mp4` remains byte-identical.
+- Original executable quiz renderer and audio module are preserved. Active edition uses `quiz-recut.js` / `quiz_recut_audio.py`.
+- Original attachment: `input/scenarios/scenario-08.json`; original active snapshot: `scenario-08-active.json`; recut snapshot: `scenario-08-recut-active.json`.
+- Preview defaults to recut; previous preview preserved at `preview-08-original.html`.
+- Edition-specific test: `node kit/render/quiz-recut-test.mjs` from repository root. `quiz-test.mjs` is for the original edition, not this input.
+
+No platform publication or audience Insights were accessed; Explore distribution is not guaranteed.

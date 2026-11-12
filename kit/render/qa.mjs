@@ -17,7 +17,7 @@ const server=await serve();let browser;
 try{
  const session=await openScene(server);browser=session.browser;const {page,errors}=session;
  const data=await page.evaluate(()=>({duration:window.__duration,scenes:window.__scenes}));
- assert.equal(data.scenes.length,PROJECT.scenes.length);assert.ok(data.duration>=(PROJECT.renderer==='quiz'?28:['macro','education'].includes(PROJECT.renderer)?30:PROJECT.renderer==='journey'?34:PROJECT.renderer==='sequel'?32:28)&&data.duration<=(PROJECT.renderer==='quiz'?34:['macro','education'].includes(PROJECT.renderer)?38:PROJECT.renderer==='journey'?42:PROJECT.renderer==='sequel'?40:['trailer','sequel','journey','macro','education','quiz'].includes(PROJECT.renderer)?36:38));
+ assert.equal(data.scenes.length,PROJECT.scenes.length);assert.ok(data.duration>=(['quiz','quizRecut'].includes(PROJECT.renderer)?28:['macro','education'].includes(PROJECT.renderer)?30:PROJECT.renderer==='journey'?34:PROJECT.renderer==='sequel'?32:28)&&data.duration<=(['quiz','quizRecut'].includes(PROJECT.renderer)?34:['macro','education'].includes(PROJECT.renderer)?38:PROJECT.renderer==='journey'?42:PROJECT.renderer==='sequel'?40:['trailer','sequel','journey','macro','education','quiz','quizRecut'].includes(PROJECT.renderer)?36:38));
  const capture=async t=>{await page.evaluate(t=>window.__seek(t),t);return {dom:await page.content(),buf:await page.screenshot({type:'png'})};};
  const checks=[];
  for(const s of data.scenes){
@@ -37,7 +37,7 @@ try{
   },s.start+(w.t0+w.t1)/2);
   assert.deepEqual(state.selected,[w.w],`Highlight ${s.id}: ${w.w}`);
   assert.ok(state.loaded);assert.ok(!state.emoji);
-  if(['trailer','sequel','journey','macro','education','quiz'].includes(PROJECT.renderer))assert.equal(state.eyebrow,'','Trailer must not have an extra heading above captions');
+  if(['trailer','sequel','journey','macro','education','quiz','quizRecut'].includes(PROJECT.renderer))assert.equal(state.eyebrow,'','Trailer must not have an extra heading above captions');
   for(const b of state.boxes)assert.ok(b.x>=15&&b.right<=525&&b.y>=125&&b.bottom<=310,JSON.stringify({scene:s.id,b}));
   words++;
  }
@@ -47,7 +47,7 @@ try{
  // Ensure no global CSS animations or wall-clock timers drive the scene.
  const animations=await page.evaluate(()=>document.getAnimations().length);assert.equal(animations,0);
  assert.deepEqual(errors,[]);
- const report={passed:true,duration:data.duration,scenes:checks,checkedWords:words,trailerHeadingRemoved:['trailer','sequel','journey','macro','education','quiz'].includes(PROJECT.renderer),captionSafeZones:true,localFont:true,noEmoji:true,loopBoundaryDomIdentical:true,loopRaster,activeCssAnimations:animations,browserErrors:errors};
+ const report={passed:true,duration:data.duration,scenes:checks,checkedWords:words,trailerHeadingRemoved:['trailer','sequel','journey','macro','education','quiz','quizRecut'].includes(PROJECT.renderer),captionSafeZones:true,localFont:true,noEmoji:true,loopBoundaryDomIdentical:true,loopRaster,activeCssAnimations:animations,browserErrors:errors};
  fs.writeFileSync(path.join(OUTDIR,'qa.json'),JSON.stringify(report,null,2));
  console.log(JSON.stringify(report,null,2));
 }finally{await browser?.close();server.close();}

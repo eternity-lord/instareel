@@ -16,9 +16,9 @@ from music_source import music_bed
 ROOT = Path(__file__).resolve().parents[1]
 SR = 48000
 SC = json.loads((ROOT / 'input/scenario.json').read_text())
-if SC.get('audioStyle') in ('cinematic','journey','macro','education','quiz'):
+if SC.get('audioStyle') in ('cinematic','journey','macro','education','quiz','quizRecut'):
     import runpy
-    runpy.run_path(str(ROOT/('audio/quiz_audio.py' if SC.get('audioStyle')=='quiz' else 'audio/education_audio.py' if SC.get('audioStyle')=='education' else 'audio/macro_audio.py' if SC.get('audioStyle')=='macro' else 'audio/journey_audio.py' if SC.get('audioStyle')=='journey' else 'audio/cinematic_audio.py')), run_name='__main__')
+    runpy.run_path(str(ROOT/('audio/quiz_recut_audio.py' if SC.get('audioStyle')=='quizRecut' else 'audio/quiz_audio.py' if SC.get('audioStyle')=='quiz' else 'audio/education_audio.py' if SC.get('audioStyle')=='education' else 'audio/macro_audio.py' if SC.get('audioStyle')=='macro' else 'audio/journey_audio.py' if SC.get('audioStyle')=='journey' else 'audio/cinematic_audio.py')), run_name='__main__')
     raise SystemExit(0)
 BR = json.loads((ROOT / 'brand.json').read_text())
 OUT = ROOT / 'out'
