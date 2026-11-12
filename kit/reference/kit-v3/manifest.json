@@ -1,0 +1,24 @@
+{
+  "sourceFile": "nail-reel-kit (2).zip",
+  "sourceCommit": "73ae644cf861954c6c20d75d41aea51c56592424",
+  "sha256": "ccdd50d68016abc9698b13f2555f9f3b0ab53245553b278cc0aad2e72d2d6b14",
+  "files": {
+    "kit/README.md": "97c21a20d36d68f3a40ebb0fe367366c0281a722734d7a7f93a084ed96851fea",
+    "kit/assets/art/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "kit/audio/README.txt": "e0fc1f799428b591a4f230ef652a0c99892fa9e071b63a33c9c7d5eef32ade0c",
+    "kit/audio/make_audio.py": "7c46ac6614c8a1dd2662c113327436f9982a8c5669ac40da23dff4e9cf574c75",
+    "kit/audio/voice/README.txt": "cac93aa0a39475b0987bd8c28d66223af9e7f0795594afb5e3230d2b9821450b",
+    "kit/brand.json": "c71b9e07a4f8298678d010f95d2854c4551eacdbf7404db3f38dc18abb896cc3",
+    "kit/input/README.txt": "169831675584e413757b9a592301680fef1201026f564d29cd9ec1b5413f58d8",
+    "kit/input/post_copy.md": "db24d97dc10995cdf861bc3b388cd86d1fc647ac04314bf21d919669c7c1e8da",
+    "kit/input/scenario.json": "ce94b792cff82f045760ae4c1217fc95f963f2e94fb199cf092c6317ea7a6990",
+    "kit/music-prompts.md": "c0c278f99baca86402219796e05a78c43c0b5ed139d5422a4e80edbddab84f2f",
+    "kit/out/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "kit/reference/prototype-v2.html": "e377ddb3d72f0f6568b4ab921efd82e00d4639c0647e7d722481a9c72bc628a2",
+    "kit/render/package.json": "3fd2cebd8eb221fa3832d179135980a017d7e4a8abd2dd8a3e66790b54528151",
+    "kit/render/render.mjs": "036ae6a3bc5e6f33ab6639abc33afa1c8b65be4001c31981d034cf0658bcca54",
+    "kit/render/run.sh": "e67739f7f190647e2dd1126ec5b96fb19b0cccc3bb4257488673f070f7ecfb17",
+    "kit/src/index.html": "c99d00f65aaaaea020576b75bfb2e04b77e78bacad840d455f401a8ccf0e93fe",
+    "kit/voice-prompts.md": "6fd7b5443bce0de924103650ea277a3f8776f19ab22186872d338cd7543aef52"
+  }
+}

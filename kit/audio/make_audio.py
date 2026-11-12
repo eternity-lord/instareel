@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Original instrumental score + timed SFX; bounded optional synthetic Persian TTS.
-No external tracks. Run from any directory. Audio metadata explicitly reports fallback.
+Optional user-supplied local music bed (kit v3). Run from any directory. Audio metadata explicitly reports fallback.
 """
 import asyncio
 import json
@@ -11,6 +11,7 @@ import shutil
 import subprocess
 import wave
 import numpy as np
+from music_source import music_bed
 
 ROOT = Path(__file__).resolve().parents[1]
 SR = 48000
@@ -162,6 +163,7 @@ if BR['music']['enabled']:
             add(music,brush,b*beat,.018,pan=.2)
         b+=1
     music *= BR['music']['volume'] / max(1e-6, float(np.max(np.abs(music))))
+music, music_source = music_bed(ROOT, music, SR)
 clock=0
 for scene in SC['scenes']:
     for effect in scene.get('sfx', []):
@@ -204,5 +206,7 @@ metadata={'duration':TOTAL,'sampleRate':SR,'peakDbFS':round(20*math.log10(max(1e
           'timingMode':'tts-boundaries' if all(v is not None for _,v in voices) else 'reading-timing',
           'music':'Original deterministic synthesized bossa/music-box; no external recordings',
           'seed':1621}
+metadata['musicSource'] = music_source
+if music_source['mode'] != 'synthesized': metadata['music'] = music_source['mode']
 (OUT/'audio-status.json').write_text(json.dumps(metadata,ensure_ascii=False,indent=2))
 print(json.dumps(metadata,ensure_ascii=False,indent=2))

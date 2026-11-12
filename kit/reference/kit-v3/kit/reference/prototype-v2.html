@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>اولین روز بعد از ناخن جدید</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@500;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;background:#0b0d26;font-family:Vazirmatn,Tahoma,sans-serif;color:#fff}
+body{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+#st{container-type:inline-size;width:min(100vw,calc((100vh - 80px)*.5625));aspect-ratio:9/16;position:relative;overflow:hidden;border-radius:12px;background:#1d2150}
+#bg{position:absolute;inset:-10%;background:radial-gradient(circle at 50% 60%,#4a3fc0,#1d2150 68%);transition:filter 1s}
+.bk{position:absolute;border-radius:50%;background:rgba(255,255,255,.12);animation:bk 9s linear infinite}
+#art{position:absolute;inset:0}
+.cam{position:absolute;inset:0;animation:dr linear both}
+.cam:nth-child(odd){animation-name:dr2}
+.in{position:absolute;inset:0}
+.i0{animation:i0 .6s cubic-bezier(.2,1.3,.4,1) both}.i1{animation:i1 .6s cubic-bezier(.2,1.3,.4,1) both}
+.i2{animation:i2 .6s cubic-bezier(.2,1.3,.4,1) both}.i3{animation:i3 .6s ease-out both}
+svg{width:100%;height:100%;display:block;overflow:visible}
+#cap{position:absolute;top:6%;inset-inline:5%;text-align:center;font-weight:800;font-size:6.4cqw;line-height:1.9;z-index:3;text-shadow:0 .4cqw 1.2cqw rgba(0,0,0,.45)}
+.w{display:inline-block;padding:0 1.2cqw;margin:0 .3cqw;border-radius:1.6cqw;transition:background .08s}
+.w.on{background:#f5b73b;color:#1d2150;text-shadow:none;transform:scale(1.06)}
+#bar{position:absolute;bottom:0;left:0;height:1.1cqw;background:#f5b73b;width:0;z-index:4}
+.fg{transform-origin:50% 100%;animation:wig 1.6s ease-in-out infinite}.f1{animation-delay:.2s}.f2{animation-delay:.4s}.f3{animation-delay:.6s}.th{animation-delay:.8s}
+.gl{animation:tw 1.4s ease-in-out infinite}
+.bob{animation:bob 1.4s ease-in-out infinite}.shake{animation:shk .35s linear infinite}
+.tap{animation:tap .9s ease-in-out infinite}.sway{animation:sway 2s ease-in-out infinite}
+.fl{animation:fl 2.4s ease-out infinite}.tw{animation:tw 1.2s ease-in-out infinite}
+.pop{animation:pop .5s cubic-bezier(.3,1.8,.5,1) both}.pulse{animation:pl 1.6s ease-in-out infinite}
+.spin{animation:sp 4s linear infinite}.tabf{animation:tb 1.2s ease-in-out infinite}
+.zip{animation:zp 2s ease-in-out infinite}.dash{stroke-dasharray:12 10;animation:ds 1s linear infinite}
+.fall{animation:fa 2.4s linear infinite}.dance{animation:dn .8s ease-in-out infinite}
+.paused *,.paused{animation-play-state:paused!important}
+#ctl{display:flex;gap:8px}
+button{font:inherit;font-weight:500;padding:8px 18px;border-radius:99px;border:0;background:#2d3386;color:#fff;cursor:pointer}
+@keyframes bk{from{transform:translateY(110cqw)}to{transform:translateY(-20cqw)}}
+@keyframes dr{from{transform:scale(1)}to{transform:scale(1.12)}}
+@keyframes dr2{from{transform:scale(1.1) translateX(2%)}to{transform:scale(1) translateX(-2%)}}
+@keyframes i0{from{transform:translateX(90%) rotate(6deg);opacity:0}}
+@keyframes i1{from{transform:scale(.4);opacity:0}}
+@keyframes i2{from{transform:translateY(-70%);opacity:0}}
+@keyframes i3{from{transform:rotate(-12deg) scale(.7);opacity:0}}
+@keyframes wig{50%{transform:rotate(5deg)}}
+@keyframes bob{50%{transform:translateY(-12px)}}
+@keyframes shk{25%{transform:translate(-6px,2px)}75%{transform:translate(6px,-2px)}}
+@keyframes tap{50%{transform:translateY(26px) rotate(-6deg)}}
+@keyframes sway{50%{transform:rotate(14deg) translateX(14px)}}
+@keyframes fl{0%{transform:translateY(0) scale(.4);opacity:0}20%{opacity:1}100%{transform:translateY(-150px) scale(1.2);opacity:0}}
+@keyframes tw{50%{opacity:.2;transform:scale(.4)}}
+@keyframes pop{from{transform:scale(0)}}
+@keyframes pl{50%{opacity:.4;transform:scale(1.08)}}
+@keyframes sp{to{transform:rotate(360deg)}}
+@keyframes tb{40%{transform:rotate(-22deg) translateY(-6px)}70%{transform:rotate(0)}}
+@keyframes zp{0%{transform:translateY(0)}45%{transform:translateY(-70px)}55%{transform:translateY(-62px)}100%{transform:translateY(0)}}
+@keyframes ds{to{stroke-dashoffset:-22}}
+@keyframes fa{from{transform:translateY(-60px) rotate(0)}to{transform:translateY(700px) rotate(540deg)}}
+@keyframes dn{50%{transform:rotate(-8deg) scale(1.08)}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<linearGradient id="sk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffdcc2"/><stop offset="1" stop-color="#e5a57c"/></linearGradient>
+<linearGradient id="nl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffa8d2"/><stop offset=".6" stop-color="#ff4b96"/><stop offset="1" stop-color="#d81b78"/></linearGradient>
+<linearGradient id="mt" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9aa7b8"/><stop offset=".4" stop-color="#f3f7fb"/><stop offset="1" stop-color="#8794a6"/></linearGradient>
+<linearGradient id="scr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a56c9"/><stop offset="1" stop-color="#1b2a5c"/></linearGradient>
+<linearGradient id="bm" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="gl" cx=".4" cy=".3" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#9fb4ff" stop-opacity=".35"/></radialGradient>
+</defs></svg>
+<div id="st"><div id="bg"></div><div id="art"></div><div id="cap"></div><div id="bar"></div></div>
+<div id="ctl"><button id="pp">⏸ توقف</button><button id="rs">↺ از اول</button></div>
+<script>
+function fcs(m){
+ var r=m=='shock'?10:8,p=m=='shock'?2.5:4;
+ var L=m=='calm'?'<path d="M66 164Q76 152 86 164M110 164Q120 152 130 164" stroke="#1d2150" stroke-width="4" fill="none" stroke-linecap="round"/>'
+ :m=='love'?'<text x="76" y="172" font-size="28" text-anchor="middle" fill="#ff2e6e">♥</text><text x="120" y="172" font-size="28" text-anchor="middle" fill="#ff2e6e">♥</text>'
+ :'<circle cx="76" cy="160" r="'+r+'" fill="#fff"/><circle cx="120" cy="160" r="'+r+'" fill="#fff"/><circle cx="77" cy="161" r="'+p+'" fill="#1d2150"/><circle cx="121" cy="161" r="'+p+'" fill="#1d2150"/>';
+ if(m=='angry')L+='<path d="M64 142L88 152M132 142L108 152" stroke="#1d2150" stroke-width="5" stroke-linecap="round"/>';
+ var M=m=='shock'?'<ellipse cx="98" cy="194" rx="7" ry="10" fill="#1d2150"/>'
+ :(m=='sad'||m=='angry')?'<path d="M82 199Q98 184 114 199" stroke="#1d2150" stroke-width="4" fill="none" stroke-linecap="round"/>'
+ :'<path d="M80 184Q98 210 116 184Z" fill="#1d2150"/>';
+ return L+M+'<ellipse cx="58" cy="184" rx="9" ry="5" fill="#ff7aa8" opacity=".55"/><ellipse cx="138" cy="184" rx="9" ry="5" fill="#ff7aa8" opacity=".55"/>';
+}
+function nl(c,y){return '<path d="M'+(c-11)+' '+(y+20)+'L'+(c-9)+' '+(y-6)+'Q'+c+' '+(y-28)+' '+(c+9)+' '+(y-6)+'L'+(c+11)+' '+(y+20)+'Q'+c+' '+(y+27)+' '+(c-11)+' '+(y+20)+'Z" fill="url(#nl)"/><path class="gl" d="M'+(c-4)+' '+(y-1)+'Q'+(c-4)+' '+(y-10)+' '+(c+1)+' '+(y-15)+'" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>'}
+function H(x,y,s,r,m,c){
+ var F=[[45,70],[80,90],[115,84],[150,66]],o='';
+ F.forEach(function(f,i){var t=110-f[1];o+='<g class="fg f'+i+'"><rect x="'+(f[0]-13)+'" y="'+t+'" width="26" height="'+(f[1]+30)+'" rx="13" fill="url(#sk)"/>'+nl(f[0],t+2)+'</g>'});
+ return '<g transform="translate('+x+' '+y+') scale('+s+') rotate('+r+' 98 150)"><g class="'+(c||'')+'">'+o+'<rect x="25" y="100" width="146" height="140" rx="52" fill="url(#sk)"/><g transform="rotate(-38 40 190)"><g class="fg th"><rect x="8" y="128" width="30" height="84" rx="15" fill="url(#sk)"/>'+nl(23,130)+'</g></g>'+fcs(m)+'</g></g>';
+}
+function st(x,y,s,d){return '<g transform="translate('+x+' '+y+') scale('+s+')"><path class="tw" style="animation-delay:'+d+'s" d="M0-12Q1-1 12 0Q1 1 0 12Q-1 1-12 0Q-1-1 0-12Z" fill="#fff"/></g>'}
+function hs(n,x0,w,ch,col){var o='';for(var i=0;i<n;i++)o+='<text class="fl" style="animation-delay:'+(i*.33)+'s" x="'+(x0+(i*53)%w)+'" y="'+(540-(i*29)%100)+'" font-size="'+(22+i%3*8)+'" fill="'+(col||'#ff5c9a')+'">'+(ch||'♥')+'</text>';return o}
+function phone(c){return '<g class="'+c+'"><rect x="110" y="170" width="150" height="270" rx="26" fill="#0c0f24" stroke="#6b7be0" stroke-width="4"/><rect x="119" y="182" width="132" height="246" rx="18" fill="url(#scr)"/><text x="185" y="290" font-size="44" text-anchor="middle">🔒</text><text x="185" y="345" font-size="22" text-anchor="middle" fill="#fff" font-weight="800">9:41</text></g>'}
+function sc(){return [
+ hs(8,30,290)+H(60,290,1.05,0,'love','bob')+st(70,260,1.6,0)+st(300,330,1.2,.4)+st(290,230,1,.8)+st(40,430,1,1.1)+st(190,250,1.3,.6),
+ '<path class="pulse" d="M360 -40L190 700L360 700Z" fill="url(#bm)"/>'+H(70,300,1,0,'happy','sway')+st(120,290,1.8,0)+st(215,265,1.5,.5)+st(250,300,1.2,.9)+st(300,150,2,.3)+st(330,260,1.2,.7),
+ phone('bob')+H(10,400,.85,22,'happy','tap')+st(260,190,1.2,.2),
+ phone('shake')+'<text class="pop" x="185" y="400" font-size="70" text-anchor="middle" fill="#ff4d6d">✕</text>'+H(10,400,.85,22,'angry','shake')+hs(5,40,120,'💢','#ff4d6d'),
+ '<g><rect x="125" y="210" width="110" height="200" rx="16" fill="url(#mt)"/><rect x="125" y="268" width="110" height="60" fill="#e23b3b"/><text x="180" y="308" font-size="26" text-anchor="middle" fill="#fff" font-weight="800">COLA</text><ellipse cx="180" cy="210" rx="55" ry="10" fill="#cfd8e3"/><g class="tabf"><rect x="165" y="196" width="30" height="14" rx="7" fill="#aab6c5"/></g></g>'+hs(7,130,100,'○','#bfe3ff')+H(10,400,.85,22,'shock','tap'),
+ '<rect x="90" y="110" width="180" height="440" rx="34" fill="#3b4fc4"/><line x1="180" y1="125" x2="180" y2="535" stroke="#dfe6f2" stroke-width="10" stroke-dasharray="4 6"/><g class="zip"><rect x="166" y="380" width="28" height="40" rx="9" fill="#f5b73b"/><circle cx="180" cy="428" r="7" fill="#f5b73b"/></g><circle cx="235" cy="190" r="16" fill="#9fb4ff"/><circle cx="235" cy="190" r="6" fill="#1d2150"/>'+H(150,420,.85,-10,'sad','tap'),
+ '<circle cx="180" cy="250" r="92" fill="#fff6e8" stroke="#f5b73b" stroke-width="8"/><g class="spin" style="transform-box:view-box;transform-origin:180px 250px"><rect x="177" y="180" width="6" height="74" rx="3" fill="#1d2150"/></g><rect x="177" y="226" width="6" height="28" rx="3" fill="#e23b8b" transform="rotate(70 180 250)"/><circle cx="180" cy="250" r="8" fill="#1d2150"/><g class="pop" style="animation-delay:.4s"><rect x="50" y="380" width="120" height="34" rx="12" fill="#fff6e8"/><text x="110" y="404" font-size="20" text-anchor="middle" fill="#1d2150" font-weight="800">✓ برنامه</text></g><g class="pop" style="animation-delay:1.1s"><rect x="190" y="380" width="120" height="34" rx="12" fill="#fff6e8"/><text x="250" y="404" font-size="20" text-anchor="middle" fill="#1d2150" font-weight="800">✓ هماهنگی</text></g>'+H(100,430,.7,0,'sad','bob'),
+ (function(){var k='';for(var r=0;r<3;r++)for(var c=0;c<8;c++)k+='<rect x="'+(24+c*40+r*8)+'" y="'+(360+r*46)+'" width="34" height="38" rx="8" fill="#e9edf7"/>';return k})()+hs(6,60,240,'غلط','#ff4d6d')+H(90,150,.8,0,'angry','tap'),
+ '<path class="dash" d="M270 90Q190 190 240 290T210 440" stroke="#ffb199" stroke-width="7" fill="none" stroke-linecap="round"/>'+H(70,230,1,0,'shock','shake')+'<g class="pop"><polygon points="280,110 300,150 340,150 308,174 320,214 280,190 240,214 252,174 220,150 260,150" fill="#f5b73b"/><text x="280" y="190" font-size="48" font-weight="800" text-anchor="middle" fill="#1d2150">!</text></g>',
+ '<circle class="pulse" cx="180" cy="290" r="170" fill="#9fb4ff" opacity=".25"/><ellipse cx="180" cy="290" rx="115" ry="165" fill="url(#gl)" stroke="#f5b73b" stroke-width="10"/>'+H(100,230,.8,0,'calm','bob')+st(120,260,1.8,0)+st(185,245,1.6,.4)+st(235,270,1.5,.8)+st(150,160,1.2,.2)+st(240,170,1.2,.6),
+ (function(){var o='',cl=['#ff4b96','#f5b73b','#6bd6ff','#9bff9b'];for(var i=0;i<26;i++)o+='<rect class="fall" style="animation-delay:'+(-i*.19)+'s" x="'+(10+(i*47)%340)+'" y="0" width="10" height="16" fill="'+cl[i%4]+'"/>';return o})()+hs(8,30,290)+H(50,280,1.15,0,'love','dance'),
+ hs(9,20,320)+H(90,150,.85,0,'love','bob')+'<g class="pulse"><rect x="50" y="440" width="260" height="64" rx="32" fill="#f5b73b"/><text x="180" y="482" font-size="24" text-anchor="middle" fill="#1d2150" font-weight="800">بفرست برای دوستت 💌</text></g>'
+]}
+var W=['تازه ناخن کاشتی و عاشقشون شدی','انقدر که هی دستت رو جلوی نور می‌گیری','ده دقیقه بعد می‌خوای گوشی رو باز کنی','ولی صفحه اصلاً ناخن رو نمی‌فهمه','قوطی نوشابه؟ ماموریت غیرممکن','زیپ و دکمه هم که دیگه هیچی','حتی دستشویی رفتن هم برنامه‌ریزی می‌خواد','تایپ؟ هر پیام سه تا غلط املایی','یه تار پشمی و همه‌چی تموم می‌شه','ولی همین که تو آینه نگاشون می‌کنی','همه‌ی سختی‌ها یادت می‌ره','ناخن خوشگل یعنی درد می‌کشیم ولی شیک! این رو برای دوستت بفرست'];
+var HU=[0,20,-20,-70,40,70,110,150,-100,10,30,-30],D=.4,S=[],tot=0,SC=sc();
+W.forEach(function(t,i){var n=t.split(' ');S.push({n:n,d:n.length*D+1,s:tot,v:SC[i],h:HU[i]});tot+=n.length*D+1});
+var $=function(i){return document.getElementById(i)},T=0,last=0,go=true,cur=-1,wk=-9;
+for(var b=0;b<12;b++)$('bg').insertAdjacentHTML('afterend','<i class="bk" style="left:'+(b*29%96)+'%;width:'+(4+b%4*3)+'cqw;height:'+(4+b%4*3)+'cqw;animation-delay:'+(-b*.9)+'s"></i>');
+function show(i){var s=S[i];
+ $('cap').innerHTML=s.n.map(function(w){return '<span class="w">'+w+'</span>'}).join(' ');
+ $('art').innerHTML='<div class="cam" style="animation-duration:'+s.d+'s"><div class="in i'+(i%4)+'"><svg viewBox="0 0 360 640">'+s.v+'</svg></div></div>';
+ $('bg').style.filter='hue-rotate('+s.h+'deg)';cur=i;wk=-9}
+function frame(n){
+ var dt=Math.min(.1,(n-(last||n))/1000);last=n;
+ if(go){T+=dt;if(T>=tot){T=tot-.001;go=false;$('pp').textContent='▶ پخش'}}
+ var i=S.length-1;while(S[i].s>T)i--;
+ if(i!=cur)show(i);
+ var k=Math.floor((T-S[i].s-.15)/D);
+ if(k!=wk){wk=k;var w=$('cap').children;for(var j=0;j<w.length;j++)w[j].className='w'+(j==k?' on':'')}
+ $('bar').style.width=(T/tot*100)+'%';
+ $('st').className=go?'':'paused';
+ requestAnimationFrame(frame)}
+$('pp').onclick=function(){if(T>=tot-.01){T=0;cur=-1}go=!go;this.textContent=go?'⏸ توقف':'▶ پخش'};
+$('rs').onclick=function(){T=0;cur=-1;go=true;$('pp').textContent='⏸ توقف'};
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>

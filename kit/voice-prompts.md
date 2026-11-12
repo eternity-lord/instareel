@@ -1,3 +1,5 @@
+> Imported from kit v3. Reference prompts only: narration remains disabled by the owner's explicit request. Do not synthesize or re-enable a voice without a new request. There are two alternative scenario-08 concepts below; choose by title and scene IDs, never by number alone. The active scenario is «۴ تیپ مشتری ناخن: تو کدومی؟». Scenario 05's historical “weeks” claim is not an approved caption: keep «اجرای درست، به ماندگاری بیشتر کمک می‌کنه» and the existing accuracy safeguards.
+
 # Voice prompts for ElevenLabs (website) — scenario 01 and 02
 
 ## How to use
@@ -70,32 +72,84 @@ A warm, gentle Persian storyteller, native Iranian (Tehran) accent, 30s. Soft, c
 - `cta`: [lighter, playful] تگ کن اونی رو که ناخن پاش رو نادیده می‌گیره!
 
 ---
-## SCENARIO 05 — «کوچک‌ترین بوم دنیا» (mature / luxury, no cartoon)
+## SCENARIO 05 — «چرا ژل ناخن زود می‌پره؟» (cartoon, educational)
 **Voice design prompt (English):**
-A calm, intimate, luxurious Persian female voice, native Iranian (Tehran) accent, late 20s to 30s. Low, soft, almost-whispered but perfectly clear, slow pace with deliberate pauses, like a high-end beauty brand film narrator. Confident and elegant, no giggles, no exaggerated energy. Not a real person's clone.
-
-**Lines (one scene per generation):**
-- `hook`: [softly] کوچک‌ترین بوم دنیا... [long pause] روی نوک انگشته.
-- `precision`: [whispers] جایی که هیچ اشتباهی... کوچیک نیست.
-- `color`: [softly, dreamy] رنگ... مثل مه‌ای که تو نور شهر حل می‌شه.
-- `chrome`: [low, confident] کروم... [short pause] وقتی نور تصمیم می‌گیره.
-- `cateye`: [whispers] کت‌آی... [short pause] جادوی یه آهنربا.
-- `foil`: [slow, precise] ورق طلا... با دقت جراح.
-- `top`: [softly] یه لایه‌ی آخر... [short pause] و همه‌چی عمیق می‌شه.
-- `reveal`: [warm, low] ناخن تموم می‌شه... [long pause] ولی حسش نه.
-- `cta`: [intimate] طرح بعدی... مال توئه.
-
----
-## SCENARIO 05 — «چرا ژل ناخن زود می‌پره؟» (non-cartoon, educational)
-**Voice design prompt (English):**
-A calm, confident Persian-speaking woman, native Iranian (Tehran) accent, 30s. Smooth, intimate, authoritative like a premium beauty-expert voiceover, slightly ASMR-soft, clear diction, medium-slow pace, no cartoonish energy. Not a real person's clone.
+A young Persian-speaking woman, native Iranian (Tehran) accent, 20s to 30s. Bright, witty and clear, like a fun-but-smart beauty-tips narrator, comedic timing, a smile in the voice, medium-high energy, natural and not robotic. Not a real person's clone.
 
 **Lines:**
-- `hook`: [serious, intriguing] ژل ناخنت چرا زود می‌پره؟
+- `hook`: [curious, dramatic] ژل ناخنت چرا زود می‌پره؟
 - `oil`: دلیل اول: [short pause] چربی نامرئی روی سطح ناخن.
 - `skin`: دلیل دوم: [short pause] پوست نازکی که روی ناخن می‌مونه.
 - `thick`: دلیل سوم: [short pause] لایه‌ی ضخیم و کم‌پخت.
-- `seal`: دلیل چهارم: [short pause] لبه‌ی ناخن که سیل نشده.
-- `tool`: [firm] دلیل پنجم: [short pause] استفاده از ناخن به‌جای ابزار.
-- `fix`: [warm, satisfied] درست انجام بشه... [short pause] هفته‌ها می‌درخشه.
-- `cta`: [inviting] ذخیره کن... و برای کسی بفرست که ناخنش همیشه می‌پره.
+- `seal`: [whispers, sneaky] دلیل چهارم: [short pause] لبه‌ی ناخن که سیل نشده.
+- `tool`: [panicked] دلیل پنجم: [short pause] استفاده از ناخن به‌جای ابزار!
+- `fix`: [warm, happy] درست انجام بشه... [short pause] هفته‌ها می‌درخشه.
+- `cta`: [playful] ذخیره کن... و برای کسی بفرست که ناخنش همیشه می‌پره.
+
+---
+## SCENARIO 06 — «پرونده‌ی ناخن: مقصر کیه؟» (noir mystery)
+**Voice design prompt (English):**
+A raspy, world-weary male film-noir detective narrator, native Persian (Tehran) accent, 40s. Low, smoky, dry sarcasm with sudden comic timing, clear Persian diction, slow-medium pace, jazz-club atmosphere. Not a real person's clone.
+
+**Lines:**
+- `hook`: [low, gravelly] ناخن شماره‌ی هفت ترک خورد... [short pause] و یکی مقصره.
+- `detective`: [dry, cool] پرونده رسید دست... کارآگاه نایلی.
+- `door`: [interrogating] مظنون اول: درِ ماشین. [short pause] [sarcastic] میگه: من فقط بسته شدم!
+- `can`: [suspicious] مظنون دوم: قوطی نوشابه... [short pause] عرق می‌ریزه.
+- `thread`: [unimpressed] مظنون سوم: تار پشمی... [short pause] آلیبی نداره.
+- `clue`: [whispers, intense] ولی یه سرنخ... همه‌چی رو عوض کرد.
+- `reveal`: [dramatic pause] مقصر... [long pause] [loud, accusing] همونیه که ناخن رو ابزار می‌کنه!
+- `cta`: [smug, playful] آره... [short pause] تو! حالا تگ کن همدستت رو.
+
+---
+## SCENARIO 07 — «۵ جمله‌ای که هر مشتری از ناخن‌کار می‌شنوه (قسمت ۲)» (same voice as scenario 01)
+Use the same voice as scenario 01 for continuity.
+
+**Lines:**
+- `hook`: [excited] پنج جمله‌ای که هر مشتری از ناخن‌کار می‌شنوه!
+- `clock`: میگه ده دقیقه دیگه تمومه... [short pause] [sarcastic] یعنی یه ساعت!
+- `good`: میگه ناخن‌هات خوبه... [short pause] [sarcastic] یعنی با اینا چی کار کردی؟!
+- `dry`: میگه دست نزن تا خشک بشه... [short pause] [panicked] تو بلافاصله گوشیت رو برمی‌داری!
+- `return`: میگه دو هفته بعد بیا... [short pause] [laughs] تو دو ماه بعد میای!
+- `heat`: میگه فقط یه ذره گرم می‌شه... [short pause] [sarcastic] یعنی دستت رو بیرون می‌کشی!
+- `payoff`: [softly] ولی وقتی میگی عاشقشونم... [happy] همه‌چی بخشیده می‌شه!
+- `cta`: [playful] تگ کن ناخن‌کارت رو که همیشه اینا رو میگه.
+
+---
+## SCENARIO 08 — «۵ نشونه‌ی اینکه ناخن‌کارت واقعاً دوستت داره» (same voice as scenario 01, warmer)
+**Lines:**
+- `sign1`: [warm, quick] نوبتش پر بود... [short pause] [happy] ولی برات جا باز کرد!
+- `sign2`: [dramatic] ناخنت شکست؟ [short pause] [warm] میگه بیا درستش کنم.
+- `sign3`: [softly, surprised] رنگ مورد علاقه‌ت... یادشه.
+- `sign4`: [playful] ناخنت رو تو استوری می‌بینه... [short pause] اول از همه لایک می‌کنه.
+- `sign5`: [warm, smiling] و وقتی میگی عاشقشونم... [short pause] [giggles] ذوق می‌کنه.
+- `cta`: [playful] ناخن‌کارت رو کامنت تگ کن... [short pause] ببین چی میگه!
+
+---
+## SCENARIO 08 — «۴ تیپ مشتری ناخن: تو کدومی؟» (same voice as scenario 01)
+Use the same voice as scenario 01 for continuity.
+
+**Lines:**
+- `hook`: [curious, playful] ناخن‌کارت تو دلش... تو رو چی صدا می‌کنه؟
+- `late`: تیپ اول: ساعت‌نشناس... [short pause] [sarcastic] چهل دقیقه دیر میاد!
+- `shots`: تیپ دوم: اسکرین‌شات‌باز... [short pause] [laughs] چهل تا عکس، ولی میگه عین همین!
+- `friend`: تیپ سوم: دوست‌آورنده... [short pause] [fast] هر دو دقیقه یه نظر جدید!
+- `tool`: تیپ چهارم: ناخن به‌جای ابزار... [short pause] [innocent] و بعد میگه: خودش شکست!
+- `payoff`: ولی یه تیپ پنجم هم هست... [short pause] [warm, happy] که میگه: دستت درد نکنه!
+- `card`: [clear, friendly] ذخیره کن: وقت‌شناس باش... یه عکس بیار... دست نزن.
+- `cta`: [playful] تو کدوم تیپی؟ با ایموجیش جواب بده... و تیپ سه رو تگ کن!
+
+---
+## SCENARIO 09 — «۵ تیپ ناخن‌کار» (same voice as scenario 01)
+Use the same voice as scenario 01 for continuity.
+
+**Lines:**
+- `hook`: [curious, playful] ناخن‌کارها هم تیپ دارن... [short pause] تیپ آخر رو باور نمی‌کنی!
+- `talker`: تیپ اول: پرحرف... [short pause] [laughs] آخرش همه‌ی فامیلش رو می‌شناسی!
+- `perfectionist`: تیپ دوم: وسواسی... [short pause] [exasperated] یه ذره رو پنج بار دوباره می‌کنه!
+- `dm`: تیپ سوم: دایرکت‌جواب‌ده... [short pause] [fast] یه دست ناخن، یه دست دایرکت!
+- `legend`: [proud, epic] تیپ چهارم: افسانه‌ای... بیست دقیقه و تموم!
+- `twist`: و تیپ پنجم: [short pause] [deadpan] ناخن‌کاری که ناخن خودش همیشه نصفه‌ست!
+- `thanks`: [warm, softly] دستتون درد نکنه ناخن‌کارها!
+- `card`: [clear, friendly] ذخیره کن: قبل از رزرو... سه تا سوال بپرس.
+- `cta`: [playful] تیپ ناخن‌کارت کدومه؟ ایموجی بزن... و تیپ پنج رو تگ کن!

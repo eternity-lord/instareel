@@ -7,6 +7,7 @@ import subprocess
 import wave
 from pathlib import Path
 import numpy as np
+from music_source import music_bed
 import imageio_ffmpeg
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'out/05';OUT.mkdir(parents=True,exist_ok=True)
@@ -47,6 +48,7 @@ for b in range(math.ceil(TOTAL/(8*beat))):
   when=at+step*2*beat+.12
   add(piano(note),when,.18,pan=(step%2-.5)*.35)
   add(piano(note),when+.23,.032,pan=(.5-step%2)*.5)
+mix, music_source = music_bed(ROOT, mix, SR)
 fade_in=round(.65*SR);fade_out=round(1.25*SR)
 mix[:fade_in]*=np.linspace(0,1,fade_in)[:,None]
 mix[-fade_out:]*=np.linspace(1,0,fade_out)[:,None]
@@ -60,5 +62,7 @@ raw.unlink()
 loudness,_=json.JSONDecoder().raw_decode(r.stderr[r.stderr.rfind('{'):])
 (OUT/'timing.json').write_bytes(TIMING.read_bytes())
 status=dict(duration=TOTAL,sampleRate=SR,bpm=BPM,voiceUsed=False,voiceReason='User requested narration removal; no voice file opened or mixed.',sfxUsed=False,music='Original gentle instrumental: warm sine pads and soft piano-like arpeggio, no external recording.',timingMode='Frozen original caption/scene times; visual stream unchanged, no spoken alignment',lastWordHoldMinimum=.9,mastering='-20 LUFS / -3 dBTP / LRA 7',loudness=loudness,revision='music-only')
+status['musicSource'] = music_source
+if music_source['mode'] != 'synthesized': status['music'] = music_source['mode']
 (OUT/'audio-status.json').write_text(json.dumps(status,indent=2))
 print(json.dumps(status,indent=2))

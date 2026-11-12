@@ -7,6 +7,7 @@ import subprocess
 import wave
 from pathlib import Path
 import numpy as np
+from music_source import music_bed
 import imageio_ffmpeg
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'out/08';OUT.mkdir(parents=True,exist_ok=True)
@@ -54,6 +55,7 @@ for b in range(math.ceil(TOTAL/(8*beat))):
   when=at+step*2*beat+.12
   add(piano(note),when,.18,pan=(step%2-.5)*.35)
   add(piano(note),when+.23,.032,pan=(.5-step%2)*.5)
+mix, music_source = music_bed(ROOT, mix, SR)
 # Gentle scene-timed cartoon accents, deliberately below the instrumental bed.
 sc=json.loads((ROOT/'input/scenario.json').read_text());rng=np.random.default_rng(515)
 at=0
@@ -84,5 +86,7 @@ raw.unlink()
 loudness,_=json.JSONDecoder().raw_decode(r.stderr[r.stderr.rfind('{'):])
 (OUT/'timing.json').write_text(json.dumps(timing,ensure_ascii=False,indent=2)+'\n')
 status=dict(duration=TOTAL,sampleRate=SR,bpm=BPM,voiceUsed=False,voiceReason='User requested narration removal; no voice file opened or mixed.',sfxUsed=True,music='Original gentle instrumental: warm sine pads and soft piano-like arpeggio, no external recording.',timingMode='Reading-timed captions on a new cartoon animation; no voice or spoken alignment',lastWordHoldMinimum=.6,mastering='-20 LUFS / -3 dBTP / LRA 7',loudness=loudness,revision='client identity quiz; original instrumental and gentle SFX, no narrator')
+status['musicSource'] = music_source
+if music_source['mode'] != 'synthesized': status['music'] = music_source['mode']
 (OUT/'audio-status.json').write_text(json.dumps(status,indent=2))
 print(json.dumps(status,indent=2))

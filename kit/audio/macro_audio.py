@@ -2,6 +2,7 @@
 import json, math, wave, subprocess
 from pathlib import Path
 import numpy as np
+from music_source import music_bed
 import imageio_ffmpeg
 ROOT=Path(__file__).resolve().parents[1]
 if not json.loads((ROOT/'brand.json').read_text()).get('voice',{}).get('enabled',True):
@@ -71,6 +72,7 @@ for sc in SC['scenes']:
 # Smooth ducking from speech envelope, avoiding frame-dependent sidechain state.
 chunks=energy(voice);activity=np.interp(np.arange(N)/SR,np.arange(len(chunks))*.01,chunks)
 duck=1-.72*np.clip(activity/.035,0,1)
+bed, music_source = music_bed(ROOT, bed, SR)
 mix=voice[:,None]*np.ones((1,2))*.86+bed*duck[:,None]+fx
 fade=round(.03*SR);mix[:fade]*=np.linspace(0,1,fade)[:,None];mix[-fade:]*=np.linspace(1,0,fade)[:,None]
 raw=OUT/'mix-unmastered.wav';write(raw,mix)
@@ -78,4 +80,6 @@ r=subprocess.run([FF,'-hide_banner','-y','-i',str(raw),'-af','loudnorm=I=-17:TP=
 loudness,_=json.JSONDecoder().raw_decode(r.stderr[r.stderr.rfind('{'):])
 (OUT/'timing.json').write_text(json.dumps(timing,ensure_ascii=False,indent=2))
 status=dict(duration=TOTAL,sampleRate=SR,seed=505,bpm=84,voiceUsed=True,voice='User-selected voice-00, synthetic Persian feminine',timingMode='speech-envelope weighted estimate; not forced alignment; no fixed 150ms guarantee',lastWordHoldMinimum=.9,atempo=rate,clips=original,mastering='-17 LUFS / -2 dBTP / LRA 9',loudness=loudness,music='Original deterministic ambient sine pad and soft pulse, no external music')
+status['musicSource'] = music_source
+if music_source['mode'] != 'synthesized': status['music'] = music_source['mode']
 (OUT/'audio-status.json').write_text(json.dumps(status,indent=2));print(json.dumps(status,indent=2))
