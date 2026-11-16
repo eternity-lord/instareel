@@ -1,0 +1,38 @@
+{
+  "versionNote": "Local archive label v4 (upload has no version tag)",
+  "sourceFile": "nail-reel-kit.zip",
+  "sourceCommit": "0362650",
+  "zipSha256": "4dde708b36e937f7fbfc2604f37a10ae2ec848c9e6e9da931d8e6766872e6612",
+  "files": {
+    "kit/src/index.html": "0783a8ede7776c592d15d79cef36ecbde8e309cd3e42e01d932937940f0d6848",
+    "kit/brand.json": "c71b9e07a4f8298678d010f95d2854c4551eacdbf7404db3f38dc18abb896cc3",
+    "kit/assets/art/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "kit/voice-prompts.md": "f38a69713830133b5235a1ee139c85105f2f8b01fe4739e7102186927c007e5f",
+    "kit/audio/voice/README.txt": "cac93aa0a39475b0987bd8c28d66223af9e7f0795594afb5e3230d2b9821450b",
+    "kit/audio/README.txt": "e0fc1f799428b591a4f230ef652a0c99892fa9e071b63a33c9c7d5eef32ade0c",
+    "kit/audio/make_audio.py": "fb02b96b91fd14b8e3438c9222470b0b3c983612ac2abfbc25b07fa6f56da4f8",
+    "kit/README.md": "d5f5eb1399843b2f06ba647434569e7384402a1b1f97dac364afbda81a585b5b",
+    "kit/render/run.sh": "e67739f7f190647e2dd1126ec5b96fb19b0cccc3bb4257488673f070f7ecfb17",
+    "kit/render/package.json": "3fd2cebd8eb221fa3832d179135980a017d7e4a8abd2dd8a3e66790b54528151",
+    "kit/render/motion_check.py": "827bc391e2efdfea9e96679d5617173dd09bb75fb02c9c3b2be9583d904d5521",
+    "kit/render/render.mjs": "036ae6a3bc5e6f33ab6639abc33afa1c8b65be4001c31981d034cf0658bcca54",
+    "kit/input/scenario.json": "ce94b792cff82f045760ae4c1217fc95f963f2e94fb199cf092c6317ea7a6990",
+    "kit/input/README.txt": "169831675584e413757b9a592301680fef1201026f564d29cd9ec1b5413f58d8",
+    "kit/input/post_copy.md": "db24d97dc10995cdf861bc3b388cd86d1fc647ac04314bf21d919669c7c1e8da",
+    "kit/out/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "kit/reference/prototype-v2.html": "e377ddb3d72f0f6568b4ab921efd82e00d4639c0647e7d722481a9c72bc628a2",
+    "kit/music-prompts.md": "2641ef3274e95c5c75e8ddbaa492f8fc0a4141d8af1b33216d8b8963e2283b09"
+  },
+  "excludedGeneratedFiles": [
+    {
+      "path": "kit/audio/__pycache__/make_audio.cpython-312.pyc",
+      "sha256": "38bbca7825c1cd615b452fb9906aa78d8124527a8760779a8350904a51ef09f1",
+      "reason": "Generated executable bytecode; not imported or retained"
+    },
+    {
+      "path": "kit/render/__pycache__/motion_check.cpython-312.pyc",
+      "sha256": "5660d02ef64ce8df19f00860fb3bf054633c011028006aefd7a778ff1ede16d8",
+      "reason": "Generated executable bytecode; not imported or retained"
+    }
+  ]
+}

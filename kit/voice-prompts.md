@@ -1,4 +1,4 @@
-> Imported from kit v3. Reference prompts only: narration remains disabled by the owner's explicit request. Do not synthesize or re-enable a voice without a new request. There are two alternative scenario-08 concepts below; choose by title and scene IDs, never by number alone. The active scenario is «۴ تیپ مشتری ناخن: تو کدومی؟». Scenario 05's historical “weeks” claim is not an approved caption: keep «اجرای درست، به ماندگاری بیشتر کمک می‌کنه» and the existing accuracy safeguards.
+> Imported from kit v4 (local archive label). Reference prompts only: narration remains disabled by the owner's explicit request. Do not synthesize or re-enable a voice without a new request. There are two alternative scenario-08 concepts below; choose by title and scene IDs, never by number alone. The active scenario is «۴ تیپ مشتری ناخن: تو کدومی؟». Scenario 05's historical “weeks” claim is not an approved caption: keep «اجرای درست، به ماندگاری بیشتر کمک می‌کنه» and the existing accuracy safeguards.
 
 # Voice prompts for ElevenLabs (website) — scenario 01 and 02
 
@@ -153,3 +153,19 @@ Use the same voice as scenario 01 for continuity.
 - `thanks`: [warm, softly] دستتون درد نکنه ناخن‌کارها!
 - `card`: [clear, friendly] ذخیره کن: قبل از رزرو... سه تا سوال بپرس.
 - `cta`: [playful] تیپ ناخن‌کارت کدومه؟ ایموجی بزن... و تیپ پنج رو تگ کن!
+
+---
+## SCENARIO 10 — «۴ نوع دوست که با مشتری میان» (ink doodle; same voice as scenario 01, softer in the emotional scenes)
+Use the same voice as scenario 01. In `turn`, `friend`, `payoff` the delivery gets softer and warmer; keep a small pause before each of them.
+
+**Lines:**
+- `hook`: [excited, comic] مشتری یکی بود... [short pause] ولی چهار نفر اومدن!
+- `filmer`: اولی: فیلم‌بردار... [short pause] [laughs] همه‌چی رو برای استوری می‌گیره!
+- `inspector`: دومی: بازرس... [short pause] [suspicious] هر ذره رو با ذره‌بین چک می‌کنه!
+- `sleeper`: سومی: خواب‌آلود... [short pause] [yawns] وسط کار خروپف می‌کنه!
+- `hush`: [whispers] ولی یهو... [long pause] همه‌چی ساکت شد.
+- `turn`: [softly] ولی مشتری امروز... یه کم می‌ترسید. [short pause] فردا روز مهمی بود.
+- `friend`: [warm, slow] چهارمی: [short pause] دوستی که... فقط دستش رو گرفت.
+- `payoff`: [tender, smiling] بعضی دوستا... کار خاصی نمی‌کنن. [short pause] فقط هستن.
+- `card`: [clear, friendly] ذخیره کن: سه قانون یه همراه خوب.
+- `cta`: [warm, playful] تو کدوم نوعی؟ ایموجی بزن... و دوست واقعیت رو تگ کن!
