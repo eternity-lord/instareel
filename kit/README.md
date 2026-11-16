@@ -1,3 +1,5 @@
+> **Latest production: scenario 10 — INK DOODLE (44s / 96 BPM / no narration).** Source attachment and executable snapshot: `input/scenarios/scenario-10*.json`. [Report](docs/REPORT-10.md), [storyboard](docs/storyboard-10.md), [caption](input/post_copy-10.md). Output: `deliverables/nail-reel-10.mp4`. Renderer/audio: `ink.js` / `ink_audio.py`; edition QA: `node kit/render/ink-test.mjs`. Previous 08 recut preview is `preview-08-recut.html`; all prior MP4s retained. This latest scenario overrides earlier active-edition descriptions below.
+
 > **کیت تازهٔ GitHub خوانده و ادغام شد — آرشیو محلی v4.** منبع: `nail-reel-kit.zip` از upload `0362650`؛ نسخهٔ خام در `reference/kit-v4/`، [جزئیات و اولویت‌ها](docs/kit-v4-update.md). v4 نام داخلی آرشیو است، نه برچسب منتشرشدهٔ سازنده.
 >
 > **برای سناریوی بعد:** motion budget تازه، ژست/واکنش قوی‌تر، تغییر نما و تست حرکت ملاک طراحی‌اند؛ متن `style` سناریوی ارسالی مقدم است. فایل‌های پرامپت فعال با ZIP تازه هماهنگ‌اند، از جمله موزیک سناریوی ۱۰ (ink doodle، 96 BPM، playful → tender → uplifting). این‌ها پرامپت‌اند، نه فایل صوتی آماده.

@@ -1,0 +1,256 @@
+{
+  "title": "۴ نوع دوست که با مشتری میان (دوست واقعی کیه؟)",
+  "style": {
+    "look": "INK DOODLE ANIMATION. Same series characters redrawn as hand-inked doodles: Nailie (round pink blob with a tiny nail-brush antenna with a gel-drop tip), Client (round peach-cream blob with a small bottle-cap tuft), plus four Friend blobs with one badge each. Cream paper texture with subtle grain, thick-thin ink outlines (variable stroke width), flat color fills slightly misregistered from the lines, scribbled hatching shadows, handwritten Persian SFX words and arrows, ink splashes/drips as transitions, doodle icons instead of emoji. Color script: warm paper + pink/peach/yellow (chaos) -> dim blue-gray dusk (anxiety) -> golden warm (relief). Karaoke yellow word pill (#f5b73b) stays as in README.",
+    "tools": "SVG paths + GSAP paused timelines driven by window.__seek(t). LINE BOIL: apply feTurbulence + feDisplacementMap to ink strokes with the seed = floor(t*12) so lines shiver at 12 fps (deterministic). Characters animated 'on twos' (12 fps stepped poses) while the CAMERA moves smoothly at 30 fps (this contrast is the signature look). Draw-on effect with stroke-dashoffset for titles/cards. Variable stroke widths via filled outline shapes or dual strokes. Ink-splash/drip mask transitions. Paper grain overlay with multiply blend. Seeded randomness only.",
+    "camera": "Every scene: big camera move + new environment + an extreme close-up. Use whip-pans disguised as ink swipes, dolly-zoom, crane-down/up, orbit, push-in on faces/hands, frame-within-frame (phone POV), match-cut portals (door, magnifier lens), handheld breathing in anxious beats, smear frames on fast moves.",
+    "emotion": "Acting over decoration: eyes (pupil size, glint, tears), brows, mouth shapes, blush, sweat drops, heartbeat line as an emotional meter (jagged -> smooth), hold the key expression 0.2-0.4 s, close-ups on hands for tenderness, palette and line quality change with mood (shaky when anxious, smooth when calm).",
+    "audio": "Lo-fi acoustic: ukulele/piano, soft brush drums, playful start, tender in the middle (scenes 'turn' to 'payoff'), uplifting end; handwritten-style SFX (pen scratch, paper rustle, pops, ink splash). Set brand.json music.bpm to 96."
+  },
+  "format": "Episode 3 of the 'types' series (fulfils the 'next: 4 types of client's friends' promise). Humor in the first half, emotion in the second half; the fourth type is the emotional punchline and the share trigger ('tag your real friend').",
+  "endCardText": [
+    "قسمت بعد: ۴ نوع ناخن‌کار کارتونی",
+    "هر هفته یه قسمت",
+    "فالو کن",
+    "@ayda.nailroom"
+  ],
+  "endCardSeconds": 3,
+  "hold": 0.7,
+  "researchBasis": [
+    "Instagram ranks watch time/completion first, then sends per reach, then likes per reach; sends are strongest for non-follower reach.",
+    "First 3 s decide whether a Reel is tested on a larger audience; hook visual in frame 1.",
+    "A visual change every ~2-3 s; static visuals hurt retention.",
+    "Endings that rhyme with the opening drive replays (loop).",
+    "Under ~15 s completion is highest, 30-60 s completion lower: so a ~45 s reel must be dense and emotionally structured. Tag/share trigger at the emotional peak.",
+    "Hand-drawn line boil = lines that shiver because each frame is re-traced; stepped 12 fps look; messy stroke weight reads as human and personal."
+  ],
+  "goal": "Fix 'too slow/relaxing' feedback: high motion, camera, environment changes, close-ups, visible emotion; length ~45 s. Targets: first-3-second hold, completion, sends (tag real friend), saves (card), comments (emoji per type), follows (series promise).",
+  "growth": [
+    "Hook: chaos in frame 1 (5 people through one door) + curiosity gap (the 4th type).",
+    "Comment: emoji per type (movie camera, magnifier, zzz, clasped hands) - pin it.",
+    "Send trigger: 'tag your real friend' right after the emotional peak.",
+    "Save trigger: 'سه قانون یه همراه خوب' card.",
+    "Follow reason: next-episode tease + weekly series promise.",
+    "Loop: final door shot rhymes with scene 1."
+  ],
+  "scenes": [
+    {
+      "id": "hook",
+      "text": "مشتری یکی بود... ولی چهار نفر اومدن!",
+      "mood": "shock",
+      "idea": "ENV: street door -> salon entrance. First frame already in action: an ink-drawn salon door bursts open and ONE client plus FOUR friends try to squeeze through at once; the door frame cracks with a drawn burst 'کرچ!'; whip-zoom through the door into the salon (match-cut portal). Ink splash on the impact, line boil heavy, camera handheld shake, title scribble '۴ نوع دوست' draws itself in with a pen (draw-on).",
+      "sfx": [
+        {
+          "k": "whoosh",
+          "t": 0.0
+        },
+        {
+          "k": "pop",
+          "t": 0.7
+        },
+        {
+          "k": "error",
+          "t": 1.5
+        }
+      ],
+      "hold": 0.6
+    },
+    {
+      "id": "filmer",
+      "text": "اولی: فیلم‌بردار... همه‌چی رو برای استوری می‌گیره!",
+      "mood": "tired",
+      "idea": "ENV: nail desk, close. Friend #1 (emoji badge: movie camera) shoves a phone into the shot; camera cuts to PHONE-POV frame-within-frame with record dot and vertical crop; extreme close-up on the nail brush tip, then on Nailie's twitching eye; flash photography pops as drawn starbursts; 'one more take!' scribbled bubble. Whip-pan between phone POV and Nailie.",
+      "sfx": [
+        {
+          "k": "tick",
+          "t": 0.5
+        },
+        {
+          "k": "pop",
+          "t": 1.4
+        },
+        {
+          "k": "pop",
+          "t": 2.2
+        }
+      ],
+      "hold": 0.7
+    },
+    {
+      "id": "inspector",
+      "text": "دومی: بازرس... هر ذره رو با ذره‌بین چک می‌کنه!",
+      "mood": "angry",
+      "idea": "ENV: lamp-lit corner. Friend #2 (badge: magnifier) looms with a giant magnifier; EXTREME close-up of one huge googly ink eye filling the screen, pupil darting; dolly-zoom on Nailie as her face shrinks with a sweat drop; tiny dust speck is drawn as a monster under the magnifier; line boil turns jittery. Hard cut rhythm on every glance.",
+      "sfx": [
+        {
+          "k": "tick",
+          "t": 0.4
+        },
+        {
+          "k": "tick",
+          "t": 1.2
+        },
+        {
+          "k": "error",
+          "t": 2.6
+        }
+      ],
+      "hold": 0.7
+    },
+    {
+      "id": "sleeper",
+      "text": "سومی: خواب‌آلود... وسط کار خروپف می‌کنه!",
+      "mood": "calm",
+      "idea": "ENV: waiting-area couch, wide. Friend #3 (badge: zzz) melts into the sofa; crane-down reveal; drawn snore waves ripple outward and make the polish bottles hop and dance on the shelf; Nailie tiptoes, a bottle wobbles and she catches it in a slow-mo dive. Exaggerated squash/stretch on the snore inhale/exhale.",
+      "sfx": [
+        {
+          "k": "whoosh",
+          "t": 0.0
+        },
+        {
+          "k": "pop",
+          "t": 1.6
+        },
+        {
+          "k": "tick",
+          "t": 2.6
+        }
+      ],
+      "hold": 0.8
+    },
+    {
+      "id": "hush",
+      "text": "ولی یهو... همه‌چی ساکت شد",
+      "mood": "calm",
+      "idea": "ENV change: the whole salon freezes mid-chaos (freeze-frame), ink drips down the paper, the palette shifts from warm paper to dim blue-gray dusk; all the noise doodles fade; slow push-in toward the client sitting alone at the desk, drawn dust motes float. A held breath beat before the emotional turn.",
+      "sfx": [
+        {
+          "k": "error",
+          "t": 0.2
+        },
+        {
+          "k": "whoosh",
+          "t": 1.4
+        }
+      ],
+      "hold": 0.6
+    },
+    {
+      "id": "turn",
+      "text": "ولی مشتری امروز یه کم می‌ترسید... فردا روز مهمی بود",
+      "mood": "sad",
+      "idea": "ENV: moody desk close-up. EXTREME close-up on the client's fidgeting fingers and a trembling nail polish bottle; a jagged ink heartbeat line runs across the frame; close-up of eyes glancing away, brows up, tiny sweat drop; a calendar page doodle with a circled 'فردا' trembles. Slow push-in with subtle handheld breathing, line boil slower and shakier to show anxiety.",
+      "sfx": [
+        {
+          "k": "tick",
+          "t": 0.5
+        },
+        {
+          "k": "tick",
+          "t": 1.3
+        },
+        {
+          "k": "tick",
+          "t": 2.1
+        }
+      ],
+      "hold": 2.0
+    },
+    {
+      "id": "friend",
+      "text": "چهارمی: دوستی که فقط دستش رو گرفت...",
+      "mood": "love",
+      "idea": "ENV: same desk, warmer light blooming. Friend #4 (badge: two clasped hands) quietly slides her hand over the client's hand; EXTREME close-up on the two hands, fingers interlacing in slow motion; the jagged heartbeat line smooths into a calm wave; close-up of client's eyes welling, a tear forms and a smile appears (key emotional acting hold 0.4 s); tiny handwritten 'قشنگ می‌شه' whispers beside the friend; ink hearts bloom and the paper warms from gray to golden. Slow push-in then gentle pull-back to a profile two-shot.",
+      "sfx": [
+        {
+          "k": "chime",
+          "t": 0.4
+        },
+        {
+          "k": "pop",
+          "t": 2.8
+        }
+      ],
+      "hold": 2.5
+    },
+    {
+      "id": "payoff",
+      "text": "بعضی دوستا کار خاصی نمی‌کنن... فقط هستن",
+      "mood": "love",
+      "idea": "ENV: window, golden hour. Macro close-up of the finished glossy nails with a drawn specular sweep; Nailie leans in with a soft smile; wide group shot: all four friends in one frame, the filmer films a heartfelt selfie, the inspector gives a thumbs-up, the sleeper wakes and waves; sunlight streaks across the paper; floating ink sparkles. Pull-back crane with a warm color wash.",
+      "sfx": [
+        {
+          "k": "chime",
+          "t": 0.3
+        },
+        {
+          "k": "pop",
+          "t": 2.2
+        }
+      ],
+      "hold": 2.5
+    },
+    {
+      "id": "card",
+      "text": "ذخیره کن: سه قانون یه همراه خوب",
+      "mood": "calm",
+      "idea": "ENV: clean paper card (utility, readable 3 s, motion kept minimal but alive). A hand-drawn card titled 'قانون همراه خوب' draws on with three items one by one: آروم صحبت کن (hushing finger), نظر اضافه نده (crossed-out speech bubble), دست دوستت رو بگیر (clasped hands). Check marks ink in; bookmark icon bounces.",
+      "sfx": [
+        {
+          "k": "pop",
+          "t": 0.5
+        },
+        {
+          "k": "pop",
+          "t": 1.2
+        },
+        {
+          "k": "pop",
+          "t": 1.9
+        },
+        {
+          "k": "chime",
+          "t": 2.6
+        }
+      ],
+      "hold": 1.5
+    },
+    {
+      "id": "cta",
+      "text": "تو کدوم نوعی؟ ایموجی بزن... و دوست واقعیت رو تگ کن!",
+      "mood": "love",
+      "idea": "ENV: salon door again (loop). The four badges (movie camera, magnifier, zzz, clasped hands) pop in a row like stickers; Nailie points at the viewer; a send arrow flies out; the door from scene 1 swings open to a new silhouette (loop to the opening). End-card (3 s) on paper: 'قسمت بعد: ... فالو کن' + 'هر هفته یه قسمت' + @ayda.nailroom with a pen-drawn underline.",
+      "sfx": [
+        {
+          "k": "pop",
+          "t": 0.3
+        },
+        {
+          "k": "whoosh",
+          "t": 1.6
+        },
+        {
+          "k": "chime",
+          "t": 2.4
+        }
+      ],
+      "hold": 1.0
+    }
+  ],
+  "reelId": "10",
+  "renderer": "ink",
+  "audioStyle": "ink",
+  "editDurations": [
+    3,
+    3.8,
+    3.8,
+    3.8,
+    2.2,
+    5,
+    5.5,
+    4.7,
+    4.8,
+    4.4
+  ],
+  "sourceNotes": "Original attachment preserved. Emoji in endcard replaced by drawn eyes. researchBasis is supplied creative brief, not verified ranking weights. No narration per standing preference."
+}

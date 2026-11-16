@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "attachmentScenesUnchanged": true,
+  "sourceAttachmentSha256": "803d5a1cac5e253cba3e188f2ae6c6d62d9e091ab8ba6d335ff5833d3819d3df",
+  "protectedPreviousVideos": 8,
+  "timeSamples": 80,
+  "perSceneHoldsHonored": true,
+  "steppedPoses12fps": true,
+  "deterministicLineBoil12fps": true,
+  "smoothCameraWithinPoseBucket": true,
+  "utilityCardFullyVisibleFrom": 1.1,
+  "utilityCardStableThrough": 4.7,
+  "utilityCardStableSeconds": 3.6,
+  "noVoice": true,
+  "bpm": 96,
+  "browserErrors": []
+}

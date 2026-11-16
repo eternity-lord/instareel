@@ -1,0 +1,41 @@
+{
+  "duration": 44.0,
+  "sampleRate": 48000,
+  "bpm": 96,
+  "voiceUsed": false,
+  "voiceReason": "Standing no-narration preference. No TTS/voice files opened.",
+  "sfxUsed": true,
+  "musicSource": {
+    "mode": "synthesized"
+  },
+  "music": "Original local acoustic-inspired synthesis: plucked strings, soft piano-like tones, brush noise and warm pads. No external recording/provider.",
+  "sections": {
+    "playful": [
+      0,
+      14.4
+    ],
+    "tender": [
+      14.4,
+      27.1
+    ],
+    "uplifting": [
+      27.1,
+      44.0
+    ]
+  },
+  "timingMode": "Reading-timed Persian captions, not speech alignment; per-scene holds honored",
+  "loudness": {
+    "input_i": "-26.98",
+    "input_tp": "-13.89",
+    "input_lra": "1.50",
+    "input_thresh": "-36.98",
+    "output_i": "-19.02",
+    "output_tp": "-5.81",
+    "output_lra": "1.30",
+    "output_thresh": "-29.02",
+    "normalization_type": "dynamic",
+    "target_offset": "0.02"
+  },
+  "mastering": "-19 LUFS, -3 dBTP, LRA 9",
+  "audioLoop": "Deliberate short fade, not claimed seamless"
+}
