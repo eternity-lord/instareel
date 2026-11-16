@@ -34,3 +34,8 @@ Instrumental, no vocals. Smoky film-noir jazz, upright bass, brushed drums, mute
 ```
 Instrumental, no vocals. Bouncy game-show pop, whistling melody, claps, bright piano stabs, 108 BPM, fun and fast, quick "ding" stingers for each reveal, tiny drum-roll before the last reveal, happy ending button. 35 seconds.
 ```
+
+## 10 — ink doodle, funny then tender (96 BPM)
+```
+Instrumental, no vocals. Lo-fi acoustic indie-pop, 96 BPM. Starts playful and bouncy with ukulele plucks, light brushed drums, finger snaps and a cute whistle hook (first 15 seconds), then the energy drops into a tender moment with soft felt piano and warm pads (seconds 15-30), then builds into an uplifting, hopeful ending with gentle claps and glockenspiel sparkles. Paper-rustle and pen-scratch texture, warm analog tape feel, clear dynamic shape: playful -> tender -> uplifting, ends on a soft resolve. 45 seconds.
+```

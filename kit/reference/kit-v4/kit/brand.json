@@ -1,0 +1,41 @@
+{
+ "handle": "@ayda.nailroom",
+ "url": "https://instagram.com/ayda.nailroom",
+ "services": [
+  "کاشت",
+  "ژلیش",
+  "فرنچ مینیاتوری"
+ ],
+ "frame": "none",
+ "wordDuration": 0.4,
+ "font": "Vazirmatn",
+ "palette": {
+  "board": "#26342f",
+  "wood": "#8b5a2b",
+  "chalk": "#f4f1e8",
+  "highlight": "#f5b73b",
+  "gelPink": "#ff4b96",
+  "navy": "#1d2150",
+  "violet": "#4a3fc0"
+ },
+ "safeZone": {
+  "top": 250,
+  "bottom": 380
+ },
+ "watermark": {
+  "pos": "bottom-left-above-safe",
+  "opacity": 0.7
+ },
+ "voice": {
+  "enabled": true,
+  "engine": "edge-tts",
+  "voice": "fa-IR-DilaraNeural",
+  "rate": "+0%",
+  "note": "synthetic voice only, never a real person; set enabled=false for music+SFX only"
+ },
+ "music": {
+  "enabled": true,
+  "bpm": 100,
+  "volume": 0.16
+ }
+}
